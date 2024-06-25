@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr4qw4ohs81s1"]
+
+[ext_resource type="PackedScene" uid="uid://d1xrun1w0orx8" path="res://assets/badger.glb" id="1_8lio3"]
+
+[node name="badger" instance=ExtResource("1_8lio3")]
+
+[node name="Skeleton3D" parent="metarig" index="0"]
+bones/6/rotation = Quaternion(-0.0863492, -0.000691352, -0.00797515, 0.996233)
+bones/8/position = Vector3(0.0207454, 0.470782, -0.028363)
+bones/8/rotation = Quaternion(-0.279507, 0.584606, -0.551353, 0.525472)
+bones/9/rotation = Quaternion(-0.0397894, -0.0934768, -0.10936, 0.988797)
+bones/12/position = Vector3(-0.0207454, 0.470781, -0.0283631)
+bones/12/rotation = Quaternion(-0.279507, -0.584607, 0.551353, 0.525472)
+bones/13/rotation = Quaternion(-0.0397894, 0.0934768, 0.10936, 0.988797)
+bones/15/position = Vector3(0.1184, 0.147906, -0.0402532)
+bones/16/position = Vector3(-0.1184, 0.147906, -0.0402533)
+bones/19/rotation = Quaternion(0.850934, 0.00777679, -0.00469532, 0.525194)
+bones/20/rotation = Quaternion(-0.00808028, 0.000457021, -0.000657701, 0.999967)
+bones/24/rotation = Quaternion(0.850934, -0.00777698, 0.00469553, 0.525194)
+bones/25/rotation = Quaternion(-0.00808028, -0.000457028, 0.000657638, 0.999967)

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjvw86dy0w0we"]
+
+[ext_resource type="PackedScene" uid="uid://bu3nnj8aktq5a" path="res://assets/catDetective.glb" id="1_xgs5n"]
+
+[node name="catDetective" instance=ExtResource("1_xgs5n")]

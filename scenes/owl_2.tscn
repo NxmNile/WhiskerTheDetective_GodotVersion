@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj85h3i7ylxgu"]
+
+[ext_resource type="PackedScene" uid="uid://clt8hhh3y0iro" path="res://assets/owl2.glb" id="1_eur7h"]
+
+[node name="owl2" instance=ExtResource("1_eur7h")]
