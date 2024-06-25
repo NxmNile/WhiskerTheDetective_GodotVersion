@@ -1,11 +1,144 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvj0v3fd5brce"]
+[gd_scene load_steps=7 format=3 uid="uid://cvj0v3fd5brce"]
 
+[ext_resource type="Script" path="res://scripts/SceneChanger.gd" id="1_jd72h"]
 [ext_resource type="Texture2D" uid="uid://dqrwxtg4cuk8m" path="res://assets/Menu.png" id="1_l7ulx"]
+[ext_resource type="Texture2D" uid="uid://bpq6gkrdk2tgk" path="res://assets/4498fd18c59c6d058bd083fa6c2b7f96-resized.png" id="2_jr57v"]
+[ext_resource type="Texture2D" uid="uid://dlmt0ef2xieqi" path="res://UI/yellowRectNormal.png" id="3_73mgk"]
+[ext_resource type="FontFile" uid="uid://deigtwdpbmrw6" path="res://Fonts/Itim-Regular.ttf" id="4_q1td6"]
 
-[node name="MainMenu" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxtqo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="BG" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.6)
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jd72h")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.670162, 0.674907)
 texture = ExtResource("1_l7ulx")
+stretch_mode = 3
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Cat" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.388692, 0.388722)
+texture = ExtResource("2_jr57v")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 530.0
+offset_top = 411.0
+offset_right = -497.0
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jxtqo")
+
+[node name="PlayButtonBG" type="TextureRect" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -48.5
+offset_right = 230.5
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.71039, 0.611279)
+texture = ExtResource("3_73mgk")
+
+[node name="Label" type="Label" parent="PlayButton/PlayButtonBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_q1td6")
+theme_override_font_sizes/font_size = 112
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 530.0
+offset_top = 526.0
+offset_right = -497.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jxtqo")
+
+[node name="ExitButtonBG" type="TextureRect" parent="ExitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -48.5
+offset_right = 230.5
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.71039, 0.611279)
+texture = ExtResource("3_73mgk")
+
+[node name="Label" type="Label" parent="ExitButton/ExitButtonBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_q1td6")
+theme_override_font_sizes/font_size = 112
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = 69.0
+offset_right = 257.0
+offset_bottom = 278.0
+grow_horizontal = 2
+scale = Vector2(1.0518, 1.24022)
+theme_override_colors/font_color = Color(0.921569, 0.545098, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 55
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("4_q1td6")
+theme_override_font_sizes/font_size = 85
+text = "Whisker
+The Detective"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
