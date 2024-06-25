@@ -4,7 +4,7 @@
 
 [node name="MainMenu" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_l7ulx")
 
