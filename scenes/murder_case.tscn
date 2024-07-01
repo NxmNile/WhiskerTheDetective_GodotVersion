@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://duxsghk0b6amm"]
+
+[ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
+[ext_resource type="PackedScene" uid="uid://cjvw86dy0w0we" path="res://scenes/cat_detective.tscn" id="2_wk66f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vxvir"]
+radius = 0.915
+height = 3.035
+
+[node name="MurderCase" type="Node3D"]
+
+[node name="OwlInteria" parent="." instance=ExtResource("1_ac73a")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.684636, 0.728885, 0, -0.728885, 0.684636, -0.10393, 8.12947, 7.17069)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(-0.999998, -0.00182117, -0.00111996, -0.00182249, 0.999998, 0.00118209, 0.00111781, 0.00118412, -0.999999, 0, 0, 5.42098)
+
+[node name="MeshRoot" type="Node3D" parent="CharacterBody3D"]
+
+[node name="catDetective" parent="CharacterBody3D/MeshRoot" instance=ExtResource("2_wk66f")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/RigidBody3D"]
+transform = Transform3D(1, -2.6148e-11, 0, -1.80762e-11, 1, -1.16415e-10, -1.16415e-10, -1.16415e-10, 1, 4.65661e-10, 1.42618, 0)
+shape = SubResource("CapsuleShape3D_vxvir")

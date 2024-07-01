@@ -88,12 +88,12 @@ material_override = ExtResource("2_asw4m")
 [node name="glass4" parent="." index="13"]
 material_override = ExtResource("2_asw4m")
 
-[node name="Node" type="Node" parent="." index="21"]
+[node name="Lights" type="Node" parent="." index="21"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Node" index="0"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lights" index="0"]
 environment = SubResource("Environment_ortwr")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Node" index="1"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69901, 4.47348, -1.42793)
 light_color = Color(0.904628, 0.892108, 0.887867, 1)
 light_energy = 1.878
@@ -102,7 +102,7 @@ light_specular = 0.0
 light_bake_mode = 1
 omni_range = 17.6374
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Node" index="2"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1607, 4.47348, -1.42793)
 light_color = Color(0.904628, 0.892108, 0.887867, 1)
 light_energy = 1.878
@@ -111,7 +111,7 @@ light_specular = 0.0
 light_bake_mode = 1
 omni_range = 17.6374
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Node" index="3"]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.164261, 4.47348, 4.16641)
 light_color = Color(0.904628, 0.892108, 0.887867, 1)
 light_energy = 1.878
@@ -120,12 +120,12 @@ light_specular = 0.0
 light_bake_mode = 1
 omni_range = 17.6374
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Node" index="4"]
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15164, 0.579006, 1.97177)
 light_color = Color(0.943013, 0.630328, 0.291936, 1)
 light_energy = 4.681
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Node" index="5"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" index="5"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.09304, 2.23282, 2.00654)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 3.045
@@ -135,7 +135,7 @@ spot_attenuation = 1.8025
 spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="Node" index="6"]
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights" index="6"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.36302, 1.765, 1.37374)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 1.242
@@ -145,7 +145,7 @@ spot_attenuation = 1.8025
 spot_angle = 28.2025
 spot_angle_attenuation = 0.435276
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="Node" index="7"]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" index="7"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.22269, 1.64052, 2.35011)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 1.433
@@ -155,7 +155,7 @@ spot_attenuation = 1.8025
 spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="Node" index="8"]
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" index="8"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.49944, 3.20151, -1.38564)
 light_color = Color(0.8, 1, 1, 1)
 light_energy = 1.182
@@ -165,7 +165,7 @@ spot_attenuation = 1.8025
 spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="Node" index="9"]
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" index="9"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.34032, 2.82618, -0.703643)
 light_color = Color(0.8, 1, 1, 1)
 light_energy = 1.332
@@ -175,7 +175,7 @@ spot_attenuation = 1.8025
 spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="Node" index="10"]
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights" index="10"]
 transform = Transform3D(0.99984, -7.81176e-10, 0.0178712, -0.0178712, -4.37044e-08, 0.99984, 0, -1, -4.37114e-08, 4.74773, 2.08436, -3.39584)
 light_color = Color(1, 1, 0.831373, 1)
 light_energy = 5.539
