@@ -1,18 +1,28 @@
 extends Node3D
 
-var _spring_arm: SpringArm3D
-var speed = 10
+var speed = 6
 
 func _ready():
-	_spring_arm = $SpringArm3D
-
+	pass
+"""
 func _physics_process(delta):
-	var move_direction = Vector3.ZERO
-	move_direction.x = Input.get_action_strength("left") - Input.get_action_strength("right")
-	move_direction.z = Input.get_action_strength("forward") - Input.get_action_strength("back")
-	
-	# Rotate move_direction according to _spring_arm's rotation
-	move_direction = move_direction.rotated(Vector3.UP, _spring_arm.rotation.y)
-	move_direction = move_direction.normalized()
+	var direction = Vector3.ZERO
+	#move_direction.x = Input.get_action_strength("left") - Input.get_action_strength("right")
+	#move_direction.z = Input.get_action_strength("forward") - Input.get_action_strength("back")
+	#move_direction = move_direction.normalized()
 	# Move the node
-	translate_object_local(move_direction * speed * delta)
+	#translate_object_local(move_direction * speed * delta)
+	if Input.is_action_pressed("forward"):
+		direction.z +=1
+	if Input.is_action_pressed("back"):
+		direction.z-=1
+	if Input.is_action_pressed("right"):
+		direction.x+=1
+	if Input.is_action_pressed("left"):
+		direction.x-=1
+		
+	if direction!= Vector3.ZERO:
+		direction = direction.normalized()
+		$Posi
+		
+"""	

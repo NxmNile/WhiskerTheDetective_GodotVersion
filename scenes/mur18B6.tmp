@@ -17,5 +17,3 @@ script = ExtResource("3_2hbn0")
 
 [node name="catDetective" parent="Nophis" instance=ExtResource("2_wk66f")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
-
-[node name="Marker3D" type="Marker3D" parent="Nophis"]
