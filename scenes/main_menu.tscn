@@ -1,13 +1,78 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvj0v3fd5brce"]
+[gd_scene load_steps=19 format=3 uid="uid://cvj0v3fd5brce"]
 
 [ext_resource type="Script" path="res://scripts/SceneChanger.gd" id="1_jd72h"]
 [ext_resource type="Texture2D" uid="uid://dqrwxtg4cuk8m" path="res://assets/Menu.png" id="1_l7ulx"]
 [ext_resource type="Texture2D" uid="uid://bpq6gkrdk2tgk" path="res://assets/4498fd18c59c6d058bd083fa6c2b7f96-resized.png" id="2_jr57v"]
 [ext_resource type="Texture2D" uid="uid://dlmt0ef2xieqi" path="res://UI/yellowRectNormal.png" id="3_73mgk"]
 [ext_resource type="FontFile" uid="uid://deigtwdpbmrw6" path="res://Fonts/Itim-Regular.ttf" id="4_q1td6"]
+[ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="6_3e6di"]
+[ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="7_rumlr"]
+[ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="8_8sub4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxtqo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywa6c"]
+font = ExtResource("4_q1td6")
+font_size = 90
+
+[sub_resource type="LabelSettings" id="LabelSettings_13jgt"]
+font = ExtResource("4_q1td6")
+font_size = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgbgd"]
+bg_color = Color(0.154876, 0.154876, 0.154876, 0.415686)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyxr7"]
+bg_color = Color(0.957918, 0.80729, 0.61882, 1)
+border_color = Color(0.993597, 0.706825, 0.793039, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing_size = 0.01
+
+[sub_resource type="LabelSettings" id="LabelSettings_643yt"]
+font = ExtResource("4_q1td6")
+font_size = 141
+font_color = Color(0, 0, 0, 1)
+outline_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dv40f"]
+bg_color = Color(1, 0.67451, 0.670588, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amgtn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cd610"]
+bg_color = Color(1, 0, 0.243137, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxpl5"]
+bg_color = Color(1, 0.284297, 0.346101, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -67,12 +132,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 92.9067
+offset_right = -101.093
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("4_q1td6")
 theme_override_font_sizes/font_size = 112
 text = "Play"
+label_settings = SubResource("LabelSettings_ywa6c")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -110,12 +178,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 92.9067
+offset_right = -101.093
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("4_q1td6")
 theme_override_font_sizes/font_size = 112
 text = "Exit"
+label_settings = SubResource("LabelSettings_13jgt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -139,6 +210,207 @@ theme_override_font_sizes/font_size = 85
 text = "Whisker
 The Detective"
 horizontal_alignment = 1
+
+[node name="SettingButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 533.0
+offset_top = -334.0
+offset_right = 541.0
+offset_bottom = -326.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.32, 10.32)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgbgd")
+
+[node name="Setting" type="TextureRect" parent="SettingButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 248.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0310067, 0.0310067)
+texture = ExtResource("6_3e6di")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -121.0
+offset_right = -168.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(11.8067, 6.50019)
+theme_override_styles/panel = SubResource("StyleBoxFlat_dyxr7")
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0698755
+anchor_top = 0.219224
+anchor_right = 0.0698761
+anchor_bottom = 0.219224
+offset_right = 793.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Language"
+label_settings = SubResource("LabelSettings_643yt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0698755
+anchor_top = 0.55383
+anchor_right = 0.0698761
+anchor_bottom = 0.55383
+offset_right = 519.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Sound
+"
+label_settings = SubResource("LabelSettings_643yt")
+metadata/_edit_use_anchors_ = true
+
+[node name="ENButton" type="Button" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 17.1089
+offset_top = 9.53818
+offset_right = 26.1089
+offset_bottom = 16.5382
+theme_override_styles/normal = SubResource("StyleBoxFlat_dv40f")
+
+[node name="ENflag" type="TextureRect" parent="Panel/Panel/ENButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.331322
+anchor_top = 0.499996
+anchor_right = 0.331329
+anchor_bottom = 0.5
+offset_left = -2.3649
+offset_top = -2.50197
+offset_right = 1397.64
+offset_bottom = 1397.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0018773, 0.00339199)
+texture = ExtResource("7_rumlr")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel/Panel/ENButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400142
+anchor_top = 0.223064
+anchor_right = 0.400143
+anchor_bottom = 0.223063
+offset_left = 0.573111
+offset_top = -1.32308
+offset_right = 358.573
+offset_bottom = 168.677
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "EN"
+label_settings = SubResource("LabelSettings_643yt")
+
+[node name="JPButton" type="Button" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 27.9502
+offset_top = 9.53818
+offset_right = 36.9502
+offset_bottom = 16.5382
+theme_override_styles/normal = SubResource("StyleBoxFlat_dv40f")
+
+[node name="Panel" type="Panel" parent="Panel/Panel/JPButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.141162
+anchor_top = 0.131864
+anchor_right = 0.447577
+anchor_bottom = 0.814087
+offset_right = 37.2423
+offset_bottom = 35.2244
+scale = Vector2(0.0759089, 0.132253)
+theme_override_styles/panel = SubResource("StyleBoxFlat_amgtn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Panel/Panel/JPButton/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.4004
+offset_top = -12.2686
+offset_right = 28.5996
+offset_bottom = 27.7314
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.563267, 0.597903)
+theme_override_styles/panel = SubResource("StyleBoxFlat_cd610")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel/Panel/JPButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498775
+anchor_top = 0.0219772
+anchor_right = 1.36007
+anchor_bottom = 1.41509
+offset_left = 0.0340266
+offset_top = 0.000159696
+offset_right = 160.282
+offset_bottom = 160.248
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "JP"
+label_settings = SubResource("LabelSettings_643yt")
+
+[node name="Button" type="Button" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 36.1659
+offset_top = -2.76915
+offset_right = 44.1659
+offset_bottom = 5.23085
+scale = Vector2(0.567354, 0.96007)
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxpl5")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.23928
+offset_top = 1.76264
+offset_right = 250.239
+offset_bottom = 249.763
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0141601, 0.0141601)
+texture = ExtResource("8_8sub4")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

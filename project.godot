@@ -44,6 +44,10 @@ left={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Translation.en.translation", "res://Translation.jp.translation")
+
 [layer_names]
 
 3d_physics/layer_1="tree"
