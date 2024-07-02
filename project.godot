@@ -46,7 +46,7 @@ left={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translation.en.translation", "res://Translation.jp.translation")
+locale/translations=PackedStringArray("res://Translation.jp.translation", "res://Translation.en.translation")
 
 [layer_names]
 
