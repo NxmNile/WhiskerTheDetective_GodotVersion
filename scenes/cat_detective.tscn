@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvw86dy0w0we"]
+[gd_scene load_steps=2 format=3 uid="uid://cjvw86dy0w0we"]
 
 [ext_resource type="PackedScene" uid="uid://bu3nnj8aktq5a" path="res://assets/catDetective.glb" id="1_xgs5n"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_xllkf"]
-height = 4.552
-radius = 1.175
 
 [node name="catDetective" instance=ExtResource("1_xgs5n")]
 
@@ -37,12 +33,3 @@ bones/33/position = Vector3(-0.229758, 1.25392, -1.5444)
 
 [node name="AnimationPlayer" parent="." index="1"]
 speed_scale = 0.8
-
-[node name="RigidBody3D" type="RigidBody3D" parent="." index="2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27177, 0.147482)
-shape = SubResource("CylinderShape3D_xllkf")
-
-[node name="SpringArm3D" type="SpringArm3D" parent="." index="3"]
-unique_name_in_owner = true

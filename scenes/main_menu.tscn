@@ -77,7 +77,7 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmj14"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21m5t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or5dx"]
 bg_color = Color(0.886966, 0.545404, 0.599298, 1)
@@ -359,7 +359,7 @@ offset_bottom = 17.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_dv40f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ivd83")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gvvx1")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hmj14")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_21m5t")
 
 [node name="Panel" type="Panel" parent="SettingPanel/Panel/ENButton"]
 layout_mode = 1

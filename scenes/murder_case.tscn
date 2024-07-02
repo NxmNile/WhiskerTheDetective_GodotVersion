@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://duxsghk0b6amm"]
+[gd_scene load_steps=7 format=3 uid="uid://duxsghk0b6amm"]
 
 [ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
 [ext_resource type="PackedScene" uid="uid://cjvw86dy0w0we" path="res://scenes/cat_detective.tscn" id="2_wk66f"]
 [ext_resource type="Script" path="res://scenes/Nophis.gd" id="3_2hbn0"]
+[ext_resource type="Script" path="res://scenes/RayCast3D.gd" id="4_efwl8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_75svy"]
+height = 3.067
+radius = 0.983
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ejfbm"]
+size = Vector3(8.52905, 1.30859, 4.30225)
 
 [node name="MurderCase" type="Node3D"]
 
@@ -11,11 +19,30 @@
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.684636, 0.728885, 0, -0.728885, 0.684636, -0.10393, 8.12947, 7.17069)
 
-[node name="Nophis" type="Area3D" parent="."]
+[node name="Character" type="Area3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
+collision_layer = 2
 script = ExtResource("3_2hbn0")
 
-[node name="catDetective" parent="Nophis" instance=ExtResource("2_wk66f")]
+[node name="catDetective" parent="Character" instance=ExtResource("2_wk66f")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Marker3D" type="Marker3D" parent="Nophis"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Character"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59479, 0)
+shape = SubResource("CylinderShape3D_75svy")
+
+[node name="RayCast3D" type="RayCast3D" parent="Character"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 3.39162e-08, 1.61434, 0.387956)
+collide_with_areas = true
+debug_shape_thickness = 5
+script = ExtResource("4_efwl8")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.540179, 2.45106)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -0.165805, -0.986159, 0, 0.986159, -0.165805, 0.757446, 1.65385, 0.121603)
+shape = SubResource("BoxShape3D_ejfbm")
+
+[connection signal="body_entered" from="Area3D" to="Character" method="_on_area_3d_body_entered"]

@@ -34,3 +34,4 @@ func _process(delta):
 		
 		# Apply the interpolated rotation to the node
 		global_transform.basis = Basis(interpolated_quat)
+
