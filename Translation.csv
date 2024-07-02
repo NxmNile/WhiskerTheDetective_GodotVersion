@@ -1,9 +1,9 @@
 ﻿key,en,jp
-PlayButton,Play,プレイ
+StartButton,Start Game,ゲーム開始
 ExitButton,Exit,終了
 CreditButton,Credit,クレジット
 TryButton,Try Again,もう一度試す
 Language,Language,言語
-Sound,Sound,音
+LabelSound,Volume,ボリューム
 EN,EN,英語
 JP,JP,日本語

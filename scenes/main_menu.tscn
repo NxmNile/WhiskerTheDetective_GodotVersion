@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cvj0v3fd5brce"]
+[gd_scene load_steps=34 format=3 uid="uid://cvj0v3fd5brce"]
 
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_jd72h"]
 [ext_resource type="Texture2D" uid="uid://dqrwxtg4cuk8m" path="res://assets/Menu.png" id="1_l7ulx"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="7_rumlr"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="8_8sub4"]
 [ext_resource type="Texture2D" uid="uid://b0wkyi22ihd6u" path="res://UI/jP.png" id="9_7xm2r"]
+[ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="12_hf8in"]
+[ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="13_10k3t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxtqo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -19,13 +21,15 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ywa6c"]
 font = ExtResource("6_6abgh")
-font_size = 90
+font_size = 70
+font_color = Color(0.318684, 0.164204, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1yumf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_13jgt"]
 font = ExtResource("6_6abgh")
-font_size = 90
+font_size = 70
+font_color = Color(0.317647, 0.164706, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgbgd"]
 bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
@@ -190,7 +194,7 @@ grow_vertical = 2
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("4_q1td6")
 theme_override_font_sizes/font_size = 112
-text = "Play"
+text = "Start"
 label_settings = SubResource("LabelSettings_ywa6c")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -334,14 +338,14 @@ metadata/_edit_use_anchors_ = true
 [node name="LabelSound" type="Label" parent="SettingPanel/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0698755
-anchor_top = 0.55383
-anchor_right = 0.0698761
-anchor_bottom = 0.55383
+anchor_left = 0.0754717
+anchor_top = 0.55
+anchor_right = 27.7925
+anchor_bottom = 4.225
 offset_right = 519.0
 offset_bottom = 230.0
 scale = Vector2(0.0216527, 0.042399)
-text = "Sound"
+text = "Volume"
 label_settings = SubResource("LabelSettings_643yt")
 metadata/_edit_use_anchors_ = true
 
@@ -486,6 +490,38 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.0141601, 0.0141601)
 texture = ExtResource("8_8sub4")
+
+[node name="TextureRect" type="TextureRect" parent="SettingPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 21.0
+offset_right = 182.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("12_hf8in")
+
+[node name="TextureRect2" type="TextureRect" parent="SettingPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = 21.0
+offset_right = 468.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("13_10k3t")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
