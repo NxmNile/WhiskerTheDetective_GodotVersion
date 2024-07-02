@@ -297,6 +297,7 @@ scale = Vector2(0.0310067, 0.0310067)
 texture = ExtResource("6_3e6di")
 
 [node name="SettingPanel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
