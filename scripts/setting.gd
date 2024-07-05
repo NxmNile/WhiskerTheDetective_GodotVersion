@@ -4,11 +4,14 @@ extends Node
 @onready var parent_node = $".."
 func _ready():
 	if Keepdata.language == "en":
+		TranslationServer.set_locale("en")
 		$Panel/ENButton/Panel.visible = true
 		$Panel/JPButton/Panel2.visible = false
 	else:
+		TranslationServer.set_locale("jp")
 		$Panel/ENButton/Panel.visible = false
 		$Panel/JPButton/Panel2.visible = true
+	$Panel/LabelSound.text = tr("LabelSound")
 	pass
 
 func _on_en_button_pressed():
