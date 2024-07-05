@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://duxsghk0b6amm"]
+[gd_scene load_steps=46 format=3 uid="uid://duxsghk0b6amm"]
 
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="1_12ck4"]
 [ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dx3t7x4se5kql" path="res://assets/phonecall.png" id="7_nleot"]
 [ext_resource type="Texture2D" uid="uid://lptkmrobukbu" path="res://assets/bankRecord.png" id="8_0ivsm"]
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="8_6wdpa"]
-[ext_resource type="Texture2D" uid="uid://d1yciedqjudr7" path="res://assets/window.png" id="9_eyuul"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="9_omrxe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j30t6"]
@@ -41,16 +40,6 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5anag"]
-bg_color = Color(0.678749, 0.133306, 0.210366, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cuqeo"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0f57"]
 bg_color = Color(0.957918, 0.80729, 0.61882, 1)
 border_color = Color(0.993597, 0.706825, 0.793039, 1)
@@ -62,7 +51,7 @@ anti_aliasing_size = 0.01
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ja7a"]
 font = ExtResource("1_12ck4")
-font_size = 120
+font_size = 141
 font_color = Color(0, 0, 0, 1)
 outline_size = 32
 
@@ -148,42 +137,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkqvi"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_vubkq"]
-font = ExtResource("1_12ck4")
-font_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1cg1"]
-bg_color = Color(0.535173, 0.785843, 0.479025, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-anti_aliasing = false
-
-[sub_resource type="LabelSettings" id="LabelSettings_6ub6t"]
-font = ExtResource("1_12ck4")
-font_size = 60
-font_color = Color(0.159405, 0.218786, 0.123335, 1)
-outline_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fo3cy"]
-bg_color = Color(0.176299, 0.325984, 0.243816, 1)
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
-
-[sub_resource type="LabelSettings" id="LabelSettings_cc2tn"]
-font = ExtResource("1_12ck4")
-font_size = 100
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_75svy"]
 height = 3.067
 radius = 0.983
@@ -230,14 +183,6 @@ Bank = "Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly 
 WindowB = "A shattered window suggesting a possible break-in."
 Weapon = "The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints."
 
-[node name="Panel2" type="Panel" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Panel" type="Panel" parent="Camera3D/Control"]
 layout_mode = 0
 offset_top = 540.0
@@ -245,7 +190,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j30t6")
 
-[node name="descriptionLabel" type="Label" parent="Camera3D/Control/Panel"]
+[node name="Label" type="Label" parent="Camera3D/Control/Panel"]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 33.0
@@ -262,8 +207,6 @@ offset_right = 1250.0
 offset_bottom = -6.0
 scale = Vector2(5.10668, 5.10668)
 theme_override_styles/normal = SubResource("StyleBoxFlat_mgmx2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5anag")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cuqeo")
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/Panel/CloseButton"]
 layout_mode = 1
@@ -362,23 +305,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.920001, 0.760001)
 texture = ExtResource("8_0ivsm")
-
-[node name="Window" type="TextureRect" parent="Camera3D/Control/Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -563.0
-offset_right = 259.0
-offset_bottom = -62.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.920001, 0.760001)
-texture = ExtResource("9_eyuul")
 
 [node name="SettingPanel" type="Panel" parent="Camera3D/Control"]
 visible = false
@@ -637,67 +563,6 @@ grow_vertical = 2
 scale = Vector2(0.0310067, 0.0310067)
 texture = ExtResource("9_omrxe")
 
-[node name="NumberofClues" type="Label" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 93.0
-offset_right = 74.0
-offset_bottom = 116.0
-text = "Clues"
-label_settings = SubResource("LabelSettings_vubkq")
-
-[node name="NumberofClues2" type="Label" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 93.0
-offset_right = 182.0
-offset_bottom = 122.0
-text = ": 0 / 8"
-label_settings = SubResource("LabelSettings_vubkq")
-
-[node name="InvestigatePanel" type="Panel" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 272.0
-offset_top = 261.0
-offset_right = 312.0
-offset_bottom = 301.0
-scale = Vector2(4.24, 1.7266)
-theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
-
-[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel"]
-layout_mode = 0
-offset_left = 4.71698
-offset_top = 9.26678
-offset_right = 331.717
-offset_bottom = 94.2668
-scale = Vector2(0.095713, 0.247454)
-text = "Investigate"
-label_settings = SubResource("LabelSettings_6ub6t")
-
-[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel"]
-layout_mode = 0
-offset_left = 34.434
-offset_top = -6.95009
-offset_right = 42.434
-offset_bottom = 1.04991
-scale = Vector2(1.04297, 2.63225)
-theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
-
-[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel/Button"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.26133
-offset_top = 0.440059
-offset_right = 44.2613
-offset_bottom = 133.44
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0869526, 0.0600608)
-text = "F"
-label_settings = SubResource("LabelSettings_cc2tn")
-
 [node name="Character" type="Area3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
 collision_layer = 2
@@ -769,5 +634,4 @@ shape = SubResource("BoxShape3D_jkfqn")
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/ENButton" to="Camera3D/Control/SettingPanel" method="_on_en_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/JPButton" to="Camera3D/Control/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/CloseButton" to="Camera3D/Control/SettingPanel" method="_on_close_button_pressed"]
-[connection signal="pressed" from="Camera3D/Control/SettingButton" to="Camera3D/Control" method="_on_setting_button_pressed"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
