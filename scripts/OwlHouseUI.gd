@@ -5,7 +5,8 @@ extends Control
 @export var Bank: String
 @export var WindowB : String
 @export var Weapon : String
-
+@onready var character = $"../../Character"
+@onready var investigate = $"../../InteractionCol"
 var imageIndex = 0
 var description =[[Bank,"BankRecord"],[Diary,"Diary"],[Weapon,"Weapon"],[Letter,"Letter"],[Phone,"PhoneRecord"],[WindowB,"Window"]]
 var descriptionText
@@ -18,8 +19,6 @@ func _ready():
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name = "OwlHouse"
 	#$NumberofClues.text = tr("Clues")
-	display_description("BankRecord")
-	$Panel/Bank.visible = true
 	pass # Replace with function body.
 
 
@@ -45,26 +44,30 @@ func display_description(name):
 		descriptionText = Letter
 		Keepdata.cluses[3] = true
 		$Panel/Letter.visible = true
-	elif name == "Phone":
+	elif name == "PhoneRecord":
 		descriptionText = Phone
 		Keepdata.cluses[4] = true
 		$Panel/Phone.visible = true
-	elif name == "WindowB":
+	elif name == "Window":
 		Keepdata.cluses[5] = true
 		descriptionText=WindowB
 		$Panel/Window.visible = true
 	$Panel/descriptionLabel.text = descriptionText
 	$Panel/descriptionLabel.text = tr(object_name)
 	Keepdata.check_clues()
-	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 6"
 	pass
 func change_to_eng():
 	TranslationServer.set_locale("en")
-	$Panel/descriptionLabel.text = tr(object_name)
+	$ExitPane/Exit.text = tr("ExitButton")
+	if(object_name!=null):
+		$Panel/descriptionLabel.text = tr(object_name)
 	pass
 func change_to_jp():
 	TranslationServer.set_locale("jp")
-	$Panel/descriptionLabel.text = tr(object_name)
+	$ExitPane/Exit.text = tr("ExitButton")
+	if(object_name!=null):
+		$Panel/descriptionLabel.text = tr(object_name)
 	pass
 
 
@@ -77,6 +80,9 @@ func _on_close_button_pressed():
 	$Panel/Window.visible = false
 	$Panel2.visible = false
 	$Panel.visible = false
+	character.move_speed = 6
+	character.rotation_speed = 20
+	investigate.is_in_collider = false
 	pass # Replace with function body.
 
 

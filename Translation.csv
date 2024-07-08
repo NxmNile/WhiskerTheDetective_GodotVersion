@@ -1,21 +1,22 @@
 ﻿key,en,jp
-StartButton,Start Game,ゲーム開始
-ExitButton,Exit,終了
+StartButton,Start Game,はじめる
+ExitButton,Exit,でる
 CreditButton,Credit,クレジット
-TryButton,Try Again,もう一度試す
-Language,Language,言語
-LabelSound,Volume,ボリューム
+TryButton,Try Again,リトライ
+Language,Language,音の大きさ
+LabelSound,Volume,言語
 EN,EN,英語
 JP,JP,日本語
-Weapon,"The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints.",殺人に使われた武器: ドクター・フーティのコレクションにある古代の遺物 (儀式用の短剣)、指紋が拭き取られた状態で発見された。
-Window,A shattered window suggesting a possible break-in.,割れた窓が侵入の可能性を示唆している。
-Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger.,日記: 欠落したページから、ドクター・フーティが夫とマクシー・バジャーに関わる重大な詐欺を暴露しようとしていたことが明らかになった。
-PhoneRecord,"Phone Records: Reveal multiple calls between Dr. Hootie and an unknown number, traced back to a burner phone found in Maxie's possession.",ドクター・フーティと不明な番号の間で複数の通話があったことが判明し、その番号はマクシーの所持していた使い捨て携帯電話に繋がっている。
-Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint.,割れた窓の近くの泥の足跡が、マクシー・バジャーの足跡と一致する。
-Letter,"A threatening letter addressed to Dr. Hootie found in the room's fireplace, partially burned.",ドクター・フーティ宛ての脅迫状が部屋の暖炉で部分的に焼けた状態で発見された。
-BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly before Dr. Hootie's death.,銀行記録: ドクター・フーティの死の直前に、ホーキン・オウルが多額の現金を引き出していたことが示されている。
-Camera,"Security Camera Footage: Shows Bunny Alice entering the house late at night, after her claimed visit time.",監視カメラの映像: バニー・アリスが主張していた訪問時間の後、深夜に家に入る様子が映っている。
+Weapon,"The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints.",凶器：ドクター・フーティのコレクションの古代遺物，指紋は拭きとられている
+Window,A shattered window suggesting a possible break-in.,窓が割れている．誰か入って来たらしい
+Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger.,日記：どうやらドクター・フーティが夫とマクシー・パジャーに関わる詐欺を暴露しようとしたらしい
+PhoneRecord,"Phone Records: Reveal multiple calls between Dr. Hootie and an unknown number, traced back to a burner phone found in Maxie's possession.",不明な番号との通話が記録されている．不明の番号はマクシーの使い捨ての携帯電話のようだ
+Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint.,窓の近くの足跡は，マクシー・パジャーのものと一致している
+Letter,"A threatening letter addressed to Dr. Hootie found in the room's fireplace, partially burned.",ドクター・フーティ宛の脅迫状が，暖炉に入れられたが，燃え残っている
+BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly before Dr. Hootie's death.,銀行の取引記録：ドクター・フーティの死の直前に、ホーキン・オウルが多額の現金を引き出していたらしい
+Camera,"Security Camera Footage: Shows Bunny Alice entering the house late at night, after her claimed visit time.",監視カメラの映像:：バニー・アリスは主張した訪問時間より遅く、深夜に家に入る様子が映っている。
 Clues,Clues,手がかり
+Investigate,Investigate,しらべる
 InterviewOwl1,Whisker : Can you tell me where you were last night between 8 PM and midnight?,探偵のウィスカー: 昨夜の午後8時から午前0時までどこにいたか教えていただけますか？
 InterviewOwl2,Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.,
 InterviewOwl3,Whisker : Is there anyone who can confirm your alibi?,

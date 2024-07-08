@@ -5,7 +5,6 @@ var has_rotated_90_degrees = false
 var rotation_threshold = deg_to_rad(90)  # 90 degrees in radians
 var initial_rotation_y = 0
 var has_collided = false
-
 func _process(delta):
 	var direction = Vector3.ZERO
 	
@@ -59,6 +58,5 @@ func Collide():
 	has_collided =true
 
 func _on_area_entered(area):
-
 	print(area.name)
 	pass # Replace with function body.

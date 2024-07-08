@@ -85,7 +85,7 @@ light_color = Color(0.943013, 0.630328, 0.291936, 1)
 light_energy = 4.681
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" index="5"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.09304, 2.23282, 2.00654)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.09304, 2.64468, 2.00654)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 3.045
 light_specular = 0.0
@@ -95,7 +95,7 @@ spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="Lights" index="6"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.36302, 1.765, 1.37374)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.36302, 2.84192, 1.37374)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 1.242
 light_specular = 0.0
@@ -105,13 +105,13 @@ spot_angle = 28.2025
 spot_angle_attenuation = 0.435276
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Lights" index="7"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.22269, 1.64052, 2.35011)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.2382, 2.83874, 2.15883)
 light_color = Color(1, 1, 0.815686, 1)
 light_energy = 1.433
 light_specular = 0.0
-spot_range = 3.33763
+spot_range = 4.26969
 spot_attenuation = 1.8025
-spot_angle = 42.5609
+spot_angle = 29.8708
 spot_angle_attenuation = 0.435276
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="Lights" index="8"]
@@ -135,11 +135,11 @@ spot_angle = 42.5609
 spot_angle_attenuation = 0.435276
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="Lights" index="10"]
-transform = Transform3D(0.99984, -7.81176e-10, 0.0178712, -0.0178712, -4.37044e-08, 0.99984, 0, -1, -4.37114e-08, 4.74773, 2.08436, -3.39584)
+transform = Transform3D(0.99984, -7.81175e-10, 0.0178712, -0.0178712, -4.37044e-08, 0.99984, 0, -1, -4.37114e-08, 4.74773, 3.0531, -3.39584)
 light_color = Color(1, 1, 0.831373, 1)
 light_energy = 5.539
 light_specular = 0.0
-spot_range = 2.41981
+spot_range = 3.94531
 spot_attenuation = 1.8025
-spot_angle = 28.5158
+spot_angle = 23.69
 spot_angle_attenuation = 0.435276

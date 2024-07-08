@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://duxsghk0b6amm"]
+[gd_scene load_steps=60 format=3 uid="uid://duxsghk0b6amm"]
 
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="1_12ck4"]
 [ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="8_6wdpa"]
 [ext_resource type="Texture2D" uid="uid://d1yciedqjudr7" path="res://assets/window.png" id="9_eyuul"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="9_omrxe"]
+[ext_resource type="Script" path="res://scenes/Investigation.gd" id="20_bt6wp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j30t6"]
 bg_color = Color(1, 0.875046, 0.548086, 1)
@@ -50,6 +51,51 @@ corner_radius_bottom_left = 3
 anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cuqeo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqsq5"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkqvi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vubkq"]
+font = ExtResource("1_12ck4")
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1cg1"]
+bg_color = Color(0.535173, 0.785843, 0.479025, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ub6t"]
+font = ExtResource("1_12ck4")
+font_size = 60
+font_color = Color(0.159405, 0.218786, 0.123335, 1)
+outline_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fo3cy"]
+bg_color = Color(0.176299, 0.325984, 0.243816, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_cc2tn"]
+font = ExtResource("1_12ck4")
+font_size = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0f57"]
 bg_color = Color(0.957918, 0.80729, 0.61882, 1)
@@ -139,51 +185,6 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqsq5"]
-bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkqvi"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vubkq"]
-font = ExtResource("1_12ck4")
-font_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1cg1"]
-bg_color = Color(0.535173, 0.785843, 0.479025, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-anti_aliasing = false
-
-[sub_resource type="LabelSettings" id="LabelSettings_6ub6t"]
-font = ExtResource("1_12ck4")
-font_size = 60
-font_color = Color(0.159405, 0.218786, 0.123335, 1)
-outline_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fo3cy"]
-bg_color = Color(0.176299, 0.325984, 0.243816, 1)
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
-
-[sub_resource type="LabelSettings" id="LabelSettings_cc2tn"]
-font = ExtResource("1_12ck4")
-font_size = 100
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_75svy"]
 height = 3.067
 radius = 0.983
@@ -195,7 +196,10 @@ size = Vector3(14.065, 6.74, 0.37)
 size = Vector3(0.46, 6.525, 9.28)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6j3b8"]
-size = Vector3(4.44, 6.735, 4.77)
+size = Vector3(4.44, 6.735, 0.51)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gpwwl"]
+size = Vector3(0.565, 6.96, 3.22)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p3bo3"]
 size = Vector3(7.87, 5.4, 0.265)
@@ -211,6 +215,21 @@ size = Vector3(1.75, 3.655, 1.77)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkfqn"]
 size = Vector3(1.045, 4.37, 3.535)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o47xv"]
+height = 3.538
+radius = 1.78
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2dxhb"]
+radius = 1.346
+height = 3.39346
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2c1ip"]
+radius = 1.376
+height = 4.108
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uogef"]
+size = Vector3(4.7, 4.33, 1)
 
 [node name="MurderCase" type="Node3D"]
 
@@ -231,6 +250,7 @@ WindowB = "A shattered window suggesting a possible break-in."
 Weapon = "The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints."
 
 [node name="Panel2" type="Panel" parent="Camera3D/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -239,6 +259,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Camera3D/Control"]
+visible = false
 layout_mode = 0
 offset_top = 540.0
 offset_right = 1280.0
@@ -379,6 +400,362 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.920001, 0.760001)
 texture = ExtResource("9_eyuul")
+
+[node name="SettingButton" type="Button" parent="Camera3D/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 533.0
+offset_top = -334.0
+offset_right = 541.0
+offset_bottom = -326.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.32, 10.32)
+theme_override_styles/normal = SubResource("StyleBoxFlat_nqsq5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jkqvi")
+
+[node name="Setting" type="TextureRect" parent="Camera3D/Control/SettingButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 248.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0310067, 0.0310067)
+texture = ExtResource("9_omrxe")
+
+[node name="NumberofClues" type="Label" parent="Camera3D/Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 93.0
+offset_right = 74.0
+offset_bottom = 116.0
+text = "Clues"
+label_settings = SubResource("LabelSettings_vubkq")
+
+[node name="NumberofClues2" type="Label" parent="Camera3D/Control"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 93.0
+offset_right = 182.0
+offset_bottom = 122.0
+text = ": 0 / 6"
+label_settings = SubResource("LabelSettings_vubkq")
+
+[node name="InvestigatePanel" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 301.0
+offset_top = 346.0
+offset_right = 341.0
+offset_bottom = 386.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="InvestigatePanel2" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 657.0
+offset_top = 346.0
+offset_right = 697.0
+offset_bottom = 386.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel2"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel2"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel2/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="InvestigatePanel5" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 827.0
+offset_top = 389.0
+offset_right = 867.0
+offset_bottom = 429.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel5"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel5"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel5/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="InvestigatePanel6" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 771.0
+offset_top = 185.0
+offset_right = 811.0
+offset_bottom = 225.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel6"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel6"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel6/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="InvestigatePanel3" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 657.0
+offset_top = 222.0
+offset_right = 697.0
+offset_bottom = 262.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel3"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel3"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel3/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="InvestigatePanel4" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 527.0
+offset_top = 187.0
+offset_right = 567.0
+offset_bottom = 227.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel4"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Investigate"
+label_settings = SubResource("LabelSettings_6ub6t")
+
+[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel4"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel4/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
+
+[node name="ExitPane" type="Panel" parent="Camera3D/Control"]
+visible = false
+layout_mode = 0
+offset_left = 598.0
+offset_top = 573.0
+offset_right = 638.0
+offset_bottom = 613.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
+
+[node name="Exit" type="Label" parent="Camera3D/Control/ExitPane"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Exit"
+label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Camera3D/Control/ExitPane"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
+
+[node name="Label" type="Label" parent="Camera3D/Control/ExitPane/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_cc2tn")
 
 [node name="SettingPanel" type="Panel" parent="Camera3D/Control"]
 visible = false
@@ -608,100 +985,9 @@ grow_vertical = 2
 scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("8_6wdpa")
 
-[node name="SettingButton" type="Button" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 533.0
-offset_top = -334.0
-offset_right = 541.0
-offset_bottom = -326.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(10.32, 10.32)
-theme_override_styles/normal = SubResource("StyleBoxFlat_nqsq5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jkqvi")
-
-[node name="Setting" type="TextureRect" parent="Camera3D/Control/SettingButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 248.0
-offset_bottom = 248.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0310067, 0.0310067)
-texture = ExtResource("9_omrxe")
-
-[node name="NumberofClues" type="Label" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 93.0
-offset_right = 74.0
-offset_bottom = 116.0
-text = "Clues"
-label_settings = SubResource("LabelSettings_vubkq")
-
-[node name="NumberofClues2" type="Label" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 93.0
-offset_right = 182.0
-offset_bottom = 122.0
-text = ": 0 / 8"
-label_settings = SubResource("LabelSettings_vubkq")
-
-[node name="InvestigatePanel" type="Panel" parent="Camera3D/Control"]
-layout_mode = 0
-offset_left = 272.0
-offset_top = 261.0
-offset_right = 312.0
-offset_bottom = 301.0
-scale = Vector2(4.24, 1.7266)
-theme_override_styles/panel = SubResource("StyleBoxFlat_j1cg1")
-
-[node name="InvestigateText" type="Label" parent="Camera3D/Control/InvestigatePanel"]
-layout_mode = 0
-offset_left = 4.71698
-offset_top = 9.26678
-offset_right = 331.717
-offset_bottom = 94.2668
-scale = Vector2(0.095713, 0.247454)
-text = "Investigate"
-label_settings = SubResource("LabelSettings_6ub6t")
-
-[node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel"]
-layout_mode = 0
-offset_left = 34.434
-offset_top = -6.95009
-offset_right = 42.434
-offset_bottom = 1.04991
-scale = Vector2(1.04297, 2.63225)
-theme_override_styles/normal = SubResource("StyleBoxFlat_fo3cy")
-
-[node name="Label" type="Label" parent="Camera3D/Control/InvestigatePanel/Button"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.26133
-offset_top = 0.440059
-offset_right = 44.2613
-offset_bottom = 133.44
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0869526, 0.0600608)
-text = "F"
-label_settings = SubResource("LabelSettings_cc2tn")
-
 [node name="Character" type="Area3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
 collision_layer = 2
-collision_mask = 5
 script = ExtResource("3_2hbn0")
 
 [node name="catDetective" parent="Character" instance=ExtResource("2_wk66f")]
@@ -736,12 +1022,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87748, 2.65973, 0.0193691)
 shape = SubResource("BoxShape3D_wj1al")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="OwlHouse"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5564, 2.65973, 6.93369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5564, 2.65973, 4.82794)
 shape = SubResource("BoxShape3D_6j3b8")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="OwlHouse"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56897, 2.65973, 6.95166)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56897, 2.65973, 4.82072)
 shape = SubResource("BoxShape3D_6j3b8")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="OwlHouse"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62565, 2.65973, 6.49495)
+shape = SubResource("BoxShape3D_gpwwl")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="OwlHouse"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62729, 2.65973, 6.49495)
+shape = SubResource("BoxShape3D_gpwwl")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="OwlHouse"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160928, 2.65973, 6.90794)
@@ -763,11 +1057,82 @@ shape = SubResource("BoxShape3D_nnxcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14203, 1.82949, -2.54401)
 shape = SubResource("BoxShape3D_jkfqn")
 
-[node name="Extra" type="Area3D" parent="."]
+[node name="InteractionCol" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.947)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("20_bt6wp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionCol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60635, 0)
+shape = SubResource("CylinderShape3D_o47xv")
+
+[node name="Weapon" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Weapon"]
+transform = Transform3D(-4.2222e-08, -0.965926, -0.258819, 1, -4.37114e-08, 0, -1.13133e-08, -0.258819, 0.965926, 1.14119, 0, 1.27466)
+shape = SubResource("CapsuleShape3D_2dxhb")
+
+[node name="BankRecord" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78955, 0, -4.87185)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BankRecord"]
+transform = Transform3D(-4.2222e-08, -0.965926, -0.258819, 1, -4.37114e-08, 0, -1.13133e-08, -0.258819, 0.965926, 1.14119, 0, 1.27466)
+shape = SubResource("CapsuleShape3D_2dxhb")
+
+[node name="Letter" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39751, 0, 0.951517)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Letter"]
+transform = Transform3D(-4.2222e-08, -0.965926, -0.258819, 1, -4.37114e-08, 0, -1.13133e-08, -0.258819, 0.965926, 1.14119, 0, 1.27466)
+shape = SubResource("CapsuleShape3D_2dxhb")
+
+[node name="Window" type="Area3D" parent="."]
+transform = Transform3D(0.279979, 0.108295, -0.953878, -0.0595206, 0.993664, 0.0953412, 0.958159, 0.0300819, 0.284651, -4.56147, 0.255077, 1.07915)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Window"]
+transform = Transform3D(-4.2222e-08, -0.965926, -0.258819, 1, -4.37114e-08, 0, -1.13133e-08, -0.258819, 0.965926, 1.14119, 0, 1.27466)
+shape = SubResource("CapsuleShape3D_2dxhb")
+
+[node name="Diary" type="Area3D" parent="."]
+transform = Transform3D(0.279979, 0.108295, -0.953878, -0.0595206, 0.993664, 0.0953412, 0.958159, 0.0300819, 0.284651, -1.05702, 1.68619, -2.76368)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Diary"]
+transform = Transform3D(-5.02914e-08, -0.965926, -0.258819, 1, -4.47035e-08, -1.16415e-08, -1.95578e-08, -0.258819, 0.965926, 0.904606, -0.0915115, 2.08071)
+shape = SubResource("CapsuleShape3D_2c1ip")
+
+[node name="PhoneRecord" type="Area3D" parent="."]
+transform = Transform3D(0.958159, 0.0300819, 0.284651, -0.0595206, 0.993664, 0.0953412, -0.279979, -0.108295, 0.953878, 0.0627396, 1.68619, -2.57304)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PhoneRecord"]
+transform = Transform3D(-5.96046e-08, -0.965926, -0.258819, 1, -3.91155e-08, 0, -5.21541e-08, -0.258819, 0.965926, 0.525784, -0.0718015, 1.63879)
+shape = SubResource("CapsuleShape3D_2c1ip")
+
+[node name="Door" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59016, 6.87198)
+shape = SubResource("BoxShape3D_uogef")
 
 [connection signal="pressed" from="Camera3D/Control/Panel/CloseButton" to="Camera3D/Control" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Camera3D/Control/SettingButton" to="Camera3D/Control" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/ENButton" to="Camera3D/Control/SettingPanel" method="_on_en_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/JPButton" to="Camera3D/Control/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/CloseButton" to="Camera3D/Control/SettingPanel" method="_on_close_button_pressed"]
-[connection signal="pressed" from="Camera3D/Control/SettingButton" to="Camera3D/Control" method="_on_setting_button_pressed"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
+[connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]

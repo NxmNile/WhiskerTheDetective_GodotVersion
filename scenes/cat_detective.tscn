@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjvw86dy0w0we"]
+[gd_scene load_steps=3 format=3 uid="uid://cjvw86dy0w0we"]
 
 [ext_resource type="PackedScene" uid="uid://bu3nnj8aktq5a" path="res://assets/catDetective.glb" id="1_xgs5n"]
+[ext_resource type="Script" path="res://scenes/cat_detective.gd" id="2_prd5h"]
 
 [node name="catDetective" instance=ExtResource("1_xgs5n")]
+script = ExtResource("2_prd5h")
 
 [node name="Skeleton3D" parent="metarig" index="0"]
 bones/1/rotation = Quaternion(-0.043811, -8.32385e-05, -0.0126364, 0.99896)
