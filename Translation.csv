@@ -17,11 +17,5 @@ BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money short
 Camera,"Security Camera Footage: Shows Bunny Alice entering the house late at night, after her claimed visit time.",監視カメラの映像:：バニー・アリスは主張した訪問時間より遅く、深夜に家に入る様子が映っている。
 Clues,Clues,手がかり
 Investigate,Investigate,しらべる
-InterviewOwl1,Whisker : Can you tell me where you were last night between 8 PM and midnight?,探偵のウィスカー: 昨夜の午後8時から午前0時までどこにいたか教えていただけますか？
-InterviewOwl2,Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.,
-InterviewOwl3,Whisker : Is there anyone who can confirm your alibi?,
-InterviewOwl4,"Hawkin Owl : It was a private meeting, so unfortunately, no one can confirm. But I did stop by the convenience store on the way back. Maybe the clerk remembers me.",
-InterviewOwl5,Whisker : How was your relationship with Dr. Hootie?,
-InterviewOwl6,"Hawkin Owl : We had our ups and downs, like any couple. But I loved her deeply.",
-InterviewOwl7,Whisker : Did she mention anything unusual recently? Any threats or strange occurrences?,
-InterviewOwl8,"Hawkin Owl : She did seem more stressed than usual. She mentioned a big discovery and some fraud. I didn’t pay much attention, though. I wish I had.",
+Enter,Enter,はいる
+PlayAgain,Play Again,もういちどあそぶ
