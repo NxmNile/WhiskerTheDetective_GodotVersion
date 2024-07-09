@@ -1,37 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjvw86dy0w0we"]
 
-[ext_resource type="PackedScene" uid="uid://bu3nnj8aktq5a" path="res://assets/catDetective.glb" id="1_xgs5n"]
-[ext_resource type="Script" path="res://scenes/cat_detective.gd" id="2_prd5h"]
+[ext_resource type="PackedScene" uid="uid://ccdevhy0o3dhi" path="res://assets/catDetective.glb" id="1_xgs5n"]
+[ext_resource type="Script" path="res://assets/cat_detective.gd" id="2_aoyx2"]
 
 [node name="catDetective" instance=ExtResource("1_xgs5n")]
-script = ExtResource("2_prd5h")
-
-[node name="Skeleton3D" parent="metarig" index="0"]
-bones/1/rotation = Quaternion(-0.043811, -8.32385e-05, -0.0126364, 0.99896)
-bones/6/rotation = Quaternion(-0.130262, 0.00058051, -0.0233924, 0.991203)
-bones/8/position = Vector3(0.0905221, 0.622136, -0.145018)
-bones/8/rotation = Quaternion(-0.141963, 0.710046, -0.423153, 0.544631)
-bones/10/rotation = Quaternion(-0.000663387, 0.00162706, -0.0115084, 0.999932)
-bones/12/position = Vector3(-0.0905221, 0.622136, -0.145018)
-bones/12/rotation = Quaternion(-0.141963, -0.710046, 0.423153, 0.544631)
-bones/14/rotation = Quaternion(-0.000663387, -0.00162707, 0.0115084, 0.999932)
-bones/15/position = Vector3(0.148534, -0.00738254, -0.0580952)
-bones/16/position = Vector3(-0.148534, -0.00738259, -0.0580952)
-bones/17/rotation = Quaternion(-0.303968, -0.696588, -0.366786, 0.536504)
-bones/18/rotation = Quaternion(-0.301539, 0.698717, 0.364749, 0.536495)
-bones/19/rotation = Quaternion(0.986483, 0.00310787, -0.0031448, 0.163806)
-bones/20/rotation = Quaternion(0.179996, 0.00234045, -0.00262527, 0.983661)
-bones/21/rotation = Quaternion(-0.486273, -0.00509077, 0.00880099, 0.873748)
-bones/22/rotation = Quaternion(0.000524045, 0.925266, -0.379318, 0.000215419)
-bones/24/rotation = Quaternion(0.986399, -0.0135931, 0.000550551, 0.163805)
-bones/25/rotation = Quaternion(0.179972, -0.00317954, 0.00206172, 0.983665)
-bones/26/rotation = Quaternion(-0.48622, 0.0122636, -0.0136929, 0.873643)
-bones/27/rotation = Quaternion(0.000126932, 0.925247, -0.379365, 5.165e-05)
-bones/29/rotation = Quaternion(0.885716, -0.0239476, -0.0592397, -0.459808)
-bones/30/rotation = Quaternion(0.168787, -0.0394403, 0.0190705, 0.984679)
-bones/31/rotation = Quaternion(0.427261, -0.0260509, 0.0172832, 0.903587)
-bones/32/rotation = Quaternion(0.177895, -0.00523725, 0.0170227, 0.983888)
-bones/33/position = Vector3(-0.229758, 1.25392, -1.5444)
-
-[node name="AnimationPlayer" parent="." index="1"]
-speed_scale = 0.8
+script = ExtResource("2_aoyx2")
