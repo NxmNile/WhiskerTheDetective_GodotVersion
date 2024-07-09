@@ -23,3 +23,9 @@ func _process(delta):
 		# Apply movement
 		velocity.x = direction.x * move_speed
 	
+func stop_moving():
+	move_speed=0
+	rotation_speed=0
+func continue_moving():
+	move_speed=6
+	rotation_speed=20
