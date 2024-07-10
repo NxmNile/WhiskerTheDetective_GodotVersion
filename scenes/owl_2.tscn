@@ -1,5 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://cj85h3i7ylxgu"]
+[gd_scene load_steps=3 format=3 uid="uid://cj85h3i7ylxgu"]
 
 [ext_resource type="PackedScene" uid="uid://clt8hhh3y0iro" path="res://assets/owl2.glb" id="1_eur7h"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="2_rv04x"]
 
 [node name="owl2" instance=ExtResource("1_eur7h")]
+script = ExtResource("2_rv04x")
+delayf = 0.1
+action_name = "metarigAction"
+
+[node name="Skeleton3D" parent="metarig" index="0"]
+bones/6/rotation = Quaternion(-0.194951, -1.17132e-07, -2.69611e-08, 0.980813)
+bones/8/position = Vector3(0.0393515, 0.51447, -0.140048)
+bones/8/rotation = Quaternion(-0.351708, 0.692144, -0.430308, 0.460514)
+bones/9/rotation = Quaternion(0.147527, -0.0825644, -0.169817, 0.970866)
+bones/12/position = Vector3(-0.0393515, 0.51447, -0.140048)
+bones/12/rotation = Quaternion(-0.351708, -0.692144, 0.430308, 0.460514)
+bones/13/rotation = Quaternion(0.147527, 0.0825644, 0.169818, 0.970866)
+bones/15/position = Vector3(0.224904, 0.0138333, -0.0422531)
+bones/16/position = Vector3(-0.224308, 0.021523, -0.0422036)
+bones/19/position = Vector3(0.289084, -0.0543892, 0.0725041)
+bones/19/rotation = Quaternion(0.725784, -0.00645835, -0.00569515, 0.687869)
+bones/22/rotation = Quaternion(7.8951e-09, 0.99929, -0.0376701, 7.8932e-07)
+bones/24/position = Vector3(-0.276974, -0.0459708, 0.0720831)
+bones/24/rotation = Quaternion(0.725795, -0.00484688, -0.00399462, 0.687882)
+bones/27/rotation = Quaternion(-6.33737e-09, 0.99929, -0.0376701, -7.89061e-07)

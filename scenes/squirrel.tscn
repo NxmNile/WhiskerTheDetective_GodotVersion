@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://goqmceh160f6"]
+[gd_scene load_steps=3 format=3 uid="uid://goqmceh160f6"]
 
 [ext_resource type="PackedScene" uid="uid://bwe1e2k8w2rbh" path="res://assets/squirrel.glb" id="1_uij4m"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="2_d74a5"]
 
 [node name="squirrel" instance=ExtResource("1_uij4m")]
+script = ExtResource("2_d74a5")
+delayf = 0.8
+action_name = "Idle"
 
 [node name="Skeleton3D" parent="metarig" index="0"]
 bones/0/position = Vector3(0, 0.236827, -0.0552)
-bones/6/rotation = Quaternion(-0.0950504, 0.000541219, 0.00566895, 0.995456)
-bones/8/rotation = Quaternion(-0.222318, 0.64984, -0.490172, 0.536669)
-bones/12/rotation = Quaternion(-0.222318, -0.64984, 0.490172, 0.536669)
+bones/6/rotation = Quaternion(-0.0937104, 0.000533588, 0.00566968, 0.995583)
+bones/8/rotation = Quaternion(-0.222942, 0.649513, -0.490733, 0.536294)
+bones/12/rotation = Quaternion(-0.222942, -0.649513, 0.490733, 0.536294)
 bones/15/position = Vector3(0.180517, -0.0578408, -0.040639)
 bones/16/position = Vector3(-0.178321, -0.0578408, -0.040639)
 bones/19/rotation = Quaternion(0.688909, 1.29897e-08, 1.50583e-07, 0.724848)

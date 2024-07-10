@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="8_6wdpa"]
 [ext_resource type="Texture2D" uid="uid://d1yciedqjudr7" path="res://assets/window.png" id="9_eyuul"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="9_omrxe"]
-[ext_resource type="Script" path="res://scenes/Investigation.gd" id="20_bt6wp"]
+[ext_resource type="Script" path="res://scripts/Investigation.gd" id="20_xgmi6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j30t6"]
 bg_color = Color(1, 0.875046, 0.548086, 1)
@@ -1069,7 +1069,7 @@ shape = SubResource("CapsuleShape3D_6g3s1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.947)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("20_bt6wp")
+script = ExtResource("20_xgmi6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionCol"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60635, 0)

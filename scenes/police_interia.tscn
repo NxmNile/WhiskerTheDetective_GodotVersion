@@ -1,8 +1,15 @@
-[gd_scene load_steps=28 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=36 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
 [ext_resource type="VoxelGIData" uid="uid://qwqh0bcxiupr" path="res://scenes/police_interia.VoxelGI_data.res" id="3_tw6sk"]
+[ext_resource type="PackedScene" uid="uid://cjvw86dy0w0we" path="res://scenes/cat_detective.tscn" id="4_a7qny"]
+[ext_resource type="Script" path="res://scripts/Nophis.gd" id="4_wlgmj"]
+[ext_resource type="PackedScene" uid="uid://cjsj0aglebwtk" path="res://scenes/rabbit.tscn" id="5_gou0u"]
+[ext_resource type="PackedScene" uid="uid://goqmceh160f6" path="res://scenes/squirrel.tscn" id="6_tjo78"]
+[ext_resource type="PackedScene" uid="uid://cj85h3i7ylxgu" path="res://scenes/owl_2.tscn" id="7_t5f5a"]
+[ext_resource type="PackedScene" uid="uid://dr4qw4ohs81s1" path="res://scenes/badger.tscn" id="8_mqcrn"]
+[ext_resource type="PackedScene" uid="uid://3lv5a0d0py0b" path="res://scenes/cat_offier.tscn" id="8_vwjbm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -355,6 +362,10 @@ sky = SubResource("Sky_ivp76")
 sdfgi_read_sky_light = false
 sdfgi_y_scale = 0
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ai60w"]
+height = 5.03
+radius = 1.285
+
 [node name="PoliceInteria" instance=ExtResource("1_c42w4")]
 
 [node name="wall" parent="." index="0"]
@@ -372,7 +383,7 @@ mesh = SubResource("ArrayMesh_hmf2j")
 skeleton = NodePath("")
 
 [node name="chair2" type="MeshInstance3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 0.137786, 0, 0, 0, 1, -3.69836, 1.03098, -3.66419)
+transform = Transform3D(1, 0, 0, 0, 0.137786, 0, 0, 0, 1, -3.69836, 1.03098, -4.0463)
 mesh = SubResource("ArrayMesh_co8y7")
 skeleton = NodePath("")
 
@@ -382,7 +393,7 @@ mesh = SubResource("ArrayMesh_hmf2j")
 skeleton = NodePath("")
 
 [node name="chair3" type="MeshInstance3D" parent="." index="6"]
-transform = Transform3D(1, 0, 0, 0, 0.137786, 0, 0, 0, 1, 3.09821, 1.03098, -3.66419)
+transform = Transform3D(1, 0, 0, 0, 0.137786, 0, 0, 0, 1, 3.09821, 1.03098, -4.38125)
 mesh = SubResource("ArrayMesh_co8y7")
 skeleton = NodePath("")
 
@@ -420,44 +431,105 @@ mesh = SubResource("ArrayMesh_evg6g")
 [node name="Node" type="Node" parent="." index="16"]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56069, 4.59537, -1.20859)
-light_energy = 1.92
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.13881, 7.23322, -3.05413)
+light_energy = 1.713
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Node" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100437, 4.59537, -1.20859)
-light_energy = 1.92
+[node name="OmniLight3D7" type="OmniLight3D" parent="Node" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3636, 3.41869, -2.10805)
+light_energy = 0.974
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Node" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 4.59537, -1.20859)
-light_energy = 1.92
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214528, 6.70614, -0.860952)
+light_energy = 1.702
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Node" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56069, 4.59537, 6.96481)
+[node name="OmniLight3D9" type="OmniLight3D" parent="Node" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121922, 3.09666, 0.234851)
+light_energy = 2.626
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 5.54238
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Node" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0912, 3.09666, -0.695968)
+light_energy = 2.008
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 4.07208
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Node" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42795, 3.09666, -0.695968)
+light_energy = 2.008
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 4.07208
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Node" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.35693, 3.73724, 0.234851)
+light_energy = 3.957
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 4.97215
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Node" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.57948, 4.68377, 10.2158)
+light_energy = 3.957
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 7.1257
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Node" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94645, 4.68377, 9.49624)
+light_energy = 3.957
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 7.1257
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Node" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 7.23322, -1.20859)
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 38.7795
+omni_attenuation = 0.784584
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Node" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56069, 7.23322, 6.96481)
 light_energy = 0.515
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Node" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100437, 4.59537, 6.96481)
-light_energy = 0.515
+[node name="OmniLight3D5" type="OmniLight3D" parent="Node" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100437, 3.40427, 6.96481)
+light_energy = 0.935
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="Node" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 4.59537, 6.96481)
+[node name="OmniLight3D6" type="OmniLight3D" parent="Node" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 7.23322, 6.96481)
 light_energy = 0.515
 light_specular = 0.0
+distance_fade_enabled = true
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -469,3 +541,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01447, 4.78192, 3.01782)
 subdiv = 2
 size = Vector3(31.2545, 10.4362, 26.0356)
 data = ExtResource("3_tw6sk")
+
+[node name="Character" type="Area3D" parent="." index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.89319)
+script = ExtResource("4_wlgmj")
+
+[node name="catDetective" parent="Character" index="0" instance=ExtResource("4_a7qny")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Character" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47856, 0)
+shape = SubResource("CylinderShape3D_ai60w")
+
+[node name="Camera3D" type="Camera3D" parent="." index="20"]
+transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
+
+[node name="squirrel" parent="." index="21" instance=ExtResource("6_tjo78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11211, 0.975578, -4.03467)
+
+[node name="Rabbit" parent="." index="22" instance=ExtResource("5_gou0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57308, 1.23065, -3.70029)
+
+[node name="CatOffier" parent="." index="23" instance=ExtResource("8_vwjbm")]
+transform = Transform3D(-0.0542705, 0, 0.998526, 0, 1, 0, -0.998526, 0, -0.0542705, -9.71206, 0, 6.34369)
+
+[node name="owl2" parent="." index="24" instance=ExtResource("7_t5f5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49212, 0.940117, -4.12442)
+
+[node name="badger" parent="." index="25" instance=ExtResource("8_mqcrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
