@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=58 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://cj85h3i7ylxgu" path="res://scenes/owl_2.tscn" id="7_t5f5a"]
 [ext_resource type="PackedScene" uid="uid://dr4qw4ohs81s1" path="res://scenes/badger.tscn" id="8_mqcrn"]
 [ext_resource type="PackedScene" uid="uid://3lv5a0d0py0b" path="res://scenes/cat_offier.tscn" id="8_vwjbm"]
+[ext_resource type="Script" path="res://scenes/PoliceStationUI.gd" id="9_fk5ii"]
+[ext_resource type="Script" path="res://scenes/Interogation.gd" id="11_clcnn"]
+[ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="11_fok6o"]
+[ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="12_v4uyb"]
+[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="13_ejdxg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -48,6 +53,22 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2cu1o")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wl8k"]
+size = Vector3(0.07, 70.615, 2.015)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3srhm"]
+size = Vector3(2.005, 72.34, 0.125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gjhx4"]
+size = Vector3(0.795, 82.345, 0.075)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8yvdg"]
+size = Vector3(0.05, 70.72, 0.725)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_16vis"]
+height = 23.689
+radius = 0.11
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_04lt7"]
 _surfaces = [{
@@ -362,14 +383,131 @@ sky = SubResource("Sky_ivp76")
 sdfgi_read_sky_light = false
 sdfgi_y_scale = 0
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_ai60w"]
-height = 5.03
-radius = 1.285
+[sub_resource type="BoxShape3D" id="BoxShape3D_pk0eb"]
+size = Vector3(2.18, 7.28, 1.56)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p0rfs"]
+height = 4.424
+radius = 2.47
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56s2i"]
+bg_color = Color(1, 0.875046, 0.548086, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_syovn"]
+font = ExtResource("11_fok6o")
+font_size = 25
+font_color = Color(0.32919, 0.207122, 0.0716364, 1)
+outline_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncrr"]
+bg_color = Color(0.933333, 0.286275, 0.34902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh1ru"]
+bg_color = Color(0.678749, 0.133306, 0.210366, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvuji"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qu7v"]
+bg_color = Color(0.535173, 0.785843, 0.479025, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xjn3"]
+font = ExtResource("11_fok6o")
+font_size = 60
+font_color = Color(0.159405, 0.218786, 0.123335, 1)
+outline_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_roheb"]
+bg_color = Color(0.176299, 0.325984, 0.243816, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_x3qa1"]
+font = ExtResource("11_fok6o")
+font_size = 100
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5sag3"]
+height = 5.962
+radius = 2.21
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ipf01"]
+height = 6.097
+radius = 1.188
 
 [node name="PoliceInteria" instance=ExtResource("1_c42w4")]
 
 [node name="wall" parent="." index="0"]
 mesh = SubResource("ArrayMesh_sbfyy")
+
+[node name="Area3D" type="Area3D" parent="wall" index="0"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.994637, 33.1057, 0)
+shape = SubResource("BoxShape3D_5wl8k")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall/Area3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.991792, 33.1057, 0)
+shape = SubResource("BoxShape3D_5wl8k")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall/Area3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017922, 33.1057, -1.01492)
+shape = SubResource("BoxShape3D_3srhm")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="wall/Area3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017922, 33.1057, -0.167685)
+shape = SubResource("BoxShape3D_3srhm")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="wall/Area3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615019, 33.1057, 1.0333)
+shape = SubResource("BoxShape3D_gjhx4")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="wall/Area3D" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616216, 33.1057, 1.0333)
+shape = SubResource("BoxShape3D_gjhx4")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="wall/Area3D" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242024, 33.1057, 1.36068)
+shape = SubResource("BoxShape3D_8yvdg")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="wall/Area3D" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244107, 33.1057, 1.36068)
+shape = SubResource("BoxShape3D_8yvdg")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="wall/Area3D" index="8"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00509265, 33.1057, 1.39317)
+shape = SubResource("BoxShape3D_8yvdg")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="wall/Area3D" index="9"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.728023, 14.4554, 0.699797)
+shape = SubResource("CylinderShape3D_16vis")
 
 [node name="desk" parent="." index="1"]
 mesh = SubResource("ArrayMesh_hmf2j")
@@ -432,17 +570,19 @@ mesh = SubResource("ArrayMesh_evg6g")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.13881, 7.23322, -3.05413)
-light_energy = 1.713
+light_energy = 0.592
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="Node" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3636, 3.41869, -2.10805)
-light_energy = 0.974
+light_energy = 0.949
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -450,39 +590,44 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214528, 6.70614, -0.860952)
 light_energy = 1.702
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="Node" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121922, 3.09666, 0.234851)
-light_energy = 2.626
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121922, 3.09666, -1.86364)
+light_energy = 0.894
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 5.54238
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="Node" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0912, 3.09666, -0.695968)
-light_energy = 2.008
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0912, 3.09666, -2.38259)
+light_energy = 1.498
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 4.07208
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D12" type="OmniLight3D" parent="Node" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42795, 3.09666, -0.695968)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42795, 3.09666, -1.82629)
 light_energy = 2.008
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 4.07208
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="Node" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.35693, 3.73724, 0.234851)
-light_energy = 3.957
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.35693, 3.73724, -0.689557)
+light_energy = 2.428
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 4.97215
 omni_attenuation = 0.784584
 
@@ -490,7 +635,8 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.57948, 4.68377, 10.2158)
 light_energy = 3.957
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 7.1257
 omni_attenuation = 0.784584
 
@@ -498,14 +644,16 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94645, 4.68377, 9.49624)
 light_energy = 3.957
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 7.1257
 omni_attenuation = 0.784584
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Node" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 7.23322, -1.20859)
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -513,7 +661,8 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56069, 7.23322, 6.96481)
 light_energy = 0.515
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -521,7 +670,8 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100437, 3.40427, 6.96481)
 light_energy = 0.935
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -529,7 +679,8 @@ omni_attenuation = 0.784584
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94027, 7.23322, 6.96481)
 light_energy = 0.515
 light_specular = 0.0
-distance_fade_enabled = true
+light_bake_mode = 1
+distance_fade_length = 0.0
 omni_range = 38.7795
 omni_attenuation = 0.784584
 
@@ -542,30 +693,354 @@ subdiv = 2
 size = Vector3(31.2545, 10.4362, 26.0356)
 data = ExtResource("3_tw6sk")
 
-[node name="Character" type="Area3D" parent="." index="19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.89319)
+[node name="Camera3D" type="Camera3D" parent="." index="19"]
+transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
+
+[node name="squirrel" parent="." index="20" instance=ExtResource("6_tjo78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11211, 0.975578, -4.03467)
+
+[node name="Area3D" type="Area3D" parent="squirrel" index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="squirrel/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393362, 0, 3.71673)
+shape = SubResource("BoxShape3D_pk0eb")
+
+[node name="Rabbit" parent="." index="21" instance=ExtResource("5_gou0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57308, 1.23065, -3.70029)
+
+[node name="Area3D" type="Area3D" parent="Rabbit" index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rabbit/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.36269)
+shape = SubResource("BoxShape3D_pk0eb")
+
+[node name="CatOffier" parent="." index="22" instance=ExtResource("8_vwjbm")]
+transform = Transform3D(-0.0542705, 0, 0.998526, 0, 1, 0, -0.998526, 0, -0.0542705, -9.71206, 0, 6.34369)
+
+[node name="Area3D" type="Area3D" parent="CatOffier" index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CatOffier/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0297437, 2.13888, 0.0748529)
+shape = SubResource("CylinderShape3D_p0rfs")
+
+[node name="owl2" parent="." index="23" instance=ExtResource("7_t5f5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49212, 0.940117, -4.12442)
+
+[node name="Area3D" type="Area3D" parent="owl2" index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="owl2/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255688, 0, 3.81507)
+shape = SubResource("BoxShape3D_pk0eb")
+
+[node name="badger" parent="." index="24" instance=ExtResource("8_mqcrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
+
+[node name="Area3D" type="Area3D" parent="badger" index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="badger/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91341)
+shape = SubResource("BoxShape3D_pk0eb")
+
+[node name="Control" type="Control" parent="." index="25"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_fk5ii")
+
+[node name="Panel" type="Panel" parent="Control" index="0"]
+offset_top = 540.0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_56s2i")
+
+[node name="descriptionLabel" type="Label" parent="Control/Panel" index="0"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 33.0
+offset_right = 1243.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_syovn")
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="Control/Panel" index="1"]
+layout_mode = 0
+offset_left = 1242.0
+offset_top = -14.0
+offset_right = 1250.0
+offset_bottom = -6.0
+scale = Vector2(5.10668, 5.10668)
+theme_override_styles/normal = SubResource("StyleBoxFlat_sncrr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oh1ru")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lvuji")
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel/CloseButton" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0786566
+anchor_top = -0.0437338
+anchor_right = 6.57866
+anchor_bottom = 2.45626
+offset_left = 1.37075
+offset_top = 2.34987
+offset_right = 249.371
+offset_bottom = 250.35
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0137241, 0.0137241)
+texture = ExtResource("12_v4uyb")
+
+[node name="InterrogatePanel" type="Panel" parent="Control" index="1"]
+offset_left = 339.0
+offset_top = 118.0
+offset_right = 379.0
+offset_bottom = 158.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
+
+[node name="InterrogateText" type="Label" parent="Control/InterrogatePanel" index="0"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Interrogate"
+label_settings = SubResource("LabelSettings_0xjn3")
+
+[node name="Button" type="Button" parent="Control/InterrogatePanel" index="1"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_roheb")
+
+[node name="Label" type="Label" parent="Control/InterrogatePanel/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_x3qa1")
+
+[node name="InterrogatePanel2" type="Panel" parent="Control" index="2"]
+offset_left = 489.0
+offset_top = 118.0
+offset_right = 529.0
+offset_bottom = 158.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
+
+[node name="InterrogateText" type="Label" parent="Control/InterrogatePanel2" index="0"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Interrogate"
+label_settings = SubResource("LabelSettings_0xjn3")
+
+[node name="Button" type="Button" parent="Control/InterrogatePanel2" index="1"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_roheb")
+
+[node name="Label" type="Label" parent="Control/InterrogatePanel2/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_x3qa1")
+
+[node name="InterrogatePanel3" type="Panel" parent="Control" index="3"]
+offset_left = 648.0
+offset_top = 118.0
+offset_right = 688.0
+offset_bottom = 158.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
+
+[node name="InterrogateText" type="Label" parent="Control/InterrogatePanel3" index="0"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Interrogate"
+label_settings = SubResource("LabelSettings_0xjn3")
+
+[node name="Button" type="Button" parent="Control/InterrogatePanel3" index="1"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_roheb")
+
+[node name="Label" type="Label" parent="Control/InterrogatePanel3/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_x3qa1")
+
+[node name="InterrogatePanel4" type="Panel" parent="Control" index="4"]
+offset_left = 799.0
+offset_top = 118.0
+offset_right = 839.0
+offset_bottom = 158.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
+
+[node name="InterrogateText" type="Label" parent="Control/InterrogatePanel4" index="0"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Interrogate"
+label_settings = SubResource("LabelSettings_0xjn3")
+
+[node name="Button" type="Button" parent="Control/InterrogatePanel4" index="1"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_roheb")
+
+[node name="Label" type="Label" parent="Control/InterrogatePanel4/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_x3qa1")
+
+[node name="Talk" type="Panel" parent="Control" index="5"]
+offset_left = 222.0
+offset_top = 266.0
+offset_right = 262.0
+offset_bottom = 306.0
+scale = Vector2(2.6, 1.05876)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
+
+[node name="InterrogateText" type="Label" parent="Control/Talk" index="0"]
+layout_mode = 0
+offset_left = 4.71698
+offset_top = 9.26678
+offset_right = 331.717
+offset_bottom = 94.2668
+scale = Vector2(0.095713, 0.247454)
+text = "Talk"
+label_settings = SubResource("LabelSettings_0xjn3")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control/Talk" index="1"]
+layout_mode = 0
+offset_left = 34.434
+offset_top = -6.95009
+offset_right = 42.434
+offset_bottom = 1.04991
+scale = Vector2(1.04297, 2.63225)
+theme_override_styles/normal = SubResource("StyleBoxFlat_roheb")
+
+[node name="Label" type="Label" parent="Control/Talk/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.26133
+offset_top = 0.440059
+offset_right = 44.2613
+offset_bottom = 133.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0869526, 0.0600608)
+text = "F"
+label_settings = SubResource("LabelSettings_x3qa1")
+
+[node name="InteractionCol" type="Area3D" parent="." index="26"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("11_clcnn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionCol" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65541e-08, 1.60635, 0.189357)
+shape = SubResource("CylinderShape3D_5sag3")
+
+[node name="Character" type="Area3D" parent="." index="27"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
+collision_layer = 2
 script = ExtResource("4_wlgmj")
 
 [node name="catDetective" parent="Character" index="0" instance=ExtResource("4_a7qny")]
+transform = Transform3D(1.045, 0, 0, 0, 1.045, 0, 0, 0, 1.045, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Character" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47856, 0)
-shape = SubResource("CylinderShape3D_ai60w")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59479, 0)
+shape = SubResource("CylinderShape3D_ipf01")
 
-[node name="Camera3D" type="Camera3D" parent="." index="20"]
-transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
+[node name="RayCast3D" type="RayCast3D" parent="Character" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 3.39162e-08, 0.197501, 0.387956)
+target_position = Vector3(0, -0.8, 0)
+collide_with_areas = true
+debug_shape_thickness = 5
+script = ExtResource("13_ejdxg")
 
-[node name="squirrel" parent="." index="21" instance=ExtResource("6_tjo78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11211, 0.975578, -4.03467)
-
-[node name="Rabbit" parent="." index="22" instance=ExtResource("5_gou0u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57308, 1.23065, -3.70029)
-
-[node name="CatOffier" parent="." index="23" instance=ExtResource("8_vwjbm")]
-transform = Transform3D(-0.0542705, 0, 0.998526, 0, 1, 0, -0.998526, 0, -0.0542705, -9.71206, 0, 6.34369)
-
-[node name="owl2" parent="." index="24" instance=ExtResource("7_t5f5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49212, 0.940117, -4.12442)
-
-[node name="badger" parent="." index="25" instance=ExtResource("8_mqcrn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
+[connection signal="pressed" from="Control/Panel/CloseButton" to="Control" method="_on_close_button_pressed"]
+[connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
+[connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
