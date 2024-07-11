@@ -3,20 +3,76 @@ StartButton,Start Game,はじめる
 ExitButton,Exit,でる
 CreditButton,Credit,クレジット
 TryButton,Try Again,リトライ
-Language,Language,音の大きさ
-LabelSound,Volume,言語
+Language,Language,言語
+LabelSound,Volume,音の大きさ
 EN,EN,英語
 JP,JP,日本語
-Weapon,"The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints.",凶器：ドクター・フーティのコレクションの古代遺物，指紋は拭きとられている
-Window,A shattered window suggesting a possible break-in.,窓が割れている．誰か入って来たらしい
-Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger.,日記：どうやらドクター・フーティが夫とマクシー・パジャーに関わる詐欺を暴露しようとしたらしい
-PhoneRecord,"Phone Records: Reveal multiple calls between Dr. Hootie and an unknown number, traced back to a burner phone found in Maxie's possession.",不明な番号との通話が記録されている．不明の番号はマクシーの使い捨ての携帯電話のようだ
-Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint.,窓の近くの足跡は，マクシー・パジャーのものと一致している
-Letter,"A threatening letter addressed to Dr. Hootie found in the room's fireplace, partially burned.",ドクター・フーティ宛の脅迫状が，暖炉に入れられたが，燃え残っている
-BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly before Dr. Hootie's death.,銀行の取引記録：ドクター・フーティの死の直前に、ホーキン・オウルが多額の現金を引き出していたらしい
+Weapon,"The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints.",凶器：ドクター・フーティのコレクションの古代遺物，指紋は拭きとられている。
+Window,A shattered window suggesting a possible break-in.,窓が割れている。誰か入って来たらしい。
+Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger.,日記：どうやらドクター・フーティが夫とマクシー・パジャーに関わる詐欺を暴露しようとしたらしい。
+PhoneRecord,"Phone Records: Reveal multiple calls between Dr. Hootie and an unknown number, traced back to a burner phone found in Maxie's possession.",不明な番号との通話が記録されている。不明の番号はマクシーの使い捨ての携帯電話のようだ。
+Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint.,窓の近くの足跡は、マクシー・パジャーのものと一致している。
+Letter,"A threatening letter addressed to Dr. Hootie found in the room's fireplace, partially burned.",ドクター・フーティ宛の脅迫状が、暖炉に入れられたが、燃え残っている。
+BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly before Dr. Hootie's death.,銀行の取引記録：ドクター・フーティの死の直前に、ホーキン・オウルが多額の現金を引き出していたらしい。
 Camera,"Security Camera Footage: Shows Bunny Alice entering the house late at night, after her claimed visit time.",監視カメラの映像:：バニー・アリスは主張した訪問時間より遅く、深夜に家に入る様子が映っている。
 Clues,Clues,手がかり
-Investigate,Investigate,しらべる
-Enter,Enter,はいる
-PlayAgain,Play Again,もういちどあそぶ
-LockPoliceStation,There are clues left. Go back and investigate more!,まだ手がかりがあるよ。もどってもっとしらべてみよう！
+Investigate,Investigate,調べる
+Enter,Enter,入り口
+PlayAgain,Play Again,もう一度遊ぶ
+LockPoliceStation,There are clues left. Go back and investigate more!,まだ手がかりがあるよ。戻って調べてみよう！
+Talk,Talk,話す
+Interrogate,Interrogate,質問する
+Rabbit1,Whisker : Can you tell me where you were last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこに居たか教えてくれる？
+Rabbit2,"Alice Rabbit : I was at home most of the night. I did visit Hootie earlier in the evening, around 7 PM. I left around 8 PM.",アリスうさぎ : ほとんどの夜は家にいました。夕方7時ごろにフーティを訪ねましたが、8時ごろに帰りました。
+Rabbit3,Whisker : Security footage shows you returning to Dr. Hootie’s house later that night. Can you explain that?,ウィスカー : 監視カメラ映像に、夜遅くにドクター・フーティが再び家に戻る様子が写っています。それについて説明できますか？
+Rabbit4,"Alice Rabbit : Oh, um, yes. I forgot my scarf there. I went back to get it but didn’t see Hootie. I thought she was already asleep, so I left quickly.",アリスうさぎ : あ、うん、そうなんだ。マフラーを忘れちゃって、取りに戻ったんだけど、フーティさんは見かけなかったんだ。もう寝てるかなって思って、さっさと帰っちゃったんだ。
+Rabbit5,Whisker : How was your relationship with Dr. Hootie?,ウィスカー : ドクター・ホーティーとのかんけいはどうでしたか？
+Rabbit6,"Alice Rabbit : We were very close, like sisters. I can’t imagine who would want to harm her.",ホーキンフクロウ : 私たちはとても仲が良くて、姉妹のような存在でした。彼女を傷つけたい人なんて考えられません。
+Rabbit7,Whisker : Did Dr. Hootie mention anything unusual or worrying to you recently?,ウィスカー : 最近、ドクター・ホーティが何か変わったことや心配なことを言っていましたか？
+Rabbit8,"Alice Rabbit : She was stressed about a new discovery and mentioned something about her husband and a fraud. I told her to be careful, but I didn’t think it was this serious.",ホーキンフクロウ : 彼女は新しい発見についてストレスを感じていて、夫と詐欺のことを言っていました。私は気をつけるように言いましたが、こんなに深刻だとは思いませんでした。
+Owl1,Whisker : Can you tell me where you were last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこに居たか教えてくれる？
+Owl2,Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.,ホーキンフクロウ : 町でビジネスの会議に出ていました。7時30分ごろに出て、真夜中を少し過ぎて家に戻りました。
+Owl3,Whisker : Is there anyone who can confirm your alibi?,ウィスカー : アリバイを かくにんできる ひとは いますか？
+Owl4,"Hawkin Owl : It was a private meeting, so unfortunately, no one can confirm. But I did stop by the convenience store on the way back. Maybe the clerk remembers me.",ホーキンフクロウ : それはプライベートな会議だったので、残念ながら誰も確認できません。でも、帰りにコンビニに立ち寄りました。店員さんが覚えているかもしれません。
+Owl5,Whisker : How was your relationship with Dr. Hootie?,ウィスカー : ドクター・ホーティーとのかんけいはどうでしたか？
+Owl6,"Hawkin Owl: We had our ups and downs, like any couple. But I loved her deeply.",ホーキンフクロウ : 私たちはいろいろありましたが、どのカップルもそうだと思います。でも、私は彼女を深く愛していました。
+Owl7,Whisker : Did she mention anything unusual recently? Any threats or strange occurrences?,ウィスカー : 最近、彼女が何か変わったことや脅迫などの異常な出来事について言及しましたか？
+Owl8,"Hawkin Owl: She did seem more stressed than usual. She mentioned a big discovery and some fraud. I didn’t pay much attention, though. I wish I had.",ホーキンフクロウ : 彼女はいつもよりもストレスが多かったように思えました。大きな発見と詐欺のことを言っていました。私はあまり気にせずにいましたが、もっと注意していればよかったです。
+Squirrel1,Whisker : Can you tell me about your relationship with Dr. Hootie?,ウィスカー : ホーティーとの関係について教えてもらえますか？
+Squirrel2,"Nutty Squirrel : We were very close, like family. She trusted me with many of her secrets.",ナッツリス : 私たちはとても仲が良く、家族のようでした。彼女はたくさんの秘密を信じてくれました。
+Squirrel3,Whisker : Did Dr. Hootie mention anything unusual or concerning to you lately?,ウィスカー : 最近、ホーティさんが何か変わったことや心配なことを言っていましたか？
+Squirrel4,"Nutty Squirrel : She was excited about a new discovery and was planning to go public with it. She also seemed worried, but she didn’t tell me why.",ナッツリス : 彼女は新しい発見に興奮していて、それを公表する予定でした。でも何か心配そうな様子も見せていました。でも、具体的に何が心配だったのかは教えてくれませんでした。
+Squirrel5,Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you explain that?,ウィスカー : ホーティーの日記にあなたの指紋が見つかりました。それについて説明できますか？
+Squirrel6,"Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.",ナッツリス : 彼女の日記をよく取り扱っていました。彼女がメモを私に読み上げて、私が整理するお手伝いをしていました。
+Squirrel7,Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?,ウィスカー : ホーティーの日記から失われたページについて何か知っていますか？
+Squirrel8,Nutty Squirrel : She kept those last entries very private. I only know she was worried about something.,ナッツリス : 彼女は最後の記録をとてもプライベートにしていました。何か心配していることがあるということしか知りません。
+Squirrel9,Nutty Squirrel : How did you know that?! OK It's my fault. I'm trying to protect the secret. I don't want to lose my job.,ナッツリス : どうしてそれを知っているんだ？！わかった、私のせいだ。秘密を守ろうとしているんだ。仕事を失いたくないんだ。
+Badger1,Whisker : Where were you last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこに居たか教えてくれる？
+Badger2,"Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.",マキシアナグマ : 家にいました。一人でした。証言してくれる人はいません。それが聞きたいことなんでしょう？
+Badger3,Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?,ウィスカー : 最近、ホーテーィと公の場で口論したことがありましたね。そのことについて話してもらえますか？
+Badger4,"Maxie Badger : She exposed my artifact smuggling ring. I was angry, but I didn’t kill her!",マキシアナグマ : 彼女に私の違法な品物の密売がばれてしまったんだ。怒ったけど、彼女を殺したわけじゃない！
+Badger5,Whisker : We found muddy footprints near Dr. Hootie’s place that match shoes we found in your possession. Can you explain that?,ウィスカー : ホーティーの近くで見つかった泥だらけの足跡が、あなたの持ち物の靴と一致しています。それについて説明できますか？
+Badger6,Maxie Badger : That’s impossible! I haven’t been near her place in weeks. Someone’s setting me up!,マキシアナグマ : それはありえない！数週間、彼女の近くに行っていないんだ。だれかが私をだましているんだ！
+Badger7,Whisker : Do you know anything about a burner phone that was used to contact Dr. Hootie?,ウィスカー : ホーテーィに連絡を取るために使われたバーナー電話について何か知っていますか？
+Badger8,"Maxie Badger : No, I don’t. I’m telling you, Detective, I didn’t do this.",マキシアナグマ : いいえ、知りません。探偵さん、本当に私はやっていません！
+Police1,Police : Hey! Go back and interrogate them all!,けいさつ : ねえ、もう一度みんなに質問してきて！
+Police2,Police : Are you ready to tell me who the murderer is?,けいさつ : 犯人を教えてくれる準備はできてる？
+Police3,Police : Who is the murderer?,けいさつ : 犯人はだれ？
+Police4,Police : No! You are wrong! ,けいさつ : ちがうよ！まちがってる！
+Police5,Police : Yes! You are Right! Congraturations!,けいさつ : そうだよ！あってるよ！おめでとう！
+Choice1,Alice Rabbit,アリスうさぎ
+Choice2,Hawkin Owl,ホーキンフクロウ
+Choice3,Nutty Squirrel,ナッツリス
+Choice4,Maxie Badger,マキシアナグマ
+RabbitRelation,A neighbor rabbit and close family friend who often visited Dr.Hootie’s home.,ホーティー先生のうちによく遊びに来ていた、隣のうさぎさんで、家族ぐるみのなかよしだったんだ
+BadgerRelation,An ex-convict badger who recently had a public altercation with Dr. Hootie,ホーティー先生と最近、町で揉め事 を起こしたばかりの、元犯罪者 のムジナさんですね 
+SquirrelRelation,"The victim’s assistant, a squirrel who has been with her for years and knows her secrets.",被害者の助手で、リスさんで、もう何年も一緒にいて、ひみつも全部 知ってるんだ 
+OwlRelation,"The victim’s husband, a wealthy businessman with a financial disputes.",被害者の旦那さんはお金持ちの商人さんだけど、お金のことで揉め事 があったみたい
+Congraturations,Congraturations,おめでとう
+Failed,Failed,やられた
+Go,Go,行く
+Intro1,Whisker : Hello?,ウィスカー : もしもし？
+Intro2,"Police : Hi! Detective. Do you remember Dr.Hootie, an archiologist?",こんにちは、刑事さん。ドクター・フーティを覚えていますか？考古学者ですよね。
+Intro3,"Whisker : Yes, Why?",ウィスカー : はい、どうしたんですか？
+Intro4,Police : She just fiund dead In her room. Please come to my office as fast as possible.,彼女が部屋で亡くなっているのが見つかりました。できるだけ早く私のオフィスに来てください。
+Intro5,Whisker : Roger that!,ウィスカー : 了解しました！

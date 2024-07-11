@@ -1,5 +1,7 @@
 extends Node
 
+func _ready():
+	Keepdata.scene_name == "Menu"
 func _on_exit_button_pressed():
 	pass
 
