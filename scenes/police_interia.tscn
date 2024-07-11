@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=62 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -421,6 +421,30 @@ anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvuji"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e6jm"]
+bg_color = Color(0.590571, 0.872105, 0.408492, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lach"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbimy"]
+font = ExtResource("11_fok6o")
+font_size = 17
+font_color = Color(0.190172, 0.238016, 0.0607125, 1)
+outline_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k05wk"]
+bg_color = Color(0.826858, 0.508604, 0.351214, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qu7v"]
 bg_color = Color(0.535173, 0.785843, 0.479025, 1)
 border_width_left = 1
@@ -699,55 +723,55 @@ transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 
 [node name="squirrel" parent="." index="20" instance=ExtResource("6_tjo78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11211, 0.975578, -4.03467)
 
-[node name="Area3D" type="Area3D" parent="squirrel" index="2"]
+[node name="squirrel" type="Area3D" parent="squirrel" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="squirrel/Area3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="squirrel/squirrel" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393362, 0, 3.71673)
 shape = SubResource("BoxShape3D_pk0eb")
 
 [node name="Rabbit" parent="." index="21" instance=ExtResource("5_gou0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57308, 1.23065, -3.70029)
 
-[node name="Area3D" type="Area3D" parent="Rabbit" index="2"]
+[node name="Rabbit" type="Area3D" parent="Rabbit" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Rabbit/Area3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rabbit/Rabbit" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.36269)
 shape = SubResource("BoxShape3D_pk0eb")
 
 [node name="CatOffier" parent="." index="22" instance=ExtResource("8_vwjbm")]
 transform = Transform3D(-0.0542705, 0, 0.998526, 0, 1, 0, -0.998526, 0, -0.0542705, -9.71206, 0, 6.34369)
 
-[node name="Area3D" type="Area3D" parent="CatOffier" index="2"]
+[node name="CatOfficer" type="Area3D" parent="CatOffier" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CatOffier/Area3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CatOffier/CatOfficer" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0297437, 2.13888, 0.0748529)
 shape = SubResource("CylinderShape3D_p0rfs")
 
 [node name="owl2" parent="." index="23" instance=ExtResource("7_t5f5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49212, 0.940117, -4.12442)
 
-[node name="Area3D" type="Area3D" parent="owl2" index="2"]
+[node name="Owl" type="Area3D" parent="owl2" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="owl2/Area3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="owl2/Owl" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255688, 0, 3.81507)
 shape = SubResource("BoxShape3D_pk0eb")
 
 [node name="badger" parent="." index="24" instance=ExtResource("8_mqcrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
 
-[node name="Area3D" type="Area3D" parent="badger" index="2"]
+[node name="badger" type="Area3D" parent="badger" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="badger/Area3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="badger/badger" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91341)
 shape = SubResource("BoxShape3D_pk0eb")
 
@@ -757,8 +781,18 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_fk5ii")
+Rabbit = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Alice Rabbit : I was at home most of the night. I did visit Hootie earlier in the evening, around 7 PM. I left around 8 PM.", "Whisker : Security footage shows you returning to Dr. Hootie’s house later that night. Can you explain that?", "Alice Rabbit : Oh, um, yes. I forgot my scarf there. I went back to get it but didn’t see Hootie. I thought she was already asleep, so I left quickly.", "Whisker : How was your relationship with Dr. Hootie?", "Alice Rabbit : We were very close, like sisters. I can’t imagine who would want to harm her.", "Whisker : Did Dr. Hootie mention anything unusual or worrying to you recently?", "Alice Rabbit : She was stressed about a new discovery and mentioned something about her husband and a fraud. I told her to be careful, but I didn’t think it was this serious."]
+Owl = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.", "Whisker : Is there anyone who can confirm your alibi?", "Hawkin Owl : It was a private meeting, so unfortunately, no one can confirm. But I did stop by the convenience store on the way back. Maybe the clerk remembers me.", "Whisker : How was your relationship with Dr. Hootie?", "Hawkin Owl: We had our ups and downs, like any couple. But I loved her deeply.", "Whisker : Did she mention anything unusual recently? Any threats or strange occurrences?", "Hawkin Owl: She did seem more stressed than usual. She mentioned a big discovery and some fraud. I didn’t pay much attention, though. I wish I had."]
+Squirrel = ["Whisker : Can you tell me about your relationship with Dr. Hootie?", "Nutty Squirrel : We were very close, like family. She trusted me with many of her secrets.", "Whisker : Did Dr. Hootie mention anything unusual or concerning to you lately?", "Nutty Squirrel : She was excited about a new discovery and was planning to go public with it. She also seemed worried, but she didn’t tell me why.", "Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you explain that?", "Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.", "Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?", "Nutty Squirrel : She kept those last entries very private. I only know she was worried about something."]
+Squirrel2 = ["Nutty Squirrel : How did you know that?! OK It's my fault. I'm trying to protect the secret. I don't want to lose my job."]
+Badger = ["Whisker : Where were you last night between 8 PM and midnight?", "Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.", "Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?", "Maxie Badger : She exposed my artifact smuggling ring. I was angry, but I didn’t kill her!", "Whisker : We found muddy footprints near Dr. Hootie’s place that match shoes we found in your possession. Can you explain that?", "Maxie Badger : That’s impossible! I haven’t been near her place in weeks. Someone’s setting me up!", "Whisker : Do you know anything about a burner phone that was used to contact Dr. Hootie?", "Maxie Badger : No, I don’t. I’m telling you, Detective, I didn’t do this."]
+Police = ["Hey! Go back and interrogate them all!"]
+Police2 = ["Are you ready to tell me who the murderer is?", "Who is the murderer?"]
+Police3 = ["No! You are wrong! "]
+Police4 = ["Yes! You are Right! Congraturations!"]
 
 [node name="Panel" type="Panel" parent="Control" index="0"]
+layout_mode = 0
 offset_top = 540.0
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -800,7 +834,199 @@ grow_vertical = 2
 scale = Vector2(0.0137241, 0.0137241)
 texture = ExtResource("12_v4uyb")
 
+[node name="Choice" type="Control" parent="Control/Panel" index="2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RabbitButton" type="Button" parent="Control/Panel/Choice" index="0"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 92.0
+offset_right = 98.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/Choice/RabbitButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 219.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "Alice Rabbit"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OwlButton" type="Button" parent="Control/Panel/Choice" index="1"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 92.0
+offset_right = 378.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/Choice/OwlButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 219.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "Hawkin Owl"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SquirrelButton" type="Button" parent="Control/Panel/Choice" index="2"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 92.0
+offset_right = 658.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/Choice/SquirrelButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 220.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "Nutty Squirrel"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BadgerButton" type="Button" parent="Control/Panel/Choice" index="3"]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 92.0
+offset_right = 941.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/Choice/BadgerButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 219.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "Maxie Badger"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YesNo" type="Control" parent="Control/Panel" index="3"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="YesButton" type="Button" parent="Control/Panel/YesNo" index="0"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 92.0
+offset_right = 319.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/YesNo/YesButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 219.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "Yes
+"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoButton" type="Button" parent="Control/Panel/YesNo" index="1"]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 92.0
+offset_right = 667.0
+offset_bottom = 100.0
+scale = Vector2(32.8939, 8.70528)
+theme_override_styles/normal = SubResource("StyleBoxFlat_k05wk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
+
+[node name="Label" type="Label" parent="Control/Panel/YesNo/NoButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 219.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0357776, 0.154543)
+text = "No
+"
+label_settings = SubResource("LabelSettings_wbimy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="InterrogatePanel" type="Panel" parent="Control" index="1"]
+visible = false
+layout_mode = 0
 offset_left = 339.0
 offset_top = 118.0
 offset_right = 379.0
@@ -843,6 +1069,8 @@ text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
 [node name="InterrogatePanel2" type="Panel" parent="Control" index="2"]
+visible = false
+layout_mode = 0
 offset_left = 489.0
 offset_top = 118.0
 offset_right = 529.0
@@ -885,6 +1113,8 @@ text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
 [node name="InterrogatePanel3" type="Panel" parent="Control" index="3"]
+visible = false
+layout_mode = 0
 offset_left = 648.0
 offset_top = 118.0
 offset_right = 688.0
@@ -927,6 +1157,8 @@ text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
 [node name="InterrogatePanel4" type="Panel" parent="Control" index="4"]
+visible = false
+layout_mode = 0
 offset_left = 799.0
 offset_top = 118.0
 offset_right = 839.0
@@ -969,6 +1201,8 @@ text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
 [node name="Talk" type="Panel" parent="Control" index="5"]
+visible = false
+layout_mode = 0
 offset_left = 222.0
 offset_top = 266.0
 offset_right = 262.0

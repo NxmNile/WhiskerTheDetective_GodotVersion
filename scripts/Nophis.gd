@@ -60,3 +60,9 @@ func Collide():
 func _on_area_entered(area):
 	print(area.name)
 	pass # Replace with function body.
+func stop_move():
+	move_speed=0
+	rotation_speed=0
+func can_move():
+	move_speed = 6
+	rotation_speed=20
