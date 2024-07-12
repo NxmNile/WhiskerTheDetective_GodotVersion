@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=91 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -23,6 +23,8 @@
 [ext_resource type="Script" path="res://scenes/CameraController.gd" id="16_xxv0o"]
 [ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="17_tu6ep"]
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="18_18qjq"]
+[ext_resource type="Texture2D" uid="uid://6er0056xrtms" path="res://UI/yellowRectTapped.png" id="19_tboxp"]
+[ext_resource type="Texture2D" uid="uid://b2wdjqpkfv4qn" path="res://UI/starIcon.png" id="20_ilh4i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -583,6 +585,17 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_2sfux"]
+font = ExtResource("11_fok6o")
+font_size = 71
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_os57n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dnk6c"]
+font = ExtResource("11_fok6o")
+font_size = 56
+font_color = Color(0.380184, 0.252265, 0.156014, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5sag3"]
 height = 5.962
@@ -1636,6 +1649,119 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("18_18qjq")
+
+[node name="Failed" type="Panel" parent="Control" index="8"]
+visible = false
+layout_mode = 0
+offset_left = -68.0
+offset_top = -26.0
+offset_right = -28.0
+offset_bottom = 14.0
+scale = Vector2(35.6296, 19.44)
+
+[node name="Label" type="Label" parent="Control/Failed" index="0"]
+layout_mode = 0
+offset_left = 12.7422
+offset_top = 13.0
+offset_right = 396.742
+offset_bottom = 113.0
+scale = Vector2(0.0331685, 0.0684667)
+text = "Failed"
+label_settings = SubResource("LabelSettings_2sfux")
+horizontal_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="Control/Failed" index="1"]
+layout_mode = 0
+offset_left = 15.2401
+offset_top = 22.0165
+offset_right = 373.24
+offset_bottom = 174.016
+scale = Vector2(0.0231746, 0.0334626)
+theme_override_styles/normal = SubResource("StyleBoxTexture_os57n")
+icon = ExtResource("19_tboxp")
+
+[node name="Label" type="Label" parent="Control/Failed/TryAgainButton" index="0"]
+layout_mode = 0
+offset_left = 25.4329
+offset_top = 26.1332
+offset_right = 318.433
+offset_bottom = 119.133
+text = "Try Again"
+label_settings = SubResource("LabelSettings_dnk6c")
+horizontal_alignment = 1
+
+[node name="Congratulations" type="Panel" parent="Control" index="9"]
+visible = false
+layout_mode = 0
+offset_left = -68.0
+offset_top = -26.0
+offset_right = -28.0
+offset_bottom = 14.0
+scale = Vector2(35.6296, 19.44)
+
+[node name="Label" type="Label" parent="Control/Congratulations" index="0"]
+layout_mode = 0
+offset_left = 9.65489
+offset_top = 9.10494
+offset_right = 582.655
+offset_bottom = 109.105
+scale = Vector2(0.0331685, 0.0684667)
+text = "Congratulations!"
+label_settings = SubResource("LabelSettings_2sfux")
+
+[node name="PlayAgainButton" type="Button" parent="Control/Congratulations" index="1"]
+layout_mode = 0
+offset_left = 15.2401
+offset_top = 22.0165
+offset_right = 373.24
+offset_bottom = 174.016
+scale = Vector2(0.0231746, 0.0334626)
+theme_override_styles/normal = SubResource("StyleBoxTexture_os57n")
+icon = ExtResource("19_tboxp")
+
+[node name="Label" type="Label" parent="Control/Congratulations/PlayAgainButton" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -46.5
+offset_right = 165.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Agian"
+label_settings = SubResource("LabelSettings_dnk6c")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/Congratulations" index="2"]
+layout_mode = 0
+offset_left = 12.8264
+offset_top = 15.5864
+offset_right = 268.826
+offset_bottom = 271.586
+scale = Vector2(0.00865824, 0.0148311)
+texture = ExtResource("20_ilh4i")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Congratulations" index="3"]
+layout_mode = 0
+offset_left = 17.8503
+offset_top = 15.6379
+offset_right = 273.85
+offset_bottom = 271.638
+scale = Vector2(0.00865824, 0.0148311)
+texture = ExtResource("20_ilh4i")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Congratulations" index="4"]
+layout_mode = 0
+offset_left = 22.6497
+offset_top = 15.535
+offset_right = 278.65
+offset_bottom = 271.535
+scale = Vector2(0.00865824, 0.0148311)
+texture = ExtResource("20_ilh4i")
 
 [node name="InteractionCol" type="Area3D" parent="." index="25"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)

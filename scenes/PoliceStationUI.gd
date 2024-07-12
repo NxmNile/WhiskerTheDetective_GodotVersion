@@ -114,10 +114,12 @@ func start_typewriter_effect(line: String) -> void:
 func _on_typing_finished():
 	if index < dialog_name.size() - 1:
 		$Panel/NextButton.visible = true
-	else:
+	elif index ==4 && !(key_name =="Police4"||key_name=="Squirrel2"||key_name=="Police3"):
 		$Panel/CloseButton.visible = true
 	if key_name == "Police2":
 		$Panel/NextButton.visible = false
+	if key_name =="Police4"||key_name=="Squirrel2"||key_name=="Police3":
+		$Panel/CloseButton.visible = false
 func _on_next_button_pressed():
 	$Panel/NextButton.visible = false
 	clear_dialog()
@@ -141,7 +143,8 @@ func change_to_en():
 	$Panel/Choice/OwlButton/Label.text = tr("Choice2")
 	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
 	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
-	change_language()
+	if continue_typing:
+		change_language()
 func change_to_jp():
 	TranslationServer.set_locale("jp")
 	$Panel/YesNo/YesButton/Label.text = tr("Yes")
@@ -150,7 +153,8 @@ func change_to_jp():
 	$Panel/Choice/OwlButton/Label.text = tr("Choice2")
 	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
 	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
-	change_language()
+	if continue_typing:
+		change_language()
 	
 
 func change_language():
@@ -178,18 +182,31 @@ func _on_setting_button_pressed():
 	pass # Replace with function body.
 
 func choose_the_murderer(choice):
+	$Panel/Choice.visible = false
 	index=0
 	if choice == false:
 		key_name = "Police3"
 		dialog_name = Police3 
 		display_dialog(dialog_name)
-		pass
+		await get_tree().create_timer(4).timeout
+		$Failed.visible = true
 	elif choice == true:
 		key_name = "Police4"
 		dialog_name = Police4
 		display_dialog(dialog_name)
+		await get_tree().create_timer(3).timeout
+		camera_controller.set_active_camera("camera4")
+		dialog_name = Squirrel2
+		key_name = "Squirrel2"
+		display_dialog(dialog_name)
+		await get_tree().create_timer(5).timeout
+		camera_controller.set_active_camera("camera6")
+		$Panel.visible = false
+		$Congratulations.visible = true
+		
 	
 func _on_rabbit_button_pressed():
+	
 	choose_the_murderer(false)
 	
 func _on_owl_button_pressed():

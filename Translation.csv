@@ -46,7 +46,7 @@ Squirrel5,Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you e
 Squirrel6,"Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.",ナッツリス : 彼女の日記をよく取り扱っていました。彼女がメモを私に読み上げて、私が整理するお手伝いをしていました。
 Squirrel7,Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?,ウィスカー : ホーティーの日記から失われたページについて何か知っていますか？
 Squirrel8,Nutty Squirrel : She kept those last entries very private. I only know she was worried about something.,ナッツリス : 彼女は最後の記録をとてもプライベートにしていました。何か心配していることがあるということしか知りません。
-Squirrel9,Nutty Squirrel : How did you know that?! OK It's my fault. I'm trying to protect the secret. I don't want to lose my job.,ナッツリス : どうしてそれを知っているんだ？！わかった、私のせいだ。秘密を守ろうとしているんだ。仕事を失いたくないんだ。
+Squirrel21,Nutty Squirrel : How did you know that?! OK It's my fault. I'm trying to protect the secret. I don't want to lose my job.,ナッツリス : どうしてそれを知っているんだ？！わかった、私のせいだ。秘密を守ろうとしているんだ。仕事を失いたくないんだ。
 Badger1,Whisker : Where were you last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこに居たか教えてくれる？
 Badger2,"Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.",マキシアナグマ : 家にいました。一人でした。証言してくれる人はいません。それが聞きたいことなんでしょう？
 Badger3,Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?,ウィスカー : 最近、ホーテーィと公の場で口論したことがありましたね。そのことについて話してもらえますか？
@@ -55,11 +55,11 @@ Badger5,Whisker : We found muddy footprints near Dr. Hootie’s place that match
 Badger6,Maxie Badger : That’s impossible! I haven’t been near her place in weeks. Someone’s setting me up!,マキシアナグマ : それはありえない！数週間、彼女の近くに行っていないんだ。だれかが私をだましているんだ！
 Badger7,Whisker : Do you know anything about a burner phone that was used to contact Dr. Hootie?,ウィスカー : ホーテーィに連絡を取るために使われたバーナー電話について何か知っていますか？
 Badger8,"Maxie Badger : No, I don’t. I’m telling you, Detective, I didn’t do this.",マキシアナグマ : いいえ、知りません。探偵さん、本当に私はやっていません！
-Police1,Police : Hey! Go back and interrogate them all!,けいさつ : ねえ、もう一度みんなに質問してきて！
-Police21,Police : Are you ready to tell me who the murderer is?,けいさつ : 犯人を教えてくれる準備はできてる？
-Police22,Police : Who is the murderer?,けいさつ : 犯人はだれ？
-Police31,Police : No! You are wrong! ,けいさつ : ちがうよ！まちがってる！
-Police41,Police : Yes! You are Right! Congraturations!,けいさつ : そうだよ！あってるよ！おめでとう！
+Police1,Police : Hey! Go back and interrogate them all!,警察 : ねえ、もう一度みんなに質問してきて！
+Police21,Police : Are you ready to tell me who the murderer is?,警察 : 犯人を教えてくれる準備はできてる？
+Police22,Police : Who is the murderer?,警察 : 犯人はだれ？
+Police31,Police : No! You are wrong! ,警察 : ちがうよ！まちがってる！
+Police41,Police : Yes! You are Right! Congraturations!,警察 : そうだよ！あってるよ！おめでとう！
 Choice1,Alice Rabbit,アリスうさぎ
 Choice2,Hawkin Owl,ホーキンフクロウ
 Choice3,Nutty Squirrel,ナッツリス
