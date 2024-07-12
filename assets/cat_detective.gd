@@ -1,5 +1,5 @@
 extends Node3D
-
+var move = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("back")||Input.is_action_pressed("forward")||Input.is_action_pressed("left")||Input.is_action_pressed("right"):
+	if move&&(Input.is_action_pressed("back")||Input.is_action_pressed("forward")||Input.is_action_pressed("left")||Input.is_action_pressed("right")):
 		$AnimationPlayer.play("Walk")
 	else:
 		$AnimationPlayer.play("Ide")

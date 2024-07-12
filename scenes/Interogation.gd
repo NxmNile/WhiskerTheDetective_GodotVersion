@@ -3,9 +3,9 @@ extends Area3D
 @onready var UI = $"../Control"
 var object_name : String
 var is_in_collider =false
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 
@@ -14,7 +14,6 @@ func _process(delta):
 	transform = character.transform
 	if Input.is_action_pressed("F")&&is_in_collider:
 		$"../Control/Panel".visible = true
-		character.stop_move()
 		deactive_UI()
 		UI.choose_dialog(object_name)
 	pass
@@ -34,12 +33,12 @@ func _on_area_entered(area):
 		$"../Control/InterrogatePanel2".visible = true
 		$"../Control/InterrogatePanel3".visible = false
 		$"../Control/InterrogatePanel4".visible = false
-	elif  object_name == "squirrel":
+	elif  object_name == "Squirrel":
 		$"../Control/InterrogatePanel".visible = false
 		$"../Control/InterrogatePanel2".visible =false
 		$"../Control/InterrogatePanel3".visible = true
 		$"../Control/InterrogatePanel4".visible = false
-	elif object_name =="badger":
+	elif object_name =="Badger":
 		$"../Control/InterrogatePanel".visible = false
 		$"../Control/InterrogatePanel2".visible =false
 		$"../Control/InterrogatePanel3".visible = false

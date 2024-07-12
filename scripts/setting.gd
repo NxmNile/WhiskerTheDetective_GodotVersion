@@ -3,6 +3,7 @@ extends Node
 @onready var owl_house_UI = $".."
 @onready var parent_node = $".."
 @onready var worldUI = $".."
+@onready var police_stationUI = $".."
 func _ready():
 	if Keepdata.language == "en":
 		TranslationServer.set_locale("en")
@@ -27,7 +28,8 @@ func _on_en_button_pressed():
 		owl_house_UI.change_to_eng()
 	elif Keepdata.scene_name == "World1":
 		worldUI.change_to_en()
-	
+	elif Keepdata.scene_name =="PoliceStation2":
+		police_stationUI.change_to_en()
 
 func _on_jp_button_pressed():
 	TranslationServer.set_locale("jp")
@@ -41,7 +43,8 @@ func _on_jp_button_pressed():
 		owl_house_UI.change_to_jp()
 	elif Keepdata.scene_name == "World1":
 		worldUI.change_to_jp()
-		pass
+	elif Keepdata.scene_name =="PoliceStation2":
+		police_stationUI.change_to_jp()
 
 func _on_close_button_pressed():
 	$".".visible = false

@@ -9,6 +9,7 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_active_camera("camera1")
+	pass
 	
 func set_active_camera(camera):
 	if camera == "camera1":
@@ -53,3 +54,4 @@ func set_active_camera(camera):
 		camera4.current = false
 		camera5.current = false
 		camera6.current = true
+	print(camera)

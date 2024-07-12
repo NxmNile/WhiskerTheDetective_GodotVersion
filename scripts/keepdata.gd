@@ -1,6 +1,6 @@
 extends Node
 
-var scene_name = "Menu"
+var scene_name = "PoliceStation2"
 var language = "en"
 var cluses = [false,false,false,false,false,false,false,false]
 var npc = [false,false,false,false]

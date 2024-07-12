@@ -5,6 +5,7 @@ var has_rotated_90_degrees = false
 var rotation_threshold = deg_to_rad(90)  # 90 degrees in radians
 var initial_rotation_y = 0
 var has_collided = false
+@onready var character_root = $catDetective
 func _process(delta):
 	var direction = Vector3.ZERO
 	
@@ -61,8 +62,10 @@ func _on_area_entered(area):
 	print(area.name)
 	pass # Replace with function body.
 func stop_move():
+	character_root.move=false
 	move_speed=0
 	rotation_speed=0
 func can_move():
+	character_root.move = true
 	move_speed = 6
 	rotation_speed=20

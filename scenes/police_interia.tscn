@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=86 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -16,7 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://bu68w8kxb120o" path="res://UI/nextBtn.png" id="12_p2kfr"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="12_v4uyb"]
 [ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="13_ejdxg"]
+[ext_resource type="Script" path="res://scripts/setting.gd" id="13_pvnbw"]
+[ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="14_g4i0n"]
+[ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="15_nf148"]
+[ext_resource type="Texture2D" uid="uid://b0wkyi22ihd6u" path="res://UI/jP.png" id="16_w0513"]
 [ext_resource type="Script" path="res://scenes/CameraController.gd" id="16_xxv0o"]
+[ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="17_tu6ep"]
+[ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="18_18qjq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -481,6 +487,103 @@ anti_aliasing = false
 font = ExtResource("11_fok6o")
 font_size = 100
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xboty"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyqck"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dayg7"]
+bg_color = Color(0.957918, 0.80729, 0.61882, 1)
+border_color = Color(0.993597, 0.706825, 0.793039, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing_size = 0.01
+
+[sub_resource type="LabelSettings" id="LabelSettings_p0cl2"]
+font = ExtResource("11_fok6o")
+font_size = 120
+font_color = Color(0, 0, 0, 1)
+outline_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga4h3"]
+bg_color = Color(1, 0.67451, 0.670588, 0)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4aoe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.588235)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li12q"]
+bg_color = Color(0.6, 0.6, 0.6, 0.368627)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3mse"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwjnq"]
+bg_color = Color(0.886966, 0.545404, 0.599298, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vk8ru"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18e5s"]
+bg_color = Color(0.6, 0.6, 0.6, 0.572549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfgg0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.388235)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aej5q"]
+bg_color = Color(0.909804, 0.360784, 0.721569, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv0r6"]
+bg_color = Color(1, 0.284297, 0.346101, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uclfh"]
+bg_color = Color(0.419221, 0, 0.0829647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5sag3"]
 height = 5.962
 radius = 2.21
@@ -768,11 +871,11 @@ shape = SubResource("BoxShape3D_pk0eb")
 [node name="badger" parent="." index="23" instance=ExtResource("8_mqcrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
 
-[node name="badger" type="Area3D" parent="badger" index="2"]
+[node name="Badger" type="Area3D" parent="badger" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="badger/badger" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="badger/Badger" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91341)
 shape = SubResource("BoxShape3D_pk0eb")
 
@@ -793,6 +896,7 @@ Police3 = ["No! You are wrong! "]
 Police4 = ["Yes! You are Right! Congraturations!"]
 
 [node name="Panel" type="Panel" parent="Control" index="0"]
+visible = false
 layout_mode = 0
 offset_top = 540.0
 offset_right = 1280.0
@@ -1259,6 +1363,280 @@ scale = Vector2(0.0869526, 0.0600608)
 text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
+[node name="SettingButton" type="Button" parent="Control" index="6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1135.0
+offset_top = 27.0
+offset_right = 1143.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.32, 10.32)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xboty")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hyqck")
+
+[node name="Setting" type="TextureRect" parent="Control/SettingButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 248.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0310067, 0.0310067)
+texture = ExtResource("14_g4i0n")
+
+[node name="SettingPanel" type="Panel" parent="Control" index="7"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 634.0
+offset_top = 308.0
+offset_right = 634.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_pvnbw")
+
+[node name="Panel2" type="Panel" parent="Control/SettingPanel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -713.0
+offset_top = -327.0
+offset_right = -713.0
+offset_bottom = -327.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(36.8115, 18.8)
+
+[node name="Panel" type="Panel" parent="Control/SettingPanel" index="1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -121.0
+offset_right = -261.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(11.8067, 6.50019)
+theme_override_styles/panel = SubResource("StyleBoxFlat_dayg7")
+
+[node name="LabelLanguage" type="Label" parent="Control/SettingPanel/Panel" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0698755
+anchor_top = 0.219224
+anchor_right = 0.0698761
+anchor_bottom = 0.219224
+offset_right = 793.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Language"
+label_settings = SubResource("LabelSettings_p0cl2")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelSound" type="Label" parent="Control/SettingPanel/Panel" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0754717
+anchor_top = 0.55
+anchor_right = 27.7925
+anchor_bottom = 4.225
+offset_right = 519.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Volume"
+label_settings = SubResource("LabelSettings_p0cl2")
+metadata/_edit_use_anchors_ = true
+
+[node name="ENButton" type="Button" parent="Control/SettingPanel/Panel" index="2"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 17.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ga4h3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j4aoe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_li12q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3mse")
+
+[node name="Panel" type="Panel" parent="Control/SettingPanel/Panel/ENButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.75725
+offset_top = -0.615658
+offset_right = -1.75725
+offset_bottom = -0.615658
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15999, 1.15999)
+theme_override_styles/panel = SubResource("StyleBoxFlat_hwjnq")
+
+[node name="ENflag" type="TextureRect" parent="Control/SettingPanel/Panel/ENButton" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.255228
+anchor_top = 0.48924
+anchor_right = 0.25524
+anchor_bottom = 0.48924
+offset_left = -4.39764
+offset_top = -3.27118
+offset_right = 1395.61
+offset_bottom = 1396.73
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0018773, 0.00339199)
+texture = ExtResource("15_nf148")
+
+[node name="LabelEN" type="Label" parent="Control/SettingPanel/Panel/ENButton" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400142
+anchor_top = 0.223063
+anchor_right = 0.400143
+anchor_bottom = 0.223063
+offset_left = -2.55482
+offset_top = -2.1771
+offset_right = 499.445
+offset_bottom = 447.823
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "EN"
+label_settings = SubResource("LabelSettings_p0cl2")
+autowrap_mode = 3
+
+[node name="JPButton" type="Button" parent="Control/SettingPanel/Panel" index="3"]
+layout_mode = 0
+offset_left = 37.267
+offset_top = 9.99971
+offset_right = 50.267
+offset_bottom = 16.9997
+theme_override_styles/normal = SubResource("StyleBoxFlat_vk8ru")
+theme_override_styles/hover = SubResource("StyleBoxFlat_18e5s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nfgg0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_aej5q")
+
+[node name="Panel2" type="Panel" parent="Control/SettingPanel/Panel/JPButton" index="0"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.10107
+offset_top = -0.615368
+offset_right = -1.10107
+offset_bottom = -0.615368
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15999, 1.15999)
+theme_override_styles/panel = SubResource("StyleBoxFlat_hwjnq")
+
+[node name="LabelJP" type="Label" parent="Control/SettingPanel/Panel/JPButton" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400142
+anchor_top = 0.223063
+anchor_right = 0.400143
+anchor_bottom = 0.223063
+offset_left = -1.55984
+offset_top = -2.63833
+offset_right = 500.44
+offset_bottom = 447.362
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "JP"
+label_settings = SubResource("LabelSettings_p0cl2")
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/JPButton" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0846977
+anchor_top = 0.175819
+anchor_right = 74.1348
+anchor_bottom = 138.181
+offset_left = -1.18577
+offset_top = -0.922759
+offset_right = 36.163
+offset_bottom = 33.0381
+scale = Vector2(0.003, 0.005)
+texture = ExtResource("16_w0513")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="Control/SettingPanel/Panel" index="4"]
+layout_mode = 0
+offset_left = 49.6328
+offset_top = -2.76915
+offset_right = 57.6328
+offset_bottom = 5.23085
+scale = Vector2(0.567354, 0.96007)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kv0r6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uclfh")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/CloseButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.23928
+offset_top = 1.76264
+offset_right = 250.239
+offset_bottom = 249.763
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0141601, 0.0141601)
+texture = ExtResource("12_v4uyb")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel" index="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 21.0
+offset_right = 182.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("17_tu6ep")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/SettingPanel" index="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = 21.0
+offset_right = 468.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("18_18qjq")
+
 [node name="InteractionCol" type="Area3D" parent="." index="25"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
 collision_layer = 2
@@ -1326,7 +1704,17 @@ visible = false
 fov = 67.5
 
 [connection signal="pressed" from="Control/Panel/CloseButton" to="Control" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Choice/RabbitButton" to="Control" method="_on_rabbit_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Choice/OwlButton" to="Control" method="_on_owl_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Choice/SquirrelButton" to="Control" method="_on_squirrel_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Choice/BadgerButton" to="Control" method="_on_badger_button_pressed"]
+[connection signal="pressed" from="Control/Panel/YesNo/YesButton" to="Control" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Control/Panel/YesNo/NoButton" to="Control" method="_on_no_button_pressed"]
 [connection signal="pressed" from="Control/Panel/NextButton" to="Control" method="_on_next_button_pressed"]
+[connection signal="pressed" from="Control/SettingButton" to="Control" method="_on_setting_button_pressed"]
+[connection signal="pressed" from="Control/SettingPanel/Panel/ENButton" to="Control/SettingPanel" method="_on_en_button_pressed"]
+[connection signal="pressed" from="Control/SettingPanel/Panel/JPButton" to="Control/SettingPanel" method="_on_jp_button_pressed"]
+[connection signal="pressed" from="Control/SettingPanel/Panel/CloseButton" to="Control/SettingPanel" method="_on_close_button_pressed"]
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
