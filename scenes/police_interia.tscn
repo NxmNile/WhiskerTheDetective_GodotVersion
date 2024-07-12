@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=65 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -13,8 +13,10 @@
 [ext_resource type="Script" path="res://scenes/PoliceStationUI.gd" id="9_fk5ii"]
 [ext_resource type="Script" path="res://scenes/Interogation.gd" id="11_clcnn"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="11_fok6o"]
+[ext_resource type="Texture2D" uid="uid://bu68w8kxb120o" path="res://UI/nextBtn.png" id="12_p2kfr"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="12_v4uyb"]
 [ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="13_ejdxg"]
+[ext_resource type="Script" path="res://scenes/CameraController.gd" id="16_xxv0o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -445,6 +447,8 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5o2o"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qu7v"]
 bg_color = Color(0.535173, 0.785843, 0.479025, 1)
 border_width_left = 1
@@ -717,21 +721,18 @@ subdiv = 2
 size = Vector3(31.2545, 10.4362, 26.0356)
 data = ExtResource("3_tw6sk")
 
-[node name="Camera3D" type="Camera3D" parent="." index="19"]
-transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
-
-[node name="squirrel" parent="." index="20" instance=ExtResource("6_tjo78")]
+[node name="squirrel" parent="." index="19" instance=ExtResource("6_tjo78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11211, 0.975578, -4.03467)
 
-[node name="squirrel" type="Area3D" parent="squirrel" index="2"]
+[node name="Squirrel" type="Area3D" parent="squirrel" index="2"]
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="squirrel/squirrel" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="squirrel/Squirrel" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393362, 0, 3.71673)
 shape = SubResource("BoxShape3D_pk0eb")
 
-[node name="Rabbit" parent="." index="21" instance=ExtResource("5_gou0u")]
+[node name="Rabbit" parent="." index="20" instance=ExtResource("5_gou0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57308, 1.23065, -3.70029)
 
 [node name="Rabbit" type="Area3D" parent="Rabbit" index="2"]
@@ -742,7 +743,7 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.36269)
 shape = SubResource("BoxShape3D_pk0eb")
 
-[node name="CatOffier" parent="." index="22" instance=ExtResource("8_vwjbm")]
+[node name="CatOffier" parent="." index="21" instance=ExtResource("8_vwjbm")]
 transform = Transform3D(-0.0542705, 0, 0.998526, 0, 1, 0, -0.998526, 0, -0.0542705, -9.71206, 0, 6.34369)
 
 [node name="CatOfficer" type="Area3D" parent="CatOffier" index="2"]
@@ -753,7 +754,7 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0297437, 2.13888, 0.0748529)
 shape = SubResource("CylinderShape3D_p0rfs")
 
-[node name="owl2" parent="." index="23" instance=ExtResource("7_t5f5a")]
+[node name="owl2" parent="." index="22" instance=ExtResource("7_t5f5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49212, 0.940117, -4.12442)
 
 [node name="Owl" type="Area3D" parent="owl2" index="2"]
@@ -764,7 +765,7 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255688, 0, 3.81507)
 shape = SubResource("BoxShape3D_pk0eb")
 
-[node name="badger" parent="." index="24" instance=ExtResource("8_mqcrn")]
+[node name="badger" parent="." index="23" instance=ExtResource("8_mqcrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59696, 0.860139, -4.20143)
 
 [node name="badger" type="Area3D" parent="badger" index="2"]
@@ -775,7 +776,7 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91341)
 shape = SubResource("BoxShape3D_pk0eb")
 
-[node name="Control" type="Control" parent="." index="25"]
+[node name="Control" type="Control" parent="." index="24"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -808,6 +809,7 @@ label_settings = SubResource("LabelSettings_syovn")
 autowrap_mode = 3
 
 [node name="CloseButton" type="Button" parent="Control/Panel" index="1"]
+visible = false
 layout_mode = 0
 offset_left = 1242.0
 offset_top = -14.0
@@ -960,6 +962,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="YesNo" type="Control" parent="Control/Panel" index="3"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1023,6 +1026,17 @@ text = "No
 label_settings = SubResource("LabelSettings_wbimy")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="Control/Panel" index="4"]
+visible = false
+layout_mode = 0
+offset_left = 1227.0
+offset_top = 138.0
+offset_right = 1483.0
+offset_bottom = 394.0
+scale = Vector2(0.16, 0.12)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o5o2o")
+icon = ExtResource("12_p2kfr")
 
 [node name="InterrogatePanel" type="Panel" parent="Control" index="1"]
 visible = false
@@ -1245,7 +1259,7 @@ scale = Vector2(0.0869526, 0.0600608)
 text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
-[node name="InteractionCol" type="Area3D" parent="." index="26"]
+[node name="InteractionCol" type="Area3D" parent="." index="25"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
 collision_layer = 2
 collision_mask = 4
@@ -1255,7 +1269,7 @@ script = ExtResource("11_clcnn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65541e-08, 1.60635, 0.189357)
 shape = SubResource("CylinderShape3D_5sag3")
 
-[node name="Character" type="Area3D" parent="." index="27"]
+[node name="Character" type="Area3D" parent="." index="26"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
 collision_layer = 2
 script = ExtResource("4_wlgmj")
@@ -1274,7 +1288,45 @@ collide_with_areas = true
 debug_shape_thickness = 5
 script = ExtResource("13_ejdxg")
 
+[node name="Camera Controller" type="Node3D" parent="." index="27" node_paths=PackedStringArray("camera1", "camera2", "camera3", "camera4", "camera5", "camera6")]
+script = ExtResource("16_xxv0o")
+camera1 = NodePath("Camera1")
+camera2 = NodePath("Camera2")
+camera3 = NodePath("Camera3")
+camera4 = NodePath("Camera4")
+camera5 = NodePath("Camera5")
+camera6 = NodePath("Camera6")
+
+[node name="Camera1" type="Camera3D" parent="Camera Controller" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
+
+[node name="Camera2" type="Camera3D" parent="Camera Controller" index="1"]
+transform = Transform3D(0.751989, -0.339588, 0.564971, 0.00535039, 0.860203, 0.509923, -0.659154, -0.380434, 0.648681, -5.10383, 7.06523, 2.94118)
+visible = false
+fov = 57.1
+
+[node name="Camera3" type="Camera3D" parent="Camera Controller" index="2"]
+transform = Transform3D(0.905266, -0.220794, 0.362964, 0.00535037, 0.860203, 0.509923, -0.424811, -0.459674, 0.779895, -0.395721, 7.06523, 3.4014)
+visible = false
+fov = 57.1
+
+[node name="Camera4" type="Camera3D" parent="Camera Controller" index="3"]
+transform = Transform3D(0.839476, 0.273221, -0.469713, 0.00535038, 0.860203, 0.509923, 0.543371, -0.430581, 0.720658, 0.897732, 6.76554, 3.4014)
+visible = false
+fov = 57.1
+
+[node name="Camera5" type="Camera3D" parent="Camera Controller" index="4"]
+transform = Transform3D(0.839476, 0.273221, -0.469713, 0.00535038, 0.860203, 0.509923, 0.543371, -0.430581, 0.720658, 5.04977, 6.76554, 2.86543)
+visible = false
+fov = 47.6
+
+[node name="Camera6" type="Camera3D" parent="Camera Controller" index="5"]
+transform = Transform3D(0.999998, -0.000468514, 0.00195744, -0.000548807, 0.872209, 0.489134, -0.00193646, -0.489134, 0.872207, -5.97621, 6.75968, 12.5695)
+visible = false
+fov = 67.5
+
 [connection signal="pressed" from="Control/Panel/CloseButton" to="Control" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Control/Panel/NextButton" to="Control" method="_on_next_button_pressed"]
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]

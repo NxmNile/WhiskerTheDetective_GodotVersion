@@ -16,7 +16,7 @@ func _process(delta):
 		$"../Control/Panel".visible = true
 		character.stop_move()
 		deactive_UI()
-		UI.display_description(object_name)
+		UI.choose_dialog(object_name)
 	pass
 
 
