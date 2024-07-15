@@ -2,6 +2,8 @@ extends Node
 
 func _ready():
 	Keepdata.scene_name == "Menu"
+	$PlayButton/PlayButtonBG/Label.text = tr("StartButton")
+	$ExitButton/ExitButtonBG/Label.text = tr("ExitButton")
 func _on_exit_button_pressed():
 	pass
 

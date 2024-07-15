@@ -2,6 +2,7 @@ extends Area3D
 @onready var character = $"../Character"
 var object_name : String
 var is_in_collider = false
+var is_finish = false
 @export var police_dialog : String
 @onready var camera_controller = $"../Camera Controller"
 # Called when the node enters the scene tree for the first time.
@@ -29,7 +30,7 @@ func _process(delta):
 			$"../Control/Suspect".visible = true
 			$"../Control/Panel2".visible = true
 			pass
-		else:
+		elif object_name=="Door"&&is_finish:
 			pass
 
 
@@ -40,7 +41,7 @@ func _on_area_entered(area):
 	print(area.name)
 	if area.name == "CatOfficer":
 		$"../Control/Talk".visible = true
-	elif area.name == "Door":
+	elif area.name == "Door"&&is_finish:
 		$"../Control/Exit".visible = true
 
 
@@ -82,14 +83,22 @@ func change_to_jp():
 
 
 func _on_close_button_pressed():
+	is_finish = true
 	character.can_move()
-	camera_controller.set_active_camera("camera1")
-	$"../Control/Suspect".visible = false
 	$"../Control/Panel2".visible = false
 	$"../Control/Panel".visible = false
-	pass # Replace with function body.
+	$"../Control/Suspect".visible = false
+	camera_controller.set_active_camera("camera1")
+	display_arrow()
 
 
 func _on_setting_button_pressed():
 	$"../Control/SettingPanel".visible = true
-	pass # Replace with function body.
+
+func display_arrow():
+	for i in range(5):
+		$"../Control/Arrow".visible = true
+		await get_tree().create_timer(0.5).timeout
+		$"../Control/Arrow".visible = false
+		await get_tree().create_timer(0.5).timeout
+	

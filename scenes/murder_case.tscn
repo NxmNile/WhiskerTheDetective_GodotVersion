@@ -449,7 +449,7 @@ offset_left = 112.0
 offset_top = 93.0
 offset_right = 182.0
 offset_bottom = 122.0
-text = ": 0 / 6"
+text = ": 0 / 8"
 label_settings = SubResource("LabelSettings_vubkq")
 
 [node name="InvestigatePanel" type="Panel" parent="Camera3D/Control"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://pma33t16bgsm"]
+[gd_scene load_steps=83 format=3 uid="uid://pma33t16bgsm"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_bf3vb"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_ge2fu"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="17_mk54j"]
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="18_bbbf1"]
 [ext_resource type="Script" path="res://scenes/IntroCamera.gd" id="18_it5sh"]
+[ext_resource type="Texture2D" uid="uid://c4loe73glg08m" path="res://UI/arrow.png" id="18_xnmtr"]
 [ext_resource type="Script" path="res://scripts/Nophis.gd" id="22_8qleo"]
 [ext_resource type="PackedScene" uid="uid://cjvw86dy0w0we" path="res://scenes/cat_detective.tscn" id="23_yaf1g"]
 [ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="24_rmsd4"]
@@ -444,103 +445,6 @@ anti_aliasing = false
 font = ExtResource("10_fiwwn")
 font_size = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xboty"]
-bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyqck"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dayg7"]
-bg_color = Color(0.957918, 0.80729, 0.61882, 1)
-border_color = Color(0.993597, 0.706825, 0.793039, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-anti_aliasing_size = 0.01
-
-[sub_resource type="LabelSettings" id="LabelSettings_p0cl2"]
-font = ExtResource("10_fiwwn")
-font_size = 120
-font_color = Color(0, 0, 0, 1)
-outline_size = 32
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga4h3"]
-bg_color = Color(1, 0.67451, 0.670588, 0)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4aoe"]
-bg_color = Color(0.6, 0.6, 0.6, 0.588235)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li12q"]
-bg_color = Color(0.6, 0.6, 0.6, 0.368627)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3mse"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwjnq"]
-bg_color = Color(0.886966, 0.545404, 0.599298, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vk8ru"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_color = Color(0.8, 0.8, 0.8, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18e5s"]
-bg_color = Color(0.6, 0.6, 0.6, 0.572549)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfgg0"]
-bg_color = Color(0.6, 0.6, 0.6, 0.388235)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aej5q"]
-bg_color = Color(0.909804, 0.360784, 0.721569, 0)
-border_color = Color(0.8, 0.8, 0.8, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv0r6"]
-bg_color = Color(1, 0.284297, 0.346101, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uclfh"]
-bg_color = Color(0.419221, 0, 0.0829647, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-anti_aliasing = false
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf4yc"]
 bg_color = Color(0.916137, 0.887973, 0.663471, 1)
 corner_radius_top_left = 1
@@ -567,6 +471,103 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s43vg"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_put3w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7ctj"]
+bg_color = Color(0.957918, 0.80729, 0.61882, 1)
+border_color = Color(0.993597, 0.706825, 0.793039, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing_size = 0.01
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwgdg"]
+font = ExtResource("10_fiwwn")
+font_size = 120
+font_color = Color(0, 0, 0, 1)
+outline_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5krwq"]
+bg_color = Color(1, 0.67451, 0.670588, 0)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_megv5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.588235)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij7bl"]
+bg_color = Color(0.6, 0.6, 0.6, 0.368627)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86qj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gvs4"]
+bg_color = Color(0.886966, 0.545404, 0.599298, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxg0e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jl1r"]
+bg_color = Color(0.6, 0.6, 0.6, 0.572549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1ad6"]
+bg_color = Color(0.6, 0.6, 0.6, 0.388235)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s4xo"]
+bg_color = Color(0.909804, 0.360784, 0.721569, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqeh3"]
+bg_color = Color(1, 0.284297, 0.346101, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4ox4"]
+bg_color = Color(0.419221, 0, 0.0829647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 anti_aliasing = false
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5sag3"]
@@ -618,7 +619,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244107, 33.1057, 1.36068)
 shape = SubResource("BoxShape3D_8yvdg")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="wall/Area3D" index="8"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00509265, 33.1057, 1.39317)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00509265, 33.1057, 1.56257)
 shape = SubResource("BoxShape3D_8yvdg")
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="wall/Area3D" index="9"]
@@ -630,7 +631,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wall/Door" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.2747, 1.22101)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.2747, 1.33139)
 shape = SubResource("BoxShape3D_osnic")
 
 [node name="desk" parent="." index="1"]
@@ -883,9 +884,9 @@ label_settings = SubResource("LabelSettings_x3qa1")
 [node name="Exit" type="Panel" parent="Control" index="2"]
 visible = false
 layout_mode = 0
-offset_left = 627.0
+offset_left = 592.0
 offset_top = 500.0
-offset_right = 667.0
+offset_right = 632.0
 offset_bottom = 540.0
 scale = Vector2(2.6, 1.05876)
 theme_override_styles/panel = SubResource("StyleBoxFlat_7qu7v")
@@ -925,281 +926,7 @@ scale = Vector2(0.0869526, 0.0600608)
 text = "F"
 label_settings = SubResource("LabelSettings_x3qa1")
 
-[node name="SettingButton" type="Button" parent="Control" index="3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1135.0
-offset_top = 27.0
-offset_right = 1143.0
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(10.32, 10.32)
-theme_override_styles/normal = SubResource("StyleBoxFlat_xboty")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hyqck")
-
-[node name="Setting" type="TextureRect" parent="Control/SettingButton" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 248.0
-offset_bottom = 248.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0310067, 0.0310067)
-texture = ExtResource("13_hbqlu")
-
-[node name="SettingPanel" type="Panel" parent="Control" index="4"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 634.0
-offset_top = 308.0
-offset_right = 634.0
-offset_bottom = 308.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("14_4ptoh")
-
-[node name="Panel2" type="Panel" parent="Control/SettingPanel" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -713.0
-offset_top = -327.0
-offset_right = -713.0
-offset_bottom = -327.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(36.8115, 18.8)
-
-[node name="Panel" type="Panel" parent="Control/SettingPanel" index="1"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -314.0
-offset_top = -121.0
-offset_right = -261.0
-offset_bottom = -81.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(11.8067, 6.50019)
-theme_override_styles/panel = SubResource("StyleBoxFlat_dayg7")
-
-[node name="LabelLanguage" type="Label" parent="Control/SettingPanel/Panel" index="0"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0698755
-anchor_top = 0.219224
-anchor_right = 0.0698761
-anchor_bottom = 0.219224
-offset_right = 793.0
-offset_bottom = 230.0
-scale = Vector2(0.0216527, 0.042399)
-text = "Language"
-label_settings = SubResource("LabelSettings_p0cl2")
-metadata/_edit_use_anchors_ = true
-
-[node name="LabelSound" type="Label" parent="Control/SettingPanel/Panel" index="1"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0754717
-anchor_top = 0.55
-anchor_right = 27.7925
-anchor_bottom = 4.225
-offset_right = 519.0
-offset_bottom = 230.0
-scale = Vector2(0.0216527, 0.042399)
-text = "Volume"
-label_settings = SubResource("LabelSettings_p0cl2")
-metadata/_edit_use_anchors_ = true
-
-[node name="ENButton" type="Button" parent="Control/SettingPanel/Panel" index="2"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 10.0
-offset_right = 35.0
-offset_bottom = 17.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ga4h3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_j4aoe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_li12q")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_t3mse")
-
-[node name="Panel" type="Panel" parent="Control/SettingPanel/Panel/ENButton" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.75725
-offset_top = -0.615658
-offset_right = -1.75725
-offset_bottom = -0.615658
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.15999, 1.15999)
-theme_override_styles/panel = SubResource("StyleBoxFlat_hwjnq")
-
-[node name="ENflag" type="TextureRect" parent="Control/SettingPanel/Panel/ENButton" index="1"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.255228
-anchor_top = 0.48924
-anchor_right = 0.25524
-anchor_bottom = 0.48924
-offset_left = -4.39764
-offset_top = -3.27118
-offset_right = 1395.61
-offset_bottom = 1396.73
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0018773, 0.00339199)
-texture = ExtResource("15_8r3w8")
-
-[node name="LabelEN" type="Label" parent="Control/SettingPanel/Panel/ENButton" index="2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.400142
-anchor_top = 0.223063
-anchor_right = 0.400143
-anchor_bottom = 0.223063
-offset_left = -2.55482
-offset_top = -2.1771
-offset_right = 499.445
-offset_bottom = 447.823
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0216527, 0.042399)
-text = "EN"
-label_settings = SubResource("LabelSettings_p0cl2")
-autowrap_mode = 3
-
-[node name="JPButton" type="Button" parent="Control/SettingPanel/Panel" index="3"]
-layout_mode = 0
-offset_left = 37.267
-offset_top = 9.99971
-offset_right = 50.267
-offset_bottom = 16.9997
-theme_override_styles/normal = SubResource("StyleBoxFlat_vk8ru")
-theme_override_styles/hover = SubResource("StyleBoxFlat_18e5s")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nfgg0")
-theme_override_styles/focus = SubResource("StyleBoxFlat_aej5q")
-
-[node name="Panel2" type="Panel" parent="Control/SettingPanel/Panel/JPButton" index="0"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.10107
-offset_top = -0.615368
-offset_right = -1.10107
-offset_bottom = -0.615368
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.15999, 1.15999)
-theme_override_styles/panel = SubResource("StyleBoxFlat_hwjnq")
-
-[node name="LabelJP" type="Label" parent="Control/SettingPanel/Panel/JPButton" index="1"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.400142
-anchor_top = 0.223063
-anchor_right = 0.400143
-anchor_bottom = 0.223063
-offset_left = -1.55984
-offset_top = -2.63833
-offset_right = 500.44
-offset_bottom = 447.362
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0216527, 0.042399)
-text = "JP"
-label_settings = SubResource("LabelSettings_p0cl2")
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/JPButton" index="2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0846977
-anchor_top = 0.175819
-anchor_right = 74.1348
-anchor_bottom = 138.181
-offset_left = -1.18577
-offset_top = -0.922759
-offset_right = 36.163
-offset_bottom = 33.0381
-scale = Vector2(0.003, 0.005)
-texture = ExtResource("16_017dn")
-metadata/_edit_use_anchors_ = true
-
-[node name="CloseButton" type="Button" parent="Control/SettingPanel/Panel" index="4"]
-layout_mode = 0
-offset_left = 49.6328
-offset_top = -2.76915
-offset_right = 57.6328
-offset_bottom = 5.23085
-scale = Vector2(0.567354, 0.96007)
-theme_override_styles/normal = SubResource("StyleBoxFlat_kv0r6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uclfh")
-
-[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/CloseButton" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.23928
-offset_top = 1.76264
-offset_right = 250.239
-offset_bottom = 249.763
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0141601, 0.0141601)
-texture = ExtResource("11_wa8ba")
-
-[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel" index="2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = 21.0
-offset_right = 182.0
-offset_bottom = 277.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.239999, 0.239999)
-texture = ExtResource("17_mk54j")
-
-[node name="TextureRect2" type="TextureRect" parent="Control/SettingPanel" index="3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 212.0
-offset_top = 21.0
-offset_right = 468.0
-offset_bottom = 277.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.239999, 0.239999)
-texture = ExtResource("18_bbbf1")
-
-[node name="Suspect" type="Panel" parent="Control" index="5"]
+[node name="Suspect" type="Panel" parent="Control" index="3"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1213,7 +940,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(39.3379, 40.6178)
 
-[node name="Panel2" type="Panel" parent="Control" index="6"]
+[node name="Panel2" type="Panel" parent="Control" index="4"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1434,6 +1162,291 @@ grow_vertical = 2
 scale = Vector2(0.0133042, 0.0133042)
 texture = ExtResource("11_wa8ba")
 
+[node name="Arrow" type="TextureRect" parent="Control" index="5"]
+visible = false
+layout_mode = 0
+offset_left = 611.0
+offset_top = 686.0
+offset_right = 867.0
+offset_bottom = 799.0
+rotation = -1.57079
+scale = Vector2(0.400877, 0.520877)
+texture = ExtResource("18_xnmtr")
+
+[node name="SettingButton" type="Button" parent="Control" index="6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1135.0
+offset_top = 27.0
+offset_right = 1143.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.32, 10.32)
+theme_override_styles/normal = SubResource("StyleBoxFlat_s43vg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_put3w")
+
+[node name="Setting" type="TextureRect" parent="Control/SettingButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 248.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0310067, 0.0310067)
+texture = ExtResource("13_hbqlu")
+
+[node name="SettingPanel" type="Panel" parent="Control" index="7"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 634.0
+offset_top = 308.0
+offset_right = 634.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_4ptoh")
+
+[node name="Panel2" type="Panel" parent="Control/SettingPanel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -713.0
+offset_top = -327.0
+offset_right = -713.0
+offset_bottom = -327.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(36.8115, 18.8)
+
+[node name="Panel" type="Panel" parent="Control/SettingPanel" index="1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -121.0
+offset_right = -261.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(11.8067, 6.50019)
+theme_override_styles/panel = SubResource("StyleBoxFlat_y7ctj")
+
+[node name="LabelLanguage" type="Label" parent="Control/SettingPanel/Panel" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0698755
+anchor_top = 0.219224
+anchor_right = 0.0698761
+anchor_bottom = 0.219224
+offset_right = 793.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Language"
+label_settings = SubResource("LabelSettings_fwgdg")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelSound" type="Label" parent="Control/SettingPanel/Panel" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0754717
+anchor_top = 0.55
+anchor_right = 27.7925
+anchor_bottom = 4.225
+offset_right = 519.0
+offset_bottom = 230.0
+scale = Vector2(0.0216527, 0.042399)
+text = "Volume"
+label_settings = SubResource("LabelSettings_fwgdg")
+metadata/_edit_use_anchors_ = true
+
+[node name="ENButton" type="Button" parent="Control/SettingPanel/Panel" index="2"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 17.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5krwq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_megv5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ij7bl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v86qj")
+
+[node name="Panel" type="Panel" parent="Control/SettingPanel/Panel/ENButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.75725
+offset_top = -0.615658
+offset_right = -1.75725
+offset_bottom = -0.615658
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15999, 1.15999)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4gvs4")
+
+[node name="ENflag" type="TextureRect" parent="Control/SettingPanel/Panel/ENButton" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.255228
+anchor_top = 0.48924
+anchor_right = 0.25524
+anchor_bottom = 0.48924
+offset_left = -4.39764
+offset_top = -3.27118
+offset_right = 1395.61
+offset_bottom = 1396.73
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0018773, 0.00339199)
+texture = ExtResource("15_8r3w8")
+
+[node name="LabelEN" type="Label" parent="Control/SettingPanel/Panel/ENButton" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400142
+anchor_top = 0.223063
+anchor_right = 0.400143
+anchor_bottom = 0.223063
+offset_left = -2.55482
+offset_top = -2.1771
+offset_right = 499.445
+offset_bottom = 447.823
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "EN"
+label_settings = SubResource("LabelSettings_fwgdg")
+autowrap_mode = 3
+
+[node name="JPButton" type="Button" parent="Control/SettingPanel/Panel" index="3"]
+layout_mode = 0
+offset_left = 37.267
+offset_top = 9.99971
+offset_right = 50.267
+offset_bottom = 16.9997
+theme_override_styles/normal = SubResource("StyleBoxFlat_bxg0e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5jl1r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b1ad6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5s4xo")
+
+[node name="Panel2" type="Panel" parent="Control/SettingPanel/Panel/JPButton" index="0"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.10107
+offset_top = -0.615368
+offset_right = -1.10107
+offset_bottom = -0.615368
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15999, 1.15999)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4gvs4")
+
+[node name="LabelJP" type="Label" parent="Control/SettingPanel/Panel/JPButton" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400142
+anchor_top = 0.223063
+anchor_right = 0.400143
+anchor_bottom = 0.223063
+offset_left = -1.55984
+offset_top = -2.63833
+offset_right = 500.44
+offset_bottom = 447.362
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0216527, 0.042399)
+text = "JP"
+label_settings = SubResource("LabelSettings_fwgdg")
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/JPButton" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0846977
+anchor_top = 0.175819
+anchor_right = 74.1348
+anchor_bottom = 138.181
+offset_left = -1.18577
+offset_top = -0.922759
+offset_right = 36.163
+offset_bottom = 33.0381
+scale = Vector2(0.003, 0.005)
+texture = ExtResource("16_017dn")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="Control/SettingPanel/Panel" index="4"]
+layout_mode = 0
+offset_left = 49.6328
+offset_top = -2.76915
+offset_right = 57.6328
+offset_bottom = 5.23085
+scale = Vector2(0.567354, 0.96007)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqeh3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r4ox4")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel/Panel/CloseButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.23928
+offset_top = 1.76264
+offset_right = 250.239
+offset_bottom = 249.763
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.0141601, 0.0141601)
+texture = ExtResource("11_wa8ba")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingPanel" index="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 21.0
+offset_right = 182.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("17_mk54j")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/SettingPanel" index="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = 21.0
+offset_right = 468.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("18_bbbf1")
+
 [node name="InteractionCol" type="Area3D" parent="." index="15"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
 collision_layer = 2
@@ -1478,11 +1491,11 @@ visible = false
 fov = 67.5
 
 [connection signal="pressed" from="Control/Panel/NextButton" to="Control" method="_on_next_button_pressed"]
+[connection signal="pressed" from="Control/Panel2/CloseButton" to="InteractionCol" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/SettingButton" to="InteractionCol" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="Control/SettingPanel/Panel/ENButton" to="Control/SettingPanel" method="_on_en_button_pressed"]
 [connection signal="pressed" from="Control/SettingPanel/Panel/JPButton" to="Control/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Control/SettingPanel/Panel/CloseButton" to="Control/SettingPanel" method="_on_close_button_pressed"]
-[connection signal="pressed" from="Control/Panel2/CloseButton" to="InteractionCol" method="_on_close_button_pressed"]
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]

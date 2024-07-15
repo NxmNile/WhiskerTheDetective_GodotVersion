@@ -55,7 +55,7 @@ func display_description(name):
 	$Panel/descriptionLabel.text = descriptionText
 	$Panel/descriptionLabel.text = tr(object_name)
 	Keepdata.check_clues()
-	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 6"
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
 	pass
 func change_to_eng():
 	TranslationServer.set_locale("en")

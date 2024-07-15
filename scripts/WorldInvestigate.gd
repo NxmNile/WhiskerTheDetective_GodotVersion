@@ -29,11 +29,10 @@ func _process(delta):
 		elif  object_name == "Door":
 			pass
 		elif object_name == "PoliceStation2":
-			UI.display_clue("LockPoliceStation")
-			
-			pass
-	pass
-
+			if Keepdata.clue_num <8:
+				UI.display_clue("LockPoliceStation")
+			else :
+				pass
 
 func _on_area_entered(area):
 	print(area.name)
