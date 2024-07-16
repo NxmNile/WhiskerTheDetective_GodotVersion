@@ -5,7 +5,7 @@ var is_in_collider = false
 var is_finish = false
 @export var police_dialog : String
 @onready var camera_controller = $"../Camera Controller"
-const environment2 = preload("res://scenes/first_en.tscn")
+const environment2 = preload("res://scenes/Environment.tscn")
 const police_intro = preload("res://scenes/police_intro.tscn")
 
 func _ready():

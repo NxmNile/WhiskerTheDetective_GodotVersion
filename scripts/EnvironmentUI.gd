@@ -14,7 +14,7 @@ func _ready():
 	else:
 		TranslationServer.set_locale("jp")
 	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
-	if scene_name== "Environment2":
+	if Keepdata.scene_name == "Environment2":
 		display_arrow(arrow)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -7,6 +7,7 @@ extends Control
 @export var Weapon : String
 @onready var character = $"../../Character"
 @onready var investigate = $"../../InteractionCol"
+
 var imageIndex = 0
 var description =[[Bank,"BankRecord"],[Diary,"Diary"],[Weapon,"Weapon"],[Letter,"Letter"],[Phone,"PhoneRecord"],[WindowB,"Window"]]
 var descriptionText

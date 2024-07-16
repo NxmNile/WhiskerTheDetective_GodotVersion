@@ -2,8 +2,11 @@ extends Area3D
 var object_name : String
 var target : Area3D
 var is_in_collider : bool
+var start_owl_house = 0
 @onready var UI = $"../Camera3D/Control"
 @onready var character = $"../Character"
+const murder_room = preload("res://scenes/murder_case.tscn")
+const environment = preload("res://scenes/Environment.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = $"../Character"
@@ -13,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	transform = target.transform
-	if Input.is_action_pressed("F")&&is_in_collider&&object_name!="Door":
+	if Input.is_action_pressed("F")&&is_in_collider&&object_name!="Door3":
 		character.move_speed = 0
 		character.rotation_speed = 0
 		$"../Camera3D/Control/Panel2".visible = true
@@ -25,8 +28,10 @@ func _process(delta):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
-	if Input.is_action_pressed("F")&&is_in_collider&&object_name=="Door":
-		#Load world scene
+	if Input.is_action_pressed("F")&&is_in_collider&&object_name=="Door3":
+		Keepdata.scene_name = "Environment"
+		murder_room.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+		get_tree().change_scene_to_packed(environment)
 		pass
 
 
@@ -84,14 +89,18 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = true
 		$"../Camera3D/Control/ExitPane".visible = false
-	elif  area.name == "Door":
-		$"../Camera3D/Control/InvestigatePanel2".visible = false
-		$"../Camera3D/Control/InvestigatePanel6".visible = false
-		$"../Camera3D/Control/InvestigatePanel5".visible = false
-		$"../Camera3D/Control/InvestigatePanel".visible = false
-		$"../Camera3D/Control/InvestigatePanel4".visible = false
-		$"../Camera3D/Control/InvestigatePanel3".visible = false
-		$"../Camera3D/Control/ExitPane".visible = true
+	elif  area.name == "Door3":
+		if start_owl_house == 0:
+			is_in_collider = false
+			start_owl_house+=1
+		else :
+			$"../Camera3D/Control/InvestigatePanel2".visible = false
+			$"../Camera3D/Control/InvestigatePanel6".visible = false
+			$"../Camera3D/Control/InvestigatePanel5".visible = false
+			$"../Camera3D/Control/InvestigatePanel".visible = false
+			$"../Camera3D/Control/InvestigatePanel4".visible = false
+			$"../Camera3D/Control/InvestigatePanel3".visible = false
+			$"../Camera3D/Control/ExitPane".visible = true
 
 
 
@@ -108,5 +117,5 @@ func _on_area_exited(area):
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 	elif area.name == "Phone":
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
-	elif  area.name == "Door":
+	elif  area.name == "Door3":
 		$"../Camera3D/Control/ExitPane".visible = false

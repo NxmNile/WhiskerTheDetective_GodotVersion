@@ -2,10 +2,11 @@ extends Node
 const menu = preload("res://scenes/main_menu.tscn")
 const intro = preload("res://scenes/intro.tscn")
 func _ready():
-	Keepdata.scene_name == "Menu"
+	Keepdata.scene_name = "Menu"
 	$PlayButton/PlayButtonBG/Label.text = tr("StartButton")
 	$ExitButton/ExitButtonBG/Label.text = tr("ExitButton")
 func _on_exit_button_pressed():
+	get_tree().quit()
 	pass
 
 func _on_play_button_pressed():

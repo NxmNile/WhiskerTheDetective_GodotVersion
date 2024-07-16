@@ -2,6 +2,11 @@ extends Area3D
 var move_speed = 6
 var rotation_speed = 20
 var velocity = Vector3()
+func _ready():
+	if Keepdata.scene_name == "Environment2":
+		transform.origin.x = -30.704
+	else:
+		transform.origin.x = 41.266
 func _process(delta):
 	var direction = Vector3.ZERO
 	
