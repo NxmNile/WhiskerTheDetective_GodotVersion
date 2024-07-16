@@ -71,7 +71,7 @@ func choose_dialog(name):
 		camera_controller.set_active_camera("camera6")
 		Keepdata.check_interrogate()
 		
-		if Keepdata.npc_num ==1 :
+		if Keepdata.npc_num <4 :
 			dialog_name = Police 
 			key_name = "Police"
 		else:
@@ -112,9 +112,12 @@ func start_typewriter_effect(line: String) -> void:
 
 
 func _on_typing_finished():
+	print(index)
 	if index < dialog_name.size() - 1:
 		$Panel/NextButton.visible = true
-	elif index ==4 && !(key_name =="Police4"||key_name=="Squirrel2"||key_name=="Police3"):
+	else:
+		$Panel/CloseButton.visible = true
+	if index ==dialog_name.size()-1 && !(key_name =="Police4"||key_name=="Squirrel"||key_name=="Police3"):
 		$Panel/CloseButton.visible = true
 	if key_name == "Police2":
 		$Panel/NextButton.visible = false
@@ -173,6 +176,7 @@ func _on_yes_button_pressed():
 func _on_no_button_pressed():
 	$Panel/YesNo.visible = false
 	character.can_move()
+	camera_controller.set_active_camera("camera1")
 	$Panel.visible = false
 	pass # Replace with function body.
 

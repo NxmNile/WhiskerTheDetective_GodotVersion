@@ -29,12 +29,13 @@ func _process(delta):
 			get_tree().change_scene_to_packed(preload("res://scenes/murder_case.tscn"))
 			pass
 		elif object_name == "PoliceStation2":
-			if Keepdata.clue_num <8:
-				UI.display_clue("LockPoliceStation")
-			else :
-				Keepdata.scene_name = "PoliceStation"
-				preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-				get_tree().change_scene_to_packed(preload("res://scenes/police_interia.tscn"))
+			if Keepdata.police_station_entering>0:
+				if Keepdata.clue_num <8:
+					UI.display_clue("LockPoliceStation")
+				else :
+					Keepdata.scene_name = "PoliceStation"
+					preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+					get_tree().change_scene_to_packed(preload("res://scenes/police_interia.tscn"))
 
 func _on_area_entered(area):
 	print(area.name)

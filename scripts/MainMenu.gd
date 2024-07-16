@@ -10,6 +10,7 @@ func _on_exit_button_pressed():
 	pass
 
 func _on_play_button_pressed():
+	Keepdata.scene_name = "Intro"
 	menu.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 	get_tree().change_scene_to_packed(intro)
 	pass

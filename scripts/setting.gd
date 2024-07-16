@@ -34,6 +34,8 @@ func _on_en_button_pressed():
 		police_introUI.change_to_en()
 	elif Keepdata.scene_name == "Intro":
 		introUI.change_to_en()
+	elif Keepdata.scene_name == "PoliceStation":
+		police_stationUI.change_to_en()
 
 func _on_jp_button_pressed():
 	TranslationServer.set_locale("jp")
@@ -51,6 +53,8 @@ func _on_jp_button_pressed():
 		police_introUI.change_to_jp()
 	elif Keepdata.scene_name == "Intro":
 		introUI.change_to_jp()
+	elif Keepdata.scene_name == "PoliceStation":
+		police_stationUI.change_to_jp()
 func _on_close_button_pressed():
 	$".".visible = false
 	pass
