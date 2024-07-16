@@ -3,7 +3,6 @@ extends Area3D
 @onready var Character = $"../Character"
 var object_name : String
 var is_in_collider = true
-var stop_move : bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -13,7 +12,7 @@ func _ready():
 func _process(delta):
 	transform = Character.transform
 	if Input.is_action_pressed("F")&&is_in_collider:
-		stop_move = true
+		
 		if object_name == "Footprint":
 			UI.display_clue("Footprint")
 			Character.stop_moving()
@@ -29,10 +28,13 @@ func _process(delta):
 		elif  object_name == "Door":
 			pass
 		elif object_name == "PoliceStation2":
-			if Keepdata.clue_num <8:
-				UI.display_clue("LockPoliceStation")
-			else :
-				pass
+			if Keepdata.police_station_entering>0:
+				if Keepdata.clue_num <8:
+					UI.display_clue("LockPoliceStation")
+				else :
+					Keepdata.scene_name = "PoliceStation"
+					preload("res://scenes/environment2.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+					get_tree().change_scene_to_packed(preload("res://scenes/police_interia.tscn"))
 
 func _on_area_entered(area):
 	print(area.name)

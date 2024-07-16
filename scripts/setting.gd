@@ -5,6 +5,7 @@ extends Node
 @onready var worldUI = $".."
 @onready var police_stationUI = $".."
 @onready var introUI = $"../.."
+@onready var police_introUI = $".."
 func _ready():
 	if Keepdata.language == "en":
 		TranslationServer.set_locale("en")
@@ -30,7 +31,7 @@ func _on_en_button_pressed():
 	elif Keepdata.scene_name == "World1":
 		worldUI.change_to_en()
 	elif Keepdata.scene_name =="PoliceStation2":
-		police_stationUI.change_to_en()
+		police_introUI.change_to_en()
 	elif Keepdata.scene_name == "Intro":
 		introUI.change_to_en()
 
@@ -47,7 +48,7 @@ func _on_jp_button_pressed():
 	elif Keepdata.scene_name == "World1":
 		worldUI.change_to_jp()
 	elif Keepdata.scene_name =="PoliceStation2":
-		police_stationUI.change_to_jp()
+		police_introUI.change_to_jp()
 	elif Keepdata.scene_name == "Intro":
 		introUI.change_to_jp()
 func _on_close_button_pressed():

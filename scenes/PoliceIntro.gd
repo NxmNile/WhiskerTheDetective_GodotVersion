@@ -7,12 +7,7 @@ var is_finish = false
 @onready var camera_controller = $"../Camera Controller"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Keepdata.language =="en":
-		change_to_en()
-	else:
-		change_to_jp()
-	Keepdata.scene_name = "Intro"
-	$"../Control/Exit/InterrogateText".text = tr("Exit")
+	
 	pass # Replace with function body.
 
 
@@ -31,6 +26,9 @@ func _process(delta):
 			$"../Control/Panel2".visible = true
 			pass
 		elif object_name=="Door"&&is_finish:
+			Keepdata.scene_name = "Environment2"
+			preload("res://scenes/police_intro.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+			get_tree().change_scene_to_packed(preload("res://scenes/environment2.tscn"))
 			pass
 
 
@@ -53,34 +51,6 @@ func _on_area_exited(area):
 		$"../Control/Talk".visible = false
 	elif area.name == "Door":
 		$"../Control/Exit".visible = false
-
-func change_to_en():
-	TranslationServer.set_locale("en")
-	$"../Control/Exit/InterrogateText".text = tr("Exit")
-	$"../Control/Panel/descriptionLabel".text = tr("Intro6")
-	$"../Control/Panel2/Name".text = tr("Choice1")
-	$"../Control/Panel2/Description".text = tr("RabbitRelation")
-	$"../Control/Panel2/Name2".text = tr("Choice2")
-	$"../Control/Panel2/Description2".text = tr("OwlRelation")
-	$"../Control/Panel2/Name3".text = tr("Choice4")
-	$"../Control/Panel2/Description3".text = tr("BadgerRelation")
-	$"../Control/Panel2/Name4".text = tr("Choice3")
-	$"../Control/Panel2/Description4".text = tr("SquirrelRelation")
-func change_to_jp():
-	TranslationServer.set_locale("jp")
-	$"../Control/Exit/InterrogateText".text = tr("Exit")
-	$"../Control/Panel/descriptionLabel".text = tr("Intro6")
-	$"../Control/Panel2/Name".text = tr("Choice1")
-	$"../Control/Panel2/Description".text = tr("RabbitRelation")
-	$"../Control/Panel2/Name2".text = tr("Choice2")
-	$"../Control/Panel2/Description2".text = tr("OwlRelation")
-	$"../Control/Panel2/Name3".text = tr("Choice4")
-	$"../Control/Panel2/Description3".text = tr("BadgerRelation")
-	$"../Control/Panel2/Name4".text = tr("Choice3")
-	$"../Control/Panel2/Description4".text = tr("SquirrelRelation")
-
-	
-
 
 func _on_close_button_pressed():
 	is_finish = true

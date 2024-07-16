@@ -1,8 +1,9 @@
-[gd_scene load_steps=83 format=3 uid="uid://pma33t16bgsm"]
+[gd_scene load_steps=84 format=3 uid="uid://pma33t16bgsm"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_bf3vb"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_ge2fu"]
 [ext_resource type="VoxelGIData" uid="uid://qwqh0bcxiupr" path="res://scenes/police_interia.VoxelGI_data.res" id="3_4wmj6"]
+[ext_resource type="Script" path="res://scenes/IntroUI.gd" id="5_j3ugf"]
 [ext_resource type="PackedScene" uid="uid://3lv5a0d0py0b" path="res://scenes/cat_offier.tscn" id="6_umyhj"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="10_fiwwn"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="11_wa8ba"]
@@ -806,6 +807,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("5_j3ugf")
 
 [node name="Panel" type="Panel" parent="Control" index="0"]
 visible = false
@@ -1452,7 +1454,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.3248
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("15_r01m3")
-police_dialog = "Here is a list of individuals who are under suspicion. "
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionCol" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65541e-08, 1.60635, 0.189357)

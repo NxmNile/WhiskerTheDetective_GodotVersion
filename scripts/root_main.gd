@@ -21,6 +21,7 @@ var current_scene: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Keepdata.scene_name = "Menu"
 	change_scene(menu)
 
 # Function to change scenes
@@ -46,8 +47,10 @@ func change_scene(scene_resource: PackedScene):
 
 # Function to change to the intro scene
 func change_to_intro():
+	Keepdata.scene_name = "Intro"
 	change_scene(intro)
 
 # Function to change to the police intro scene
 func change_to_policeintro():
+	Keepdata.scene_name = "PoliceStation2"
 	change_scene(police_intro)
