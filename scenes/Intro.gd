@@ -1,5 +1,6 @@
 extends Control
-
+const intro = preload("res://scenes/intro.tscn")
+const police_intro = preload("res://scenes/police_intro.tscn")
 @export var conversation: Array = ["Hello there!", "How are you?", "Welcome to the game!"]
 var index: int = 0
 var dialog_name: Array
@@ -81,4 +82,10 @@ func change_to_jp():
 	$Panel/Label5.text = tr("Intro5")
 func _on_setting_button_pressed():
 	$Panel/SettingPanel.visible = true
+	pass # Replace with function body.
+
+
+func _on_play_button_pressed():
+	intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_packed(police_intro)
 	pass # Replace with function body.

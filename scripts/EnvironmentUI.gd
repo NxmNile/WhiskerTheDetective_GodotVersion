@@ -55,7 +55,6 @@ func _on_close_button_pressed():
 	$DesctiptionPanel/Rabbit.visible = false
 	$DesctiptionPanel/FootPrint.visible = false
 	investigate.is_in_collider = false
-	investigate.stop_move = false
 	pass # Replace with function body.
 func display_arrow(arrow):
 	for i in range(5):

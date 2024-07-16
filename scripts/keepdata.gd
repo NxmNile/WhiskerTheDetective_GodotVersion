@@ -1,12 +1,13 @@
 extends Node
 
-var scene_name = "PoliceStation2"
+var scene_name = "Menu"
 var language = "jp"
 var cluses = [false,false,false,false,false,false,false,false]
 var npc = [false,false,false,false]
 var npc_num : int
 var clue_num : int
 var police_station_entering = 0
+var house_entering = 0
 func check_clues():
 	clue_num = 0
 	for i in range(cluses.size()):

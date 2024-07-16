@@ -1,5 +1,6 @@
 extends Node
-
+const menu = preload("res://scenes/main_menu.tscn")
+const intro = preload("res://scenes/intro.tscn")
 func _ready():
 	Keepdata.scene_name == "Menu"
 	$PlayButton/PlayButtonBG/Label.text = tr("StartButton")
@@ -8,6 +9,8 @@ func _on_exit_button_pressed():
 	pass
 
 func _on_play_button_pressed():
+	menu.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_packed(intro)
 	pass
 
 func _on_setting_button_pressed():

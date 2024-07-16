@@ -530,6 +530,7 @@ texture = ExtResource("9_02isb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
+[connection signal="pressed" from="Panel/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Panel/SettingPanel/Panel/ENButton" to="Panel/SettingPanel" method="_on_en_button_pressed"]
 [connection signal="pressed" from="Panel/SettingPanel/Panel/JPButton" to="Panel/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Panel/SettingPanel/Panel/CloseButton" to="Panel/SettingPanel" method="_on_close_button_pressed"]

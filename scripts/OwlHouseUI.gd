@@ -18,6 +18,8 @@ func _ready():
 	else:
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name = "OwlHouse"
+	Keepdata.check_clues()
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
 	#$NumberofClues.text = tr("Clues")
 	pass # Replace with function body.
 

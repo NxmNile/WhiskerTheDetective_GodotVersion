@@ -5,9 +5,11 @@ var is_in_collider = false
 var is_finish = false
 @export var police_dialog : String
 @onready var camera_controller = $"../Camera Controller"
-# Called when the node enters the scene tree for the first time.
+const environment2 = preload("res://scenes/first_en.tscn")
+const police_intro = preload("res://scenes/police_intro.tscn")
+
 func _ready():
-	
+
 	pass # Replace with function body.
 
 
@@ -27,8 +29,8 @@ func _process(delta):
 			pass
 		elif object_name=="Door"&&is_finish:
 			Keepdata.scene_name = "Environment2"
-			preload("res://scenes/police_intro.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-			get_tree().change_scene_to_packed(preload("res://scenes/environment2.tscn"))
+			police_intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+			get_tree().change_scene_to_packed(environment2)
 			pass
 
 
