@@ -1,4 +1,6 @@
 extends Control
+const police_station = preload("res://scenes/police_interia.tscn")
+const intro = preload("res://scenes/intro.tscn")
 @onready var character = $"../Character"
 @onready var interrogate = $"../InteractionCol"
 @onready var camera_controller = $"../Camera Controller"
@@ -210,7 +212,6 @@ func choose_the_murderer(choice):
 		
 	
 func _on_rabbit_button_pressed():
-	
 	choose_the_murderer(false)
 	
 func _on_owl_button_pressed():
@@ -221,3 +222,26 @@ func _on_badger_button_pressed():
 
 func _on_squirrel_button_pressed():
 	choose_the_murderer(true)
+
+
+func _on_try_again_button_pressed():
+	reset_data()
+	police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_packed(intro)
+
+
+
+func _on_play_again_button_pressed():
+	reset_data()
+	police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_packed(intro)
+
+func reset_data():
+	Keepdata.scene_name = "Menu"
+	Keepdata.language = "jp"
+	Keepdata.cluses = [false,false,false,false,false,false,false,false]
+	Keepdata.npc = [false,false,false,false]
+	Keepdata.npc_num =0
+	Keepdata.clue_num = 0
+	Keepdata.police_station_entering = 0
+	Keepdata.house_entering = 0
