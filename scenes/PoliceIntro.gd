@@ -30,7 +30,7 @@ func _process(delta):
 			close_button = true
 		elif object_name=="Door"&&is_finish:
 			Keepdata.scene_name = "Environment2"
-			await get_tree().create_timer(1).timeout
+			await get_tree().create_timer(0.5).timeout
 			police_intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 			get_tree().change_scene_to_packed(environment2)
 	if Input.is_action_pressed("ESC")&&close_button==true:

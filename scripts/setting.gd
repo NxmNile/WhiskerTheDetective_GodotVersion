@@ -28,7 +28,7 @@ func _on_en_button_pressed():
 		parent_node._change_to_english()
 	elif Keepdata.scene_name =="OwlHouse":
 		owl_house_UI.change_to_eng()
-	elif Keepdata.scene_name == "Environment2":
+	elif Keepdata.scene_name == "Environment"||Keepdata.scene_name == "Environment2":
 		worldUI.change_to_en()
 	elif Keepdata.scene_name =="PoliceStation2":
 		police_introUI.change_to_en()
@@ -47,7 +47,7 @@ func _on_jp_button_pressed():
 		parent_node._change_to_japanese()
 	elif Keepdata.scene_name =="OwlHouse":
 		owl_house_UI.change_to_jp()
-	elif Keepdata.scene_name == "Environment2":
+	elif Keepdata.scene_name == "Environment"||Keepdata.scene_name == "Environment2":
 		worldUI.change_to_jp()
 	elif Keepdata.scene_name =="PoliceStation2":
 		police_introUI.change_to_jp()

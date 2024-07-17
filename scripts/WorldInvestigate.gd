@@ -14,18 +14,20 @@ func _process(delta):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		if object_name == "Footprint":
 			UI.display_clue("Footprint")
-			Character.move_speed=0
-			Character.rotation_speed = 0
+			Character.stop_moving()
 			Keepdata.cluses[6]=true
 			Keepdata.check_clues()
 			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
+			if Keepdata.clue_num==8:
+				$"../Camera3D/Control/NumberofClues3".visible = true
 		elif object_name == "CCTV2":
 			UI.display_clue("Camera")
-			Character.move_speed=0
-			Character.rotation_speed = 0
+			Character.stop_moving()
 			Keepdata.cluses[7]=true
 			Keepdata.check_clues()
 			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
+			if Keepdata.clue_num==8:
+				$"../Camera3D/Control/NumberofClues3".visible = true
 		elif  object_name == "Door2"&&Keepdata.house_entering>1:
 			preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 			get_tree().change_scene_to_packed(preload("res://scenes/murder_case.tscn"))

@@ -9,9 +9,9 @@ EN,EN,英語
 JP,JP,日本語
 Weapon,"The murder weapon: An ancient artifact (a ceremonial dagger) from Dr. Hootie's collection, found wiped clean of fingerprints.",凶器：フーティ博士のコレクションの古代遺物，指紋は拭きとられている。
 Window,A shattered window suggesting a possible break-in.,窓が割れている。誰か入って来たらしい。
-Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger.,日記：なくなったページの半分に、フーティ博士の夫とアナグマのマキシの密売について書かれている。
+Diary,The Diary: The missing pages from the diary reveal Dr. Hootie was about to expose a significant fraud involving her husband and Maxie Badger. Fingerprints on the diary belong to Nutty Squirrel.,日記：なくなったページの半分に、フーティ博士の夫とアナグマのマキシの密売について書かれている。日記の指紋はリスのナッツのものです。
 PhoneRecord,"Phone Records: Reveal multiple calls between Dr. Hootie and an unknown number, traced back to a burner phone found in Maxie's possession.",通話記録：フーティ博士の複数の通話はアナグマのマキシの使い捨ての携帯電話のようだ。
-Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint.,窓の近くのあしあとは、アナグマのマキシと一致している。
+Footprint,Muddy footprints near the shattered window match Maxie Badger's footprint. I think it’s seemed too big. It’s weird.,窓の近くのあしあとは、アナグマのマキシと一致している。大きすぎる気がします。変ですね。
 Letter,"A threatening letter addressed to Dr. Hootie found in the room's fireplace, partially burned.",フーティ博士宛の脅迫状が、暖炉に入れられ燃やされようとした
 BankRecord,Bank Records: Indicate Hawkin Owl withdrew a large sum of money shortly before Dr. Hootie's death.,銀行の取引記録：フーティ博士の死の直前に、ふくろうのホーキンが多額の現金を引き出していたらしい。
 Camera,"Security Camera Footage: Shows Bunny Alice entering the house late at night, after her claimed visit time.",監視カメラの映像:：うさぎのアリスは話した時間より遅く、深夜に家に入ったようだ。
@@ -46,7 +46,7 @@ Squirrel5,Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you e
 Squirrel6,"Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.",リスのナッツ : 日記はいつも触ってました。彼女は日記のメモを読み上げて、私が整理してたので。
 Squirrel7,Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?,ウィスカー : ホーティ博士の日記からページがなくなってたんだけど、何か知りませんか？
 Squirrel8,Nutty Squirrel : She kept those last entries very private. I only know she was worried about something.,リスのナッツ : 書いてたことの最後はわからないわ。プライバシーだもの。何か不安そうだったことはわかるけど、それ以上は・・・
-Squirrel21,Nutty Squirrel : How did you know that?! OK It's my fault. I'm trying to protect the secret. I don't want to lose my job.,リスのナッツ : なんでそれを知ってるのよ！私がわるかったの。内緒にしたかったのよ。クビになりたくなかったのよ・・・
+Squirrel21,Nutty Squirrel : How did you know that?! OK It's my fault. She is going to reveal my secret. I'm trying to protect my reputation!,リスのナッツ : なんでそれを知ってるのよ！私がわるかったの。彼女が私の秘密を暴露しようとしているんです。私は自分の評判を守ろうとしています!
 Badger1,Whisker : Where were you last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこにいましたか？
 Badger2,"Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.",アナグマのマキシ : 一人で家にいました。証言してくれる人はいません。それが聞きたいんだよね？
 Badger3,Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?,ウィスカー : 最近、街でホーティ博士と口論したみたいですが、くわしく話してもらえませんかね？
@@ -80,3 +80,4 @@ Yes,Yes,はい
 No,No,いいえ
 Intro6,Here is a list of individuals who are under suspicion.,こちらは、容疑がかかっている人物のリストです。
 Exit,Exit,でぐち
+BackToStation,Go back to Police Station.,警察署に もどって。

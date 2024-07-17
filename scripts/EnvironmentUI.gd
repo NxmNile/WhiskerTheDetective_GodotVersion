@@ -2,8 +2,9 @@ extends Control
 @export var FootPrint: String
 @export var CCTV2: String
 @export var LockPoliceStation : String 
-@export var scene_name : String
+#@export var scene_name : String
 @onready var arrow = $Arrow
+@onready var arrow2 = $Arrow2
 @onready var character = $"../../Character"
 @onready var investigate = $"../../Investigate"
 var object_name :String
@@ -14,19 +15,23 @@ func _ready():
 	else:
 		TranslationServer.set_locale("jp")
 	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
+	$NumberofClues3.text = tr("BackToStation")
 	if Keepdata.scene_name == "Environment2":
 		display_arrow(arrow)
+	if Keepdata.scene_name == "Environment"&&Keepdata.clue_num==8:
+		display_arrow(arrow2)
+		$NumberofClues3.visible = true
+		
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 func change_to_en():
 	TranslationServer.set_locale("en")
 	$DesctiptionPanel/descriptionLabel.text = tr(object_name)
+	$NumberofClues3.text = tr("BackToStation")
 	
 func change_to_jp():
 	TranslationServer.set_locale("jp")
 	$DesctiptionPanel/descriptionLabel.text = tr(object_name)
+	$NumberofClues3.text = tr("BackToStation")
 func _on_setting_button_pressed():
 	$SettingPanel.visible = true
 	pass # Replace with function body.
@@ -50,17 +55,16 @@ func display_clue(name):
 
 func _on_close_button_pressed():
 	investigate.close_button = false
-	character.move_speed = 6
-	character.rotation_speed = 20
+	character.continue_moving()
 	$Panel2.visible = false
 	$DesctiptionPanel.visible = false
 	$DesctiptionPanel/Rabbit.visible = false
 	$DesctiptionPanel/FootPrint.visible = false
 	investigate.is_in_collider = false
 	pass # Replace with function body.
-func display_arrow(arrow):
+func display_arrow(arrow_):
 	for i in range(5):
-		arrow.visible = true
+		arrow_.visible = true
 		await get_tree().create_timer(0.5).timeout
-		arrow.visible = false
+		arrow_.visible = false
 		await get_tree().create_timer(0.5).timeout
