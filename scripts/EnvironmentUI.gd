@@ -35,6 +35,7 @@ func display_clue(name):
 	object_name = name
 	$Panel2.visible = true
 	$DesctiptionPanel.visible = true
+	investigate.close_button = true
 	if name == "Camera":
 		$DesctiptionPanel/descriptionLabel.text = CCTV2
 		$DesctiptionPanel/Rabbit.visible = true
@@ -48,6 +49,7 @@ func display_clue(name):
 
 
 func _on_close_button_pressed():
+	investigate.close_button = false
 	character.move_speed = 6
 	character.rotation_speed = 20
 	$Panel2.visible = false

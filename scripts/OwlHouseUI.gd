@@ -75,6 +75,7 @@ func change_to_jp():
 
 
 func _on_close_button_pressed():
+	investigate.close_button = false
 	$Panel/Diary.visible = false
 	$Panel/Weapon.visible = false
 	$Panel/Letter.visible = false

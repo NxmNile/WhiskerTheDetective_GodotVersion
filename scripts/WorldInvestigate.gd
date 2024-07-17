@@ -3,7 +3,7 @@ extends Area3D
 @onready var Character = $"../Character"
 var object_name : String
 var is_in_collider = true
-
+var close_button : bool = false
 func _ready():
 	print(Keepdata.police_station_entering)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,7 +38,8 @@ func _process(delta):
 					Keepdata.scene_name = "PoliceStation"
 					preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 					get_tree().change_scene_to_packed(preload("res://scenes/police_interia.tscn"))
-
+	if close_button==true && Input.is_action_pressed("ESC"):
+		UI._on_close_button_pressed()
 func _on_area_entered(area):
 	print(area.name)
 	object_name = area.name

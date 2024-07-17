@@ -3,6 +3,7 @@ extends Area3D
 var object_name : String
 var is_in_collider = false
 var is_finish = false
+var close_button : bool = false
 @export var police_dialog : String
 @onready var camera_controller = $"../Camera Controller"
 const environment2 = preload("res://scenes/Environment.tscn")
@@ -26,14 +27,15 @@ func _process(delta):
 			await get_tree().create_timer(2).timeout
 			$"../Control/Suspect".visible = true
 			$"../Control/Panel2".visible = true
-			pass
+			close_button = true
 		elif object_name=="Door"&&is_finish:
 			Keepdata.scene_name = "Environment2"
 			await get_tree().create_timer(1).timeout
 			police_intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 			get_tree().change_scene_to_packed(environment2)
-			pass
-
+	if Input.is_action_pressed("ESC")&&close_button==true:
+		_on_close_button_pressed()
+	
 
 
 func _on_area_entered(area):
@@ -57,6 +59,7 @@ func _on_area_exited(area):
 
 func _on_close_button_pressed():
 	is_finish = true
+	close_button=false
 	character.can_move()
 	$"../Control/Panel2".visible = false
 	$"../Control/Panel".visible = false

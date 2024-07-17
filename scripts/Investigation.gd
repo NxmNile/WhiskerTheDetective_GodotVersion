@@ -7,6 +7,7 @@ var start_owl_house = 0
 @onready var character = $"../Character"
 const murder_room = preload("res://scenes/murder_case.tscn")
 const environment = preload("res://scenes/Environment.tscn")
+var close_button : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = $"../Character"
@@ -21,6 +22,7 @@ func _process(delta):
 		character.rotation_speed = 0
 		$"../Camera3D/Control/Panel2".visible = true
 		$"../Camera3D/Control/Panel".visible = true
+		close_button = true
 		UI.display_description(object_name)
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
 		$"../Camera3D/Control/InvestigatePanel6".visible = false
@@ -34,6 +36,8 @@ func _process(delta):
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_packed(environment)
 		pass
+	if close_button == true && Input.is_action_pressed("ESC"):
+		UI._on_close_button_pressed()
 
 
 
