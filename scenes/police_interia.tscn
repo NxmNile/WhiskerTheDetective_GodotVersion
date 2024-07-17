@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=92 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -456,6 +456,8 @@ corner_radius_bottom_left = 1
 anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5o2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c0s8f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qu7v"]
 bg_color = Color(0.535173, 0.785843, 0.479025, 1)
@@ -1147,12 +1149,13 @@ vertical_alignment = 1
 [node name="NextButton" type="Button" parent="Control/Panel" index="4"]
 visible = false
 layout_mode = 0
-offset_left = 1227.0
-offset_top = 138.0
-offset_right = 1483.0
-offset_bottom = 394.0
-scale = Vector2(0.16, 0.12)
+offset_left = 1203.0
+offset_top = 117.0
+offset_right = 1459.0
+offset_bottom = 465.0
+scale = Vector2(0.24, 0.18)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o5o2o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c0s8f")
 icon = ExtResource("12_p2kfr")
 
 [node name="InterrogatePanel" type="Panel" parent="Control" index="1"]

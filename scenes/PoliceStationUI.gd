@@ -20,7 +20,8 @@ var translate_key: String
 var key_name: String
 var is_typing: bool = false
 var continue_typing: bool = true
-
+var next_button : bool = false
+var close_button : bool = true
 signal typing_finished
 func _ready():
 	Keepdata.scene_name == "PoliceStation2"
@@ -31,12 +32,17 @@ func _ready():
 	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
 	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
 	set_language(Keepdata.language)
-	#choose_dialog("Rabbit")
+	
 
 func _process(delta):
+	if next_button == true && Input.is_action_pressed("NextDialog"):
+		_on_next_button_pressed()
+	if close_button == true && Input.is_action_pressed("ESC"):
+		_on_close_button_pressed()
 	pass
 
 func _on_close_button_pressed():
+	close_button = false
 	clear_dialog()
 	character.can_move()
 	index = 0
@@ -116,16 +122,22 @@ func start_typewriter_effect(line: String) -> void:
 func _on_typing_finished():
 	print(index)
 	if index < dialog_name.size() - 1:
+		next_button=true
 		$Panel/NextButton.visible = true
 	else:
+		close_button = true
 		$Panel/CloseButton.visible = true
 	if index ==dialog_name.size()-1 && !(key_name =="Police4"||key_name=="Squirrel"||key_name=="Police3"):
+		close_button = true
 		$Panel/CloseButton.visible = true
 	if key_name == "Police2":
+		next_button = false
 		$Panel/NextButton.visible = false
 	if key_name =="Police4"||key_name=="Squirrel2"||key_name=="Police3":
+		close_button = false
 		$Panel/CloseButton.visible = false
 func _on_next_button_pressed():
+	next_button = false
 	$Panel/NextButton.visible = false
 	clear_dialog()
 	index += 1

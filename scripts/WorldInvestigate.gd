@@ -14,13 +14,15 @@ func _process(delta):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		if object_name == "Footprint":
 			UI.display_clue("Footprint")
-			Character.stop_moving()
+			Character.move_speed=0
+			Character.rotation_speed = 0
 			Keepdata.cluses[6]=true
 			Keepdata.check_clues()
 			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
 		elif object_name == "CCTV2":
 			UI.display_clue("Camera")
-			Character.stop_moving()
+			Character.move_speed=0
+			Character.rotation_speed = 0
 			Keepdata.cluses[7]=true
 			Keepdata.check_clues()
 			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"

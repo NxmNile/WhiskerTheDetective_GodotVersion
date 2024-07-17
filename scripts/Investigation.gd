@@ -31,7 +31,7 @@ func _process(delta):
 	if Input.is_action_pressed("F")&&is_in_collider&&object_name=="Door3":
 		Keepdata.scene_name = "Environment"
 		murder_room.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_packed(environment)
 		pass
 
