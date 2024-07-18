@@ -1806,6 +1806,7 @@ camera6 = NodePath("Camera6")
 
 [node name="Camera1" type="Camera3D" parent="Camera Controller" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.736392, 0.676555, 0, -0.676555, 0.736392, 0, 12.5755, 15.7373)
+current = true
 
 [node name="Camera2" type="Camera3D" parent="Camera Controller" index="1"]
 transform = Transform3D(0.751989, -0.339588, 0.564971, 0.00535039, 0.860203, 0.509923, -0.659154, -0.380434, 0.648681, -5.10383, 7.06523, 2.94118)
