@@ -23,6 +23,12 @@ func _ready():
 	else:
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name ="Intro"
+	
+	$"Sound Controller/PhoneRigging".play()
+	await get_tree().create_timer(1).timeout
+	$"Sound Controller/PhonePickedup".play()
+	await get_tree().create_timer(0.5).timeout
+	$"Sound Controller/BGM".play()
 	start_conversation()
 
 func start_conversation() -> void:

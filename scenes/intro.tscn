@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dw2w2jxsxhune"]
+[gd_scene load_steps=35 format=3 uid="uid://dw2w2jxsxhune"]
 
 [ext_resource type="Script" path="res://scripts/Intro.gd" id="1_wll32"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="2_6y8dw"]
@@ -10,7 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="8_i8ntx"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="9_02isb"]
 [ext_resource type="Texture2D" uid="uid://dlmt0ef2xieqi" path="res://UI/yellowRectNormal.png" id="10_i8dvk"]
+[ext_resource type="Script" path="res://scenes/VolumSlider.gd" id="11_7wrhv"]
 [ext_resource type="FontFile" uid="uid://deigtwdpbmrw6" path="res://Fonts/Itim-Regular.ttf" id="11_8rrk4"]
+[ext_resource type="AudioStream" uid="uid://cub200sm82w0f" path="res://sounds/mixkit-office-telephone-ring-1350.mp3" id="13_oaum4"]
+[ext_resource type="AudioStream" uid="uid://dqsm4x60pcwmh" path="res://sounds/Picking-up-desk-office-phone-4-www.FesliyanStudios.com.mp3" id="14_38mcw"]
+[ext_resource type="AudioStream" uid="uid://ums22fbrwprh" path="res://sounds/BGM2.wav" id="15_lom08"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xwrek"]
 font = ExtResource("2_6y8dw")
@@ -498,6 +502,18 @@ grow_vertical = 2
 scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("8_i8ntx")
 
+[node name="VolumSlider" type="HSlider" parent="Panel/SettingPanel"]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 399.0
+offset_right = 770.0
+offset_bottom = 415.0
+scale = Vector2(1.4, 1.4)
+max_value = 1.0
+step = 0.001
+script = ExtResource("11_7wrhv")
+bus_name = "Master"
+
 [node name="SettingButton" type="Button" parent="Panel"]
 visible = false
 layout_mode = 1
@@ -529,6 +545,19 @@ scale = Vector2(0.0310067, 0.0310067)
 texture = ExtResource("9_02isb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Sound Controller" type="Node" parent="."]
+
+[node name="PhoneRigging" type="AudioStreamPlayer" parent="Sound Controller"]
+stream = ExtResource("13_oaum4")
+volume_db = -5.0
+
+[node name="PhonePickedup" type="AudioStreamPlayer" parent="Sound Controller"]
+stream = ExtResource("14_38mcw")
+
+[node name="BGM" type="AudioStreamPlayer" parent="Sound Controller"]
+stream = ExtResource("15_lom08")
+volume_db = -10.0
 
 [connection signal="pressed" from="Panel/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Panel/SettingPanel/Panel/ENButton" to="Panel/SettingPanel" method="_on_en_button_pressed"]

@@ -8,6 +8,7 @@ var npc_num : int
 var clue_num : int
 var police_station_entering = 0
 var house_entering = 0
+var volume_db : float = 1
 func check_clues():
 	clue_num = 0
 	for i in range(cluses.size()):
