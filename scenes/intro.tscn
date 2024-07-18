@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://dw2w2jxsxhune"]
 
-[ext_resource type="Script" path="res://scenes/Intro.gd" id="1_wll32"]
+[ext_resource type="Script" path="res://scripts/Intro.gd" id="1_wll32"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="2_6y8dw"]
 [ext_resource type="Script" path="res://scripts/setting.gd" id="3_kfn08"]
 [ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="4_7nxrk"]

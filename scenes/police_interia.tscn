@@ -10,8 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cj85h3i7ylxgu" path="res://scenes/owl_2.tscn" id="7_t5f5a"]
 [ext_resource type="PackedScene" uid="uid://dr4qw4ohs81s1" path="res://scenes/badger.tscn" id="8_mqcrn"]
 [ext_resource type="PackedScene" uid="uid://3lv5a0d0py0b" path="res://scenes/cat_offier.tscn" id="8_vwjbm"]
-[ext_resource type="Script" path="res://scenes/PoliceStationUI.gd" id="9_fk5ii"]
-[ext_resource type="Script" path="res://scenes/Interogation.gd" id="11_clcnn"]
+[ext_resource type="Script" path="res://scripts/PoliceStationUI.gd" id="9_n2lvs"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="11_fok6o"]
 [ext_resource type="Texture2D" uid="uid://bu68w8kxb120o" path="res://UI/nextBtn.png" id="12_p2kfr"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="12_v4uyb"]
@@ -20,11 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="14_g4i0n"]
 [ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="15_nf148"]
 [ext_resource type="Texture2D" uid="uid://b0wkyi22ihd6u" path="res://UI/jP.png" id="16_w0513"]
-[ext_resource type="Script" path="res://scenes/CameraController.gd" id="16_xxv0o"]
+[ext_resource type="Script" path="res://scripts/CameraController.gd" id="16_xxv0o"]
 [ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="17_tu6ep"]
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="18_18qjq"]
 [ext_resource type="Texture2D" uid="uid://6er0056xrtms" path="res://UI/yellowRectTapped.png" id="19_tboxp"]
 [ext_resource type="Texture2D" uid="uid://b2wdjqpkfv4qn" path="res://UI/starIcon.png" id="20_ilh4i"]
+[ext_resource type="Script" path="res://scripts/Interogation.gd" id="21_wodjy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -899,7 +899,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("9_fk5ii")
+script = ExtResource("9_n2lvs")
 Rabbit = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Alice Rabbit : I was at home most of the night. I did visit Hootie earlier in the evening, around 7 PM. I left around 8 PM.", "Whisker : Security footage shows you returning to Dr. Hootie’s house later that night. Can you explain that?", "Alice Rabbit : Oh, um, yes. I forgot my scarf there. I went back to get it but didn’t see Hootie. I thought she was already asleep, so I left quickly.", "Whisker : How was your relationship with Dr. Hootie?", "Alice Rabbit : We were very close, like sisters. I can’t imagine who would want to harm her.", "Whisker : Did Dr. Hootie mention anything unusual or worrying to you recently?", "Alice Rabbit : She was stressed about a new discovery and mentioned something about her husband and a fraud. I told her to be careful, but I didn’t think it was this serious."]
 Owl = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.", "Whisker : Is there anyone who can confirm your alibi?", "Hawkin Owl : It was a private meeting, so unfortunately, no one can confirm. But I did stop by the convenience store on the way back. Maybe the clerk remembers me.", "Whisker : How was your relationship with Dr. Hootie?", "Hawkin Owl: We had our ups and downs, like any couple. But I loved her deeply.", "Whisker : Did she mention anything unusual recently? Any threats or strange occurrences?", "Hawkin Owl: She did seem more stressed than usual. She mentioned a big discovery and some fraud. I didn’t pay much attention, though. I wish I had."]
 Squirrel = ["Whisker : Can you tell me about your relationship with Dr. Hootie?", "Nutty Squirrel : We were very close, like family. She trusted me with many of her secrets.", "Whisker : Did Dr. Hootie mention anything unusual or concerning to you lately?", "Nutty Squirrel : She was excited about a new discovery and was planning to go public with it. She also seemed worried, but she didn’t tell me why.", "Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you explain that?", "Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.", "Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?", "Nutty Squirrel : She kept those last entries very private. I only know she was worried about something."]
@@ -1770,7 +1770,7 @@ texture = ExtResource("20_ilh4i")
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("11_clcnn")
+script = ExtResource("21_wodjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionCol" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65541e-08, 1.60635, 0.189357)
