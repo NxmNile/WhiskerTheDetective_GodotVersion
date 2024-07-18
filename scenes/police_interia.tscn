@@ -1679,6 +1679,7 @@ scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("18_18qjq")
 
 [node name="VolumSlider" type="HSlider" parent="Control/SettingPanel" index="4"]
+layout_mode = 0
 offset_left = 14.0
 offset_top = 59.0
 offset_right = 155.0

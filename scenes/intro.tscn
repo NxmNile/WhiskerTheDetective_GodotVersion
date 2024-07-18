@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dw2w2jxsxhune"]
+[gd_scene load_steps=36 format=3 uid="uid://dw2w2jxsxhune"]
 
 [ext_resource type="Script" path="res://scripts/Intro.gd" id="1_wll32"]
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="2_6y8dw"]
@@ -22,6 +22,8 @@ font_size = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlkt7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r60yr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6j8rb"]
 
@@ -239,6 +241,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.56, 0.56)
 theme_override_styles/normal = SubResource("StyleBoxFlat_jlkt7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r60yr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6j8rb")
 
 [node name="PlayButtonBG" type="TextureRect" parent="Panel/PlayButton"]
