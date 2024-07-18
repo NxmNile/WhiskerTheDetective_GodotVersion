@@ -20,7 +20,7 @@ var current_text: String = ""
 func _ready():
 	if Keepdata.language =="en":
 		TranslationServer.set_locale("en")
-	else:
+	elif Keepdata.language=="jp":
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name ="Intro"
 	

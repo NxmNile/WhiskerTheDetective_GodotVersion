@@ -28,7 +28,7 @@ func _process(delta):
 			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
 			if Keepdata.clue_num==8:
 				$"../Camera3D/Control/NumberofClues3".visible = true
-		elif  object_name == "Door2"&&Keepdata.house_entering>1:
+		elif  object_name == "Door2"&&Keepdata.house_entering>0:
 			preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 			get_tree().change_scene_to_packed(preload("res://scenes/murder_case.tscn"))
 			pass

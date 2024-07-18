@@ -44,6 +44,10 @@ func _on_area_entered(area):
 		$"../Control/InterrogatePanel3".visible = false
 		$"../Control/InterrogatePanel4".visible = true
 	elif object_name == "CatOfficer":
+		$"../Control/InterrogatePanel".visible = false
+		$"../Control/InterrogatePanel2".visible =false
+		$"../Control/InterrogatePanel3".visible = false
+		$"../Control/InterrogatePanel4".visible = false
 		$"../Control/Talk".visible = true
 
 func _on_area_exited(area):
@@ -53,13 +57,12 @@ func _on_area_exited(area):
 		$"../Control/InterrogatePanel".visible = false
 	elif area.name =="Owl":
 		$"../Control/InterrogatePanel2".visible = false
-	elif  area.name == "squirrel":
+	elif  area.name == "Squirrel":
 		$"../Control/InterrogatePanel3".visible = false
 	elif area.name =="badger":
 		$"../Control/InterrogatePanel4".visible = false
 	elif area.name == "CatOfficer":
 		$"../Control/Talk".visible = false
-	pass # Replace with function body.
 
 func deactive_UI():
 	$"../Control/InterrogatePanel".visible = false

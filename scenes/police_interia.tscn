@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=103 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -443,6 +443,8 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufkv3"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lach"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wbimy"]
@@ -450,6 +452,14 @@ font = ExtResource("11_fok6o")
 font_size = 17
 font_color = Color(0.190172, 0.238016, 0.0607125, 1)
 outline_size = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s71kg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svd7i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7nh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnk7p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k05wk"]
 bg_color = Color(0.826858, 0.508604, 0.351214, 1)
@@ -459,7 +469,11 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edv6e"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5o2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2krx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c0s8f"]
 
@@ -904,6 +918,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_n2lvs")
+Rabbit = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Alice Rabbit : I was at home most of the night. I did visit Hootie earlier in the evening, around 7 PM. I left around 8 PM.", "Whisker : Security footage shows you returning to Dr. Hootie’s house later that night. Can you explain that?", "Alice Rabbit : Oh, um, yes. I forgot my scarf there. I went back to get it but didn’t see Hootie. I thought she was already asleep, so I left quickly.", "Whisker : How was your relationship with Dr. Hootie?", "Alice Rabbit : We were very close, like sisters. I can’t imagine who would want to harm her.", "Whisker : Did Dr. Hootie mention anything unusual or worrying to you recently?", "Alice Rabbit : She was stressed about a new discovery and mentioned something about her husband and a fraud. I told her to be careful, but I didn’t think it was this serious."]
+Owl = ["Whisker : Can you tell me where you were last night between 8 PM and midnight?", "Hawkin Owl : I was at a business meeting in town. I left around 7:30 PM and got back home just after midnight.", "Whisker : Is there anyone who can confirm your alibi?", "Hawkin Owl : It was a private meeting, so unfortunately, no one can confirm. But I did stop by the convenience store on the way back. Maybe the clerk remembers me.", "Whisker : How was your relationship with Dr. Hootie?", "Hawkin Owl: We had our ups and downs, like any couple. But I loved her deeply.", "Whisker : Did she mention anything unusual recently? Any threats or strange occurrences?", "Hawkin Owl: She did seem more stressed than usual. She mentioned a big discovery and some fraud. I didn’t pay much attention, though. I wish I had."]
+Squirrel = ["Whisker : Can you tell me about your relationship with Dr. Hootie?", "Nutty Squirrel : We were very close, like family. She trusted me with many of her secrets.", "Whisker : Did Dr. Hootie mention anything unusual or concerning to you lately?", "Nutty Squirrel : She was excited about a new discovery and was planning to go public with it. She also seemed worried, but she didn’t tell me why.", "Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you explain that?", "Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.", "Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?", "Nutty Squirrel : She kept those last entries very private. I only know she was worried about something."]
+Squirrel2 = ["Nutty Squirrel : How did you know that?! OK It's my fault. She is going to reveal my secret. I'm trying to protect my reputation!"]
+Badger = ["Whisker : Where were you last night between 8 PM and midnight?", "Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.", "Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?", "Maxie Badger : She exposed my artifact smuggling ring. I was angry, but I didn’t kill her!", "Whisker : We found muddy footprints near Dr. Hootie’s place that match shoes we found in your possession. Can you explain that?", "Maxie Badger : That’s impossible! I haven’t been near her place in weeks. Someone’s setting me up!", "Whisker : Do you know anything about a burner phone that was used to contact Dr. Hootie?", "Maxie Badger : No, I don’t. I’m telling you, Detective, I didn’t do this."]
+Police = ["Police : Hey! Go back and interrogate them all!"]
+Police2 = ["Police : Are you ready to tell me who the murderer is?", "Police : Who is the murderer?"]
+Police3 = ["Police : No! You are wrong! "]
+Police4 = ["Police : Yes! You are Right! Congraturations!"]
 
 [node name="Panel" type="Panel" parent="Control" index="0"]
 visible = false
@@ -967,6 +990,7 @@ offset_right = 98.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ufkv3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/RabbitButton" index="0"]
@@ -996,6 +1020,7 @@ offset_right = 378.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s71kg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/OwlButton" index="0"]
@@ -1025,6 +1050,7 @@ offset_right = 658.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_svd7i")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/SquirrelButton" index="0"]
@@ -1054,6 +1080,7 @@ offset_right = 941.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j7nh8")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/BadgerButton" index="0"]
@@ -1089,6 +1116,7 @@ offset_right = 319.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dnk7p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/YesNo/YesButton" index="0"]
@@ -1119,6 +1147,7 @@ offset_right = 667.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_k05wk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_edv6e")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/YesNo/NoButton" index="0"]
@@ -1150,6 +1179,7 @@ offset_right = 1442.0
 offset_bottom = 453.0
 scale = Vector2(0.24, 0.18)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o5o2o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t2krx")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_c0s8f")
 icon = ExtResource("12_p2kfr")
 
