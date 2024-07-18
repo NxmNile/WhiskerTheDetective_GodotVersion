@@ -29,6 +29,7 @@ func _ready():
 	$"Sound Controller/PhonePickedup".play()
 	await get_tree().create_timer(0.5).timeout
 	$"Sound Controller/BGM".play()
+	await get_tree().create_timer(1).timeout
 	start_conversation()
 
 func start_conversation() -> void:

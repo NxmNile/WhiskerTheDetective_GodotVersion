@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://duxsghk0b6amm"]
+[gd_scene load_steps=64 format=3 uid="uid://duxsghk0b6amm"]
 
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="1_12ck4"]
 [ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
@@ -19,7 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="8_6wdpa"]
 [ext_resource type="Texture2D" uid="uid://d1yciedqjudr7" path="res://assets/window.png" id="9_eyuul"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="9_omrxe"]
+[ext_resource type="Script" path="res://scenes/VolumSlider.gd" id="16_kucr6"]
 [ext_resource type="Script" path="res://scripts/Investigation.gd" id="20_xgmi6"]
+[ext_resource type="AudioStream" uid="uid://bgmtjlruqdaxg" path="res://sounds/BGM.wav" id="22_fvyel"]
+[ext_resource type="AudioStream" uid="uid://ctmfx2j6vjm5y" path="res://sounds/Clues.wav" id="23_5e5sk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j30t6"]
 bg_color = Color(1, 0.875046, 0.548086, 1)
@@ -989,6 +992,25 @@ grow_vertical = 2
 scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("8_6wdpa")
 
+[node name="VolumSlider" type="HSlider" parent="Camera3D/Control/SettingPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.00001
+offset_top = 41.0
+offset_right = 132.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+max_value = 1.0
+step = 0.001
+script = ExtResource("16_kucr6")
+bus_name = "Master"
+
 [node name="Character" type="Area3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 4.94696)
 collision_layer = 2
@@ -1135,6 +1157,16 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59016, 6.87198)
 shape = SubResource("BoxShape3D_uogef")
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("22_fvyel")
+volume_db = -5.0
+
+[node name="Clues" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("23_5e5sk")
+volume_db = -10.0
 
 [connection signal="pressed" from="Camera3D/Control/Panel/CloseButton" to="Camera3D/Control" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingButton" to="Camera3D/Control" method="_on_setting_button_pressed"]

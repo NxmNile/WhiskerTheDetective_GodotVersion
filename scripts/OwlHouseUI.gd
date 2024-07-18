@@ -21,8 +21,7 @@ func _ready():
 	Keepdata.scene_name = "OwlHouse"
 	Keepdata.check_clues()
 	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
-	#$NumberofClues.text = tr("Clues")
-	pass # Replace with function body.
+	$"../../Sound/BGM".play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,6 +30,8 @@ func _process(delta):
 
 func display_description(name):
 	object_name = name
+	if Keepdata.clue_num!=8:
+		$"../../Sound/Clues".play()
 	if name == "BankRecord":
 		descriptionText = Bank
 		Keepdata.cluses[0] = true

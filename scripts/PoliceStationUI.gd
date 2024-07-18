@@ -24,6 +24,7 @@ var next_button : bool = false
 var close_button : bool = true
 signal typing_finished
 func _ready():
+	$"../Sound/BGM".play()
 	Keepdata.scene_name == "PoliceStation2"
 	$Panel/YesNo/YesButton/Label.text = tr("Yes")
 	$Panel/YesNo/NoButton/Label.text = tr("No")
@@ -208,6 +209,7 @@ func choose_the_murderer(choice):
 		display_dialog(dialog_name)
 		await get_tree().create_timer(4).timeout
 		$Failed.visible = true
+		$"../Sound/Lose".play()
 	elif choice == true:
 		key_name = "Police4"
 		dialog_name = Police4
@@ -221,7 +223,7 @@ func choose_the_murderer(choice):
 		camera_controller.set_active_camera("camera6")
 		$Panel.visible = false
 		$Congratulations.visible = true
-		
+		$"../Sound/Win".play()
 	
 func _on_rabbit_button_pressed():
 	choose_the_murderer(false)

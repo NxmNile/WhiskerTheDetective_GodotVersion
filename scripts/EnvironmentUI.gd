@@ -21,7 +21,7 @@ func _ready():
 	if Keepdata.scene_name == "Environment"&&Keepdata.clue_num==8:
 		display_arrow(arrow2)
 		$NumberofClues3.visible = true
-		
+	$"../../SoundManager/BGM".play()
 
 func change_to_en():
 	TranslationServer.set_locale("en")
@@ -44,9 +44,13 @@ func display_clue(name):
 	if name == "Camera":
 		$DesctiptionPanel/descriptionLabel.text = CCTV2
 		$DesctiptionPanel/Rabbit.visible = true
+		if Keepdata.clue_num!=8:
+			$"../../SoundManager/Clues".play()
 	elif name =="Footprint":
 		$DesctiptionPanel/descriptionLabel.text = FootPrint
 		$DesctiptionPanel/FootPrint.visible = true
+		if Keepdata.clue_num!=8:
+			$"../../SoundManager/Clues".play()
 	elif name =="LockPoliceStation":
 		$DesctiptionPanel/descriptionLabel.text = LockPoliceStation
 	$DesctiptionPanel/descriptionLabel.text = tr(name)

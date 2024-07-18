@@ -9,7 +9,7 @@ func _ready():
 		change_to_jp()
 	Keepdata.scene_name = "PoliceStation2"
 	$"../Control/Exit/InterrogateText".text = tr("Exit")
-
+	$"../SoundManager/BGM".play()
 
 func change_to_en():
 	TranslationServer.set_locale("en")

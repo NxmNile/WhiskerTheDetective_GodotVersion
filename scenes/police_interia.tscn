@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=96 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -22,9 +22,13 @@
 [ext_resource type="Script" path="res://scripts/CameraController.gd" id="16_xxv0o"]
 [ext_resource type="Texture2D" uid="uid://dx4ynppg1bpxo" path="res://UI/soundOffBtn.png" id="17_tu6ep"]
 [ext_resource type="Texture2D" uid="uid://6lihqxf3ernf" path="res://UI/soundOnBtn.png" id="18_18qjq"]
+[ext_resource type="Script" path="res://scenes/VolumSlider.gd" id="19_e8c8x"]
 [ext_resource type="Texture2D" uid="uid://6er0056xrtms" path="res://UI/yellowRectTapped.png" id="19_tboxp"]
 [ext_resource type="Texture2D" uid="uid://b2wdjqpkfv4qn" path="res://UI/starIcon.png" id="20_ilh4i"]
 [ext_resource type="Script" path="res://scripts/Interogation.gd" id="21_wodjy"]
+[ext_resource type="AudioStream" uid="uid://bgmtjlruqdaxg" path="res://sounds/BGM.wav" id="26_tggxx"]
+[ext_resource type="AudioStream" uid="uid://cjm02ebwrf4c7" path="res://sounds/Win.wav" id="27_ekr5u"]
+[ext_resource type="AudioStream" uid="uid://bfuj4rb1lxcou" path="res://sounds/mixkit-player-losing-or-failing-2042.wav" id="28_456jn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -1644,6 +1648,17 @@ grow_vertical = 2
 scale = Vector2(0.239999, 0.239999)
 texture = ExtResource("18_18qjq")
 
+[node name="VolumSlider" type="HSlider" parent="Control/SettingPanel" index="4"]
+offset_left = 14.0
+offset_top = 59.0
+offset_right = 155.0
+offset_bottom = 75.0
+scale = Vector2(1.4, 1.4)
+max_value = 1.0
+step = 0.001
+script = ExtResource("19_e8c8x")
+bus_name = "Master"
+
 [node name="Failed" type="Panel" parent="Control" index="8"]
 visible = false
 layout_mode = 0
@@ -1823,6 +1838,19 @@ fov = 47.6
 transform = Transform3D(0.999998, -0.000468514, 0.00195744, -0.000548807, 0.872209, 0.489134, -0.00193646, -0.489134, 0.872207, -5.97621, 6.75968, 12.5695)
 visible = false
 fov = 67.5
+
+[node name="Sound" type="Node" parent="." index="28"]
+
+[node name="BGM" type="AudioStreamPlayer" parent="Sound" index="0"]
+stream = ExtResource("26_tggxx")
+volume_db = -5.0
+
+[node name="Win" type="AudioStreamPlayer" parent="Sound" index="1"]
+stream = ExtResource("27_ekr5u")
+
+[node name="Lose" type="AudioStreamPlayer" parent="Sound" index="2"]
+stream = ExtResource("28_456jn")
+volume_db = -5.0
 
 [connection signal="pressed" from="Control/Panel/CloseButton" to="Control" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Choice/RabbitButton" to="Control" method="_on_rabbit_button_pressed"]
