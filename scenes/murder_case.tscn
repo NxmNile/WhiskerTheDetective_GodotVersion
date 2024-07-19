@@ -1025,7 +1025,7 @@ shape = SubResource("CylinderShape3D_75svy")
 
 [node name="RayCast3D" type="RayCast3D" parent="Character"]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 3.39162e-08, 0.197501, 0.387956)
-target_position = Vector3(0, -0.8, 0)
+target_position = Vector3(0, -0.5, 0)
 collide_with_areas = true
 debug_shape_thickness = 5
 script = ExtResource("4_efwl8")

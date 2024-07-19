@@ -31,7 +31,9 @@ func _ready():
 	$"Sound Controller/BGM".play()
 	await get_tree().create_timer(1).timeout
 	start_conversation()
-
+func _process(delta):
+	if Input.is_action_just_pressed("NextDialog"):
+		_on_play_button_pressed()
 func start_conversation() -> void:
 	var sentence : String
 	for i in range(conversation.size()):

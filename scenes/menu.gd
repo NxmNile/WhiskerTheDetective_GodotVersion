@@ -1,5 +1,7 @@
 extends Control
 
+#const menu_scene = preload("res://scenes/menu.tscn")
+const intro = preload("res://scenes/intro.tscn")
 
 func _ready():
 	$Sound/BGM.play()
@@ -28,10 +30,10 @@ func _process(delta):
 	
 func _on_start_button_pressed():
 	Keepdata.scene_name = "Intro"
-	const menu = preload("res://scenes/menu.tscn")
-	const intro = preload("res://scenes/intro.tscn")
-	menu.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-	get_tree().change_scene_to_packed(intro)
+	
+	#menu_scene.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	#get_tree().change_scene_to_packed(intro)
+	pass
 
 
 func _on_exit_button_pressed():

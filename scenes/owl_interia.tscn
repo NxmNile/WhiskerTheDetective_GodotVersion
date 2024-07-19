@@ -73,7 +73,7 @@ omni_range = 17.6374
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.164261, 4.47348, 4.16641)
 light_color = Color(0.904628, 0.892108, 0.887867, 1)
-light_energy = 1.878
+light_energy = 5.548
 light_size = 76.125
 light_specular = 0.0
 light_bake_mode = 1
