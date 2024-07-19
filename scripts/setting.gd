@@ -25,7 +25,7 @@ func _on_en_button_pressed():
 	$Panel/JPButton/Panel2.visible = false
 	$Panel/LabelSound.text = tr("LabelSound")
 	if Keepdata.scene_name =="Menu":
-		parent_node._change_to_english()
+		parent_node._change_to_en()
 	elif Keepdata.scene_name =="OwlHouse":
 		owl_house_UI.change_to_eng()
 	elif Keepdata.scene_name == "Environment"||Keepdata.scene_name == "Environment2":
@@ -44,7 +44,7 @@ func _on_jp_button_pressed():
 	$Panel/JPButton/Panel2.visible = true
 	$Panel/LabelSound.text = tr("LabelSound")
 	if Keepdata.scene_name =="Menu":
-		parent_node._change_to_japanese()
+		parent_node._change_to_jp()
 	elif Keepdata.scene_name =="OwlHouse":
 		owl_house_UI.change_to_jp()
 	elif Keepdata.scene_name == "Environment"||Keepdata.scene_name == "Environment2":
