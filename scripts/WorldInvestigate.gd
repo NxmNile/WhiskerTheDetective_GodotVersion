@@ -17,16 +17,16 @@ func _process(delta):
 			Character.stop_moving()
 			Keepdata.cluses[6]=true
 			Keepdata.check_clues()
-			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
-			if Keepdata.clue_num==8:
+			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 9"
+			if Keepdata.clue_num==9:
 				$"../Camera3D/Control/NumberofClues3".visible = true
 		elif object_name == "CCTV2":
 			UI.display_clue("Camera")
 			Character.stop_moving()
 			Keepdata.cluses[7]=true
 			Keepdata.check_clues()
-			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 8"
-			if Keepdata.clue_num==8:
+			$"../Camera3D/Control/NumberofClues2".text = ": "+str(Keepdata.clue_num)+" / 9"
+			if Keepdata.clue_num==9:
 				$"../Camera3D/Control/NumberofClues3".visible = true
 		elif  object_name == "Door2"&&Keepdata.house_entering>0:
 			preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
@@ -34,7 +34,7 @@ func _process(delta):
 			pass
 		elif object_name == "PoliceStation2":
 			if Keepdata.police_station_entering>0:
-				if Keepdata.clue_num <8:
+				if Keepdata.clue_num <9:
 					UI.display_clue("LockPoliceStation")
 				else :
 					Keepdata.scene_name = "PoliceStation"

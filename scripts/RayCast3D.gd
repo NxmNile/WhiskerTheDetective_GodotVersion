@@ -1,12 +1,12 @@
 extends RayCast3D
 
 @onready var parent_node = $".."
-
+@onready var col = $"../../ExtraCollider"
 func _process(delta):
 	if is_colliding():
 		parent_node.move_speed = 0
-		parent_node.Collide()
-		#print("Collide")
+		col.raycast_collide = true
+		
 	
 
 

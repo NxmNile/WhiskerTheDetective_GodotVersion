@@ -32,6 +32,9 @@ bones/29/position = Vector3(-0.0181351, 0.0674763, -0.465956)
 bones/29/rotation = Quaternion(0.913479, -0.216167, -0.160512, 0.305064)
 bones/29/scale = Vector3(1, 1, 1)
 
+[node name="box" parent="." index="8"]
+transform = Transform3D(0.313338, 0, 0, 0, 0.308142, 0, 0, 0, 0.630574, -6.07445, 4.1815, -1.48047)
+
 [node name="glass5" parent="." index="9"]
 material_override = ExtResource("2_asw4m")
 

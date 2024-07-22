@@ -46,7 +46,7 @@ Squirrel5,Whisker : I found your fingerprints on Dr. Hootie’s diary. Can you e
 Squirrel6,"Nutty Squirrel : I often handled her diary. She would dictate notes to me, and I’d help her organize them.",リスのナッツ : 日記はいつも触ってました。彼女は日記のメモを読み上げて、私が整理してたので。
 Squirrel7,Whisker : Do you know anything about the missing pages from Dr. Hootie's diary?,ウィスカー : ホーティ博士の日記からページがなくなってたんだけど、何か知りませんか？
 Squirrel8,Nutty Squirrel : She kept those last entries very private. I only know she was worried about something.,リスのナッツ : 書いてたことの最後はわからないわ。プライバシーだもの。何か不安そうだったことはわかるけど、それ以上は・・・
-Squirrel21,Nutty Squirrel : How did you know that?! OK It's my fault. She is going to reveal my secret. I'm trying to protect my reputation!,リスのナッツ : なんでそれを知ってるのよ！私がわるかったの。彼女が私の秘密を暴露しようとしているんです。私は自分の評判を守ろうとしています!
+Squirrel21,"Nutty Squirrel: How did you know that?! OK It's my fault, but it's an accident! Dr. Hootie was really angry that I broke the ancient jade. She tried to attack me. I'm just protecting myself.",リスのナッツ: どうしてそれを知っているんだ？！わかった、私のせいだ。でも、これは事故なんだ！ホーティは、私が古代の翡翠を壊したことに本当に怒っていた。彼女が攻撃しようとしたので、私は自分を守っただけなんだ。
 Badger1,Whisker : Where were you last night between 8 PM and midnight?,ウィスカー :昨夜の午後8時から深夜の12時までどこにいましたか？
 Badger2,"Maxie Badger : I was at home, alone. No one to vouch for me, if that’s what you’re asking.",アナグマのマキシ : 一人で家にいました。証言してくれる人はいません。それが聞きたいんだよね？
 Badger3,Whisker : You had a public altercation with Dr. Hootie recently. Can you tell me about that?,ウィスカー : 最近、街でホーティ博士と口論したみたいですが、くわしく話してもらえませんかね？
@@ -58,8 +58,8 @@ Badger8,"Maxie Badger : No, I don’t. I’m telling you, Detective, I didn’t 
 Police1,Police : Hey! Go back and interrogate them all!,警察 : 捜査が不十分です。もう一度みんなを取り調べましょう！
 Police21,Police : Are you ready to tell me who the murderer is?,警察 : 犯人を教えてくれる準備はできてる？
 Police22,Police : Who is the murderer?,警察 : 犯人はだれ？
-Police31,Police : No! You are wrong! ,警察 : ちがうよ！まちがってる！
-Police41,Police : Yes! You are Right! Congraturations!,警察 : そうだよ！あってるよ！おめでとう！
+Police31,Police : No! He(She) is stubbornly refusing to confess. Let's investigate a bit more carefully. Try again.,警察 : かたくなに自白しませんね。もう一度、少し慎重に調べてみましょう。
+Police41,"Police : She confessed! Detective, it seems this person is the murderer.",警察 :自白しました！探偵，犯人はこの人みたいです
 Choice1,Alice Rabbit,うさぎのアリス
 Choice2,Hawkin Owl,ふくろうのホーキン
 Choice3,Nutty Squirrel,リスのナッツ
@@ -72,7 +72,7 @@ Congraturations,Congraturations,おめでとう
 Failed,Failed,失敗
 Go,Go,行く
 Intro1,Whisker : Hello?,ウィスカー : もしもし？
-Intro2,"Police : Hi! Detective. Do you remember Dr.Hootie, an archiologist?",警察 : こんにちは、探偵さん。フーティ博士を覚えていますか？考古学者の。
+Intro2,"Police : Hi! Detective. Do you remember Dr.Hootie, an archaeologist?",警察 : こんにちは、探偵さん。フーティ博士を覚えていますか？考古学者の。
 Intro3,"Whisker : Yes, Why?",ウィスカー : はい、どうしたんですか？
 Intro4,Police : She just found dead In her room. Please come to my office as fast as possible.,警察 : 彼女が部屋で亡くなっているのが見つかりました。できるだけ早く警察まで来てください。
 Intro5,Whisker : Roger that!,ウィスカー : わかりました
@@ -81,3 +81,4 @@ No,No,いいえ
 Intro6,Here is a list of individuals who are under suspicion.,こちらは、容疑がかかっている人物のリストです。
 Exit,Exit,でぐち
 BackToStation,Go back to Police Station.,警察署に もどって。
+Jade,The broken ancient jade :  It's valued at over one million dollars due to its historical significance and exquisite craftsmanship. Why is it in this box?,壊れた古代の翡翠: 歴史的な重要性と精巧な作りから、その価値は100万ドルを超えます。どうしてこの箱の中にあるのでしょうか？

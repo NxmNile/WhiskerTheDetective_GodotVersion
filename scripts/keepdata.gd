@@ -2,7 +2,7 @@ extends Node
 
 var scene_name = "Menu"
 var language = "en"
-var cluses = [false,false,false,false,false,false,false,false]
+var cluses = [false,false,false,false,false,false,false,false,false]
 var npc = [false,false,false,false]
 var npc_num : int
 var clue_num : int

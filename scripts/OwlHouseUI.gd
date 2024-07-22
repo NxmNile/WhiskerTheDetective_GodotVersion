@@ -5,6 +5,7 @@ extends Control
 @export var Bank: String
 @export var WindowB : String
 @export var Weapon : String
+@export var Jade : String
 @onready var character = $"../../Character"
 @onready var investigate = $"../../InteractionCol"
 
@@ -20,7 +21,7 @@ func _ready():
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name = "OwlHouse"
 	Keepdata.check_clues()
-	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 9"
 	$"../../Sound/BGM".play()
 
 
@@ -56,10 +57,14 @@ func display_description(name):
 		Keepdata.cluses[5] = true
 		descriptionText=WindowB
 		$Panel/Window.visible = true
+	elif name == "Jade":
+		Keepdata.cluses[8]=true
+		descriptionText = Jade
+		$Panel/Jade.visible = true
 	$Panel/descriptionLabel.text = descriptionText
 	$Panel/descriptionLabel.text = tr(object_name)
 	Keepdata.check_clues()
-	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 9"
 	pass
 func change_to_eng():
 	TranslationServer.set_locale("en")

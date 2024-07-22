@@ -1,10 +1,9 @@
 extends Area3D
 var move_speed = 6
 var rotation_speed = 20
-var has_rotated_90_degrees = false
+
 var rotation_threshold = deg_to_rad(90)  # 90 degrees in radians
 var initial_rotation_y = 0
-var has_collided = false
 @onready var character_root = $catDetective
 func _process(delta):
 	var direction = Vector3.ZERO
@@ -36,27 +35,8 @@ func _process(delta):
 		
 		# Apply the interpolated rotation to the node
 		global_transform.basis = Basis(interpolated_quat)
-	if has_collided&&!has_rotated_90_degrees:
-		# Calculate the current y-axis rotation
-		var current_rotation_y = global_transform.basis.get_euler().y
-
-		# Calculate the absolute difference in rotation from the initial rotation
-		var rotation_difference = abs(current_rotation_y - initial_rotation_y)
-
-		# Normalize the rotation difference to be within the range [0, PI]
-		rotation_difference = wrapf(rotation_difference, 0, PI)
-
-		# Check if the rotation difference equals the threshold and hasn't been flagged yet
-		if rotation_difference >= rotation_threshold and not has_rotated_90_degrees:
-			print("rotate")
-			has_rotated_90_degrees = true  # Set flag to true to avoid repeated prints
-	if has_rotated_90_degrees:
-		move_speed=6
 
 
-func Collide():
-	initial_rotation_y = global_transform.basis.get_euler().y
-	has_collided =true
 
 func _on_area_entered(area):
 	print(area.name)

@@ -8,6 +8,7 @@ var start_owl_house = 0
 const murder_room = preload("res://scenes/murder_case.tscn")
 const environment = preload("res://scenes/Environment.tscn")
 var close_button : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = $"../Character"
@@ -30,6 +31,7 @@ func _process(delta):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 	if Input.is_action_pressed("F")&&is_in_collider&&object_name=="Door3":
 		Keepdata.scene_name = "Environment"
 		murder_room.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
@@ -53,6 +55,7 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif area.name == "BankRecord":
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
@@ -61,6 +64,7 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif area.name == "Letter":
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
@@ -69,6 +73,7 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif  area.name == "Window":
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
@@ -77,6 +82,7 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = true
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif area.name == "Diary":
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
@@ -85,6 +91,7 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = true
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif area.name == "PhoneRecord":
 		$"../Camera3D/Control/InvestigatePanel2".visible = false
@@ -93,6 +100,16 @@ func _on_area_entered(area):
 		$"../Camera3D/Control/InvestigatePanel".visible = false
 		$"../Camera3D/Control/InvestigatePanel4".visible = false
 		$"../Camera3D/Control/InvestigatePanel3".visible = true
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
+		$"../Camera3D/Control/ExitPane".visible = false
+	elif area.name == "Jade":
+		$"../Camera3D/Control/InvestigatePanel2".visible = false
+		$"../Camera3D/Control/InvestigatePanel6".visible = false
+		$"../Camera3D/Control/InvestigatePanel5".visible = false
+		$"../Camera3D/Control/InvestigatePanel".visible = false
+		$"../Camera3D/Control/InvestigatePanel4".visible = false
+		$"../Camera3D/Control/InvestigatePanel3".visible = false
+		$"../Camera3D/Control/InvestigatePanel7".visible = true
 		$"../Camera3D/Control/ExitPane".visible = false
 	elif  area.name == "Door3":
 		if start_owl_house == 0:
@@ -105,6 +122,7 @@ func _on_area_entered(area):
 			$"../Camera3D/Control/InvestigatePanel".visible = false
 			$"../Camera3D/Control/InvestigatePanel4".visible = false
 			$"../Camera3D/Control/InvestigatePanel3".visible = false
+			$"../Camera3D/Control/InvestigatePanel7".visible = false
 			$"../Camera3D/Control/ExitPane".visible = true
 
 
@@ -124,3 +142,5 @@ func _on_area_exited(area):
 		$"../Camera3D/Control/InvestigatePanel3".visible = false
 	elif  area.name == "Door3":
 		$"../Camera3D/Control/ExitPane".visible = false
+	elif area.name == "Jade":
+		$"../Camera3D/Control/InvestigatePanel7".visible = false
