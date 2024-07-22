@@ -69,6 +69,8 @@ corner_radius_bottom_left = 10
 [sub_resource type="LabelSettings" id="LabelSettings_vubkq"]
 font = ExtResource("1_12ck4")
 font_size = 20
+font_color = Color(0.144038, 0.0689839, 0.0587056, 1)
+outline_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1cg1"]
 bg_color = Color(0.535173, 0.785843, 0.479025, 1)

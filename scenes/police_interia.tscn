@@ -443,7 +443,13 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufkv3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giptd"]
+bg_color = Color(0.285943, 0.445135, 0.177299, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lach"]
 
@@ -453,13 +459,37 @@ font_size = 17
 font_color = Color(0.190172, 0.238016, 0.0607125, 1)
 outline_size = 8
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s71kg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbofy"]
+bg_color = Color(0.286275, 0.447059, 0.176471, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svd7i"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmm2s"]
+bg_color = Color(0.286275, 0.447059, 0.176471, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7nh8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l1i7"]
+bg_color = Color(0.286275, 0.447059, 0.176471, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnk7p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_saxa3"]
+bg_color = Color(0.323992, 0.5007, 0.203465, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k05wk"]
 bg_color = Color(0.826858, 0.508604, 0.351214, 1)
@@ -469,7 +499,13 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edv6e"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k48xi"]
+bg_color = Color(0.781444, 0.301697, 0.177211, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5o2o"]
 
@@ -990,7 +1026,7 @@ offset_right = 98.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ufkv3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_giptd")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/RabbitButton" index="0"]
@@ -1020,7 +1056,7 @@ offset_right = 378.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_s71kg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vbofy")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/OwlButton" index="0"]
@@ -1050,7 +1086,7 @@ offset_right = 658.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_svd7i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mmm2s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/SquirrelButton" index="0"]
@@ -1080,7 +1116,7 @@ offset_right = 941.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_j7nh8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1l1i7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/Choice/BadgerButton" index="0"]
@@ -1116,7 +1152,7 @@ offset_right = 319.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0e6jm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_dnk7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_saxa3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/YesNo/YesButton" index="0"]
@@ -1147,7 +1183,7 @@ offset_right = 667.0
 offset_bottom = 100.0
 scale = Vector2(32.8939, 8.70528)
 theme_override_styles/normal = SubResource("StyleBoxFlat_k05wk")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_edv6e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k48xi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2lach")
 
 [node name="Label" type="Label" parent="Control/Panel/YesNo/NoButton" index="0"]
