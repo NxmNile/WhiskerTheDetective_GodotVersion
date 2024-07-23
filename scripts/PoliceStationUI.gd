@@ -26,12 +26,7 @@ signal typing_finished
 func _ready():
 	$"../Sound/BGM".play()
 	Keepdata.scene_name == "PoliceStation2"
-	$Panel/YesNo/YesButton/Label.text = tr("Yes")
-	$Panel/YesNo/NoButton/Label.text = tr("No")
-	$Panel/Choice/RabbitButton/Label.text = tr("Choice1")
-	$Panel/Choice/OwlButton/Label.text = tr("Choice2")
-	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
-	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
+	set_text()
 	set_language(Keepdata.language)
 	
 
@@ -155,26 +150,24 @@ func set_language(language: String):
 
 func change_to_en():
 	TranslationServer.set_locale("en")
-	$Panel/YesNo/YesButton/Label.text = tr("Yes")
-	$Panel/YesNo/NoButton/Label.text = tr("No")
-	$Panel/Choice/RabbitButton/Label.text = tr("Choice1")
-	$Panel/Choice/OwlButton/Label.text = tr("Choice2")
-	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
-	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
+	set_text()
 	if continue_typing:
 		change_language()
 func change_to_jp():
 	TranslationServer.set_locale("jp")
+	set_text()
+	if continue_typing:
+		change_language()
+	
+func set_text():
 	$Panel/YesNo/YesButton/Label.text = tr("Yes")
 	$Panel/YesNo/NoButton/Label.text = tr("No")
 	$Panel/Choice/RabbitButton/Label.text = tr("Choice1")
 	$Panel/Choice/OwlButton/Label.text = tr("Choice2")
 	$Panel/Choice/SquirrelButton/Label.text = tr("Choice3")
 	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
-	if continue_typing:
-		change_language()
-	
-
+	$Congratulations/ExitButton/Label.text = tr("ExitButton")
+	$Failed/ExitButton/Label.text = tr("ExitButton")
 func change_language():
 	continue_typing = false
 	display_dialog(dialog_name)
@@ -259,3 +252,8 @@ func reset_data():
 	Keepdata.clue_num = 0
 	Keepdata.police_station_entering = 0
 	Keepdata.house_entering = 0
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

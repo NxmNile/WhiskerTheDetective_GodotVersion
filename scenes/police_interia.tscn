@@ -1766,6 +1766,26 @@ text = "Try Again"
 label_settings = SubResource("LabelSettings_dnk6c")
 horizontal_alignment = 1
 
+[node name="ExitButton" type="Button" parent="Control/Failed" index="2"]
+layout_mode = 0
+offset_left = 15.2401
+offset_top = 28.5494
+offset_right = 373.24
+offset_bottom = 180.549
+scale = Vector2(0.0231746, 0.0334626)
+theme_override_styles/normal = SubResource("StyleBoxTexture_os57n")
+icon = ExtResource("19_tboxp")
+
+[node name="Label" type="Label" parent="Control/Failed/ExitButton" index="0"]
+layout_mode = 0
+offset_left = 25.4329
+offset_top = 26.1332
+offset_right = 318.433
+offset_bottom = 119.133
+text = "Exit"
+label_settings = SubResource("LabelSettings_dnk6c")
+horizontal_alignment = 1
+
 [node name="Congratulations" type="Panel" parent="Control" index="9"]
 visible = false
 layout_mode = 0
@@ -1838,6 +1858,25 @@ offset_right = 278.65
 offset_bottom = 271.535
 scale = Vector2(0.00865824, 0.0148311)
 texture = ExtResource("20_ilh4i")
+
+[node name="ExitButton" type="Button" parent="Control/Congratulations" index="5"]
+offset_left = 15.2401
+offset_top = 28.5494
+offset_right = 373.24
+offset_bottom = 180.549
+scale = Vector2(0.0231746, 0.0334626)
+theme_override_styles/normal = SubResource("StyleBoxTexture_os57n")
+icon = ExtResource("19_tboxp")
+
+[node name="Label" type="Label" parent="Control/Congratulations/ExitButton" index="0"]
+layout_mode = 0
+offset_left = 25.4329
+offset_top = 26.1332
+offset_right = 318.433
+offset_bottom = 119.133
+text = "Exit"
+label_settings = SubResource("LabelSettings_dnk6c")
+horizontal_alignment = 1
 
 [node name="InteractionCol" type="Area3D" parent="." index="25"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.32481e-07, 0, 5.00833)
@@ -1932,7 +1971,9 @@ volume_db = -5.0
 [connection signal="pressed" from="Control/SettingPanel/Panel/JPButton" to="Control/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Control/SettingPanel/Panel/CloseButton" to="Control/SettingPanel" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/Failed/TryAgainButton" to="Control" method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="Control/Failed/ExitButton" to="Control" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Control/Congratulations/PlayAgainButton" to="Control" method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="Control/Congratulations/ExitButton" to="Control" method="_on_exit_button_pressed"]
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
