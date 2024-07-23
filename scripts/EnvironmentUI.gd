@@ -14,14 +14,17 @@ func _ready():
 		TranslationServer.set_locale("en")
 	else:
 		TranslationServer.set_locale("jp")
-	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 8"
+	$NumberofClues2.text = ": "+str(Keepdata.clue_num)+" / 9"
 	$NumberofClues3.text = tr("BackToStation")
 	if Keepdata.scene_name == "Environment2":
 		display_arrow(arrow)
-	if Keepdata.scene_name == "Environment"&&Keepdata.clue_num==8:
+	if Keepdata.scene_name == "Environment"&&Keepdata.clue_num==9:
 		display_arrow(arrow2)
 		$NumberofClues3.visible = true
 	$"../../SoundManager/BGM".play()
+	if(Keepdata.clue_num==9):
+		display_arrow(arrow2)
+		$NumberofClues3.visible = true
 
 func change_to_en():
 	TranslationServer.set_locale("en")

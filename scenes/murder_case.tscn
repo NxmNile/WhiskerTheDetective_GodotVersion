@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://duxsghk0b6amm"]
+[gd_scene load_steps=67 format=3 uid="uid://duxsghk0b6amm"]
 
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="1_12ck4"]
 [ext_resource type="PackedScene" uid="uid://by34covd17xoh" path="res://scenes/owl_interia.tscn" id="1_ac73a"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://scripts/Nophis.gd" id="3_2hbn0"]
 [ext_resource type="Script" path="res://scripts/setting.gd" id="4_20xs2"]
 [ext_resource type="Texture2D" uid="uid://jwo1p532sl60" path="res://assets/Diary.png" id="4_58q5g"]
-[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="4_efwl8"]
 [ext_resource type="Texture2D" uid="uid://ccesuwdj055uf" path="res://assets/Weapon (2).png" id="5_a0asc"]
 [ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="5_symvi"]
 [ext_resource type="Texture2D" uid="uid://b0wkyi22ihd6u" path="res://UI/jP.png" id="6_j1njx"]
@@ -194,7 +193,7 @@ anti_aliasing = false
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_75svy"]
 height = 3.067
-radius = 0.983
+radius = 0.768
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iixvm"]
 size = Vector3(14.065, 6.74, 0.37)
@@ -212,7 +211,7 @@ size = Vector3(0.565, 6.96, 3.22)
 size = Vector3(7.87, 5.4, 0.265)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5pna1"]
-size = Vector3(1.5, 6.255, 3.71)
+size = Vector3(1.5, 6.255, 4.625)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5n1ce"]
 size = Vector3(5, 4.03, 2.78)
@@ -232,7 +231,7 @@ height = 3.538
 radius = 1.78
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yy101"]
-size = Vector3(0.23, 1, 0.343)
+size = Vector3(0.47, 0.6, 0.563)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2dxhb"]
 radius = 1.346
@@ -1095,13 +1094,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59479, 0)
 shape = SubResource("CylinderShape3D_75svy")
 
-[node name="RayCast3D" type="RayCast3D" parent="Character"]
-transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 3.39162e-08, 0.197501, 0.387956)
-target_position = Vector3(0, -0.5, 0)
-collide_with_areas = true
-debug_shape_thickness = 5
-script = ExtResource("4_efwl8")
-
 [node name="OwlHouse" type="Area3D" parent="."]
 collision_mask = 2
 
@@ -1140,7 +1132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160928, 2.65973, 6.90794)
 shape = SubResource("BoxShape3D_p3bo3")
 
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="OwlHouse"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.90121, 2.77856, 2.0347)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.90121, 2.77856, 2.55523)
 shape = SubResource("BoxShape3D_5pna1")
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="OwlHouse"]
@@ -1170,24 +1162,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60635, 0)
 shape = SubResource("CylinderShape3D_o47xv")
 
 [node name="ExtraCollider" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.947)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.26369)
 collision_layer = 2
 script = ExtResource("22_jtxep")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExtraCollider"]
-transform = Transform3D(0.631637, 0, 0.775264, 0, 1, 0, -0.775264, 0, 0.631637, -0.607965, 0, -0.482053)
-shape = SubResource("BoxShape3D_yy101")
-
-[node name="ExtraCollider2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.947)
-visible = false
-collision_layer = 2
-script = ExtResource("22_jtxep")
-index = 1
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ExtraCollider2"]
-transform = Transform3D(0.585368, 0, -0.810768, 0, 1, 0, 0.810768, 0, 0.585368, 0.558077, 0, -0.511733)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.239428, 0.119565)
 shape = SubResource("BoxShape3D_yy101")
 
 [node name="Weapon" type="Area3D" parent="."]
@@ -1275,9 +1255,8 @@ shape = SubResource("BoxShape3D_dnghh")
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/JPButton" to="Camera3D/Control/SettingPanel" method="_on_jp_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/SettingPanel/Panel/CloseButton" to="Camera3D/Control/SettingPanel" method="_on_close_button_pressed"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
+[connection signal="area_exited" from="Character" to="Character" method="_on_area_exited"]
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="ExtraCollider" to="ExtraCollider" method="_on_area_entered"]
 [connection signal="area_exited" from="ExtraCollider" to="ExtraCollider" method="_on_area_exited"]
-[connection signal="area_entered" from="ExtraCollider2" to="ExtraCollider2" method="_on_area_entered"]
-[connection signal="area_exited" from="ExtraCollider2" to="ExtraCollider2" method="_on_area_exited"]

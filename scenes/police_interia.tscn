@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://d1vy05x1i8pw1"]
+[gd_scene load_steps=106 format=3 uid="uid://d1vy05x1i8pw1"]
 
 [ext_resource type="PackedScene" uid="uid://x3egaae2lbjn" path="res://assets/PoliceInteria.glb" id="1_c42w4"]
 [ext_resource type="Texture2D" uid="uid://bg8o5meiayysi" path="res://assets/PoliceInteria_PoliceInteriorMat.png" id="2_qdti8"]
@@ -14,7 +14,6 @@
 [ext_resource type="FontFile" uid="uid://cef4gbi7nqx3w" path="res://Fonts/Gen Jyuu Gothic Monospace Heavy.ttf" id="11_fok6o"]
 [ext_resource type="Texture2D" uid="uid://bu68w8kxb120o" path="res://UI/nextBtn.png" id="12_p2kfr"]
 [ext_resource type="Texture2D" uid="uid://d1lemegy2hs7f" path="res://UI/closeBtn.png" id="12_v4uyb"]
-[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="13_ejdxg"]
 [ext_resource type="Script" path="res://scripts/setting.gd" id="13_pvnbw"]
 [ext_resource type="Texture2D" uid="uid://k71w56ukwmtg" path="res://UI/settingsBtn.png" id="14_g4i0n"]
 [ext_resource type="Texture2D" uid="uid://c7ek5yw24hrme" path="res://UI/english.png" id="15_nf148"]
@@ -29,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://bgmtjlruqdaxg" path="res://sounds/BGM.wav" id="26_tggxx"]
 [ext_resource type="AudioStream" uid="uid://cjm02ebwrf4c7" path="res://sounds/Win.wav" id="27_ekr5u"]
 [ext_resource type="AudioStream" uid="uid://bfuj4rb1lxcou" path="res://sounds/mixkit-player-losing-or-failing-2042.wav" id="28_456jn"]
+[ext_resource type="Script" path="res://scripts/ExtraCollider.gd" id="30_1k8b8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdl00"]
 resource_name = "PoliceInteriorMat"
@@ -83,6 +83,13 @@ size = Vector3(0.05, 70.72, 0.725)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_16vis"]
 height = 23.689
 radius = 0.11
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pswyj"]
+size = Vector3(0.3, 64.12, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u22qc"]
+height = 33.343
+radius = 0.0902924
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_04lt7"]
 _surfaces = [{
@@ -661,6 +668,9 @@ radius = 2.21
 height = 6.097
 radius = 1.188
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0nadf"]
+size = Vector3(0.47, 0.6, 0.563)
+
 [node name="PoliceInteria" instance=ExtResource("1_c42w4")]
 
 [node name="wall" parent="." index="0"]
@@ -708,6 +718,14 @@ shape = SubResource("BoxShape3D_8yvdg")
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="wall/Area3D" index="9"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.728023, 14.4554, 0.699797)
 shape = SubResource("CylinderShape3D_16vis")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="wall/Area3D" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.956688, 0, 0.498093)
+shape = SubResource("BoxShape3D_pswyj")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="wall/Area3D" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8966, 0, 0.148068)
+shape = SubResource("CylinderShape3D_u22qc")
 
 [node name="desk" parent="." index="1"]
 mesh = SubResource("ArrayMesh_hmf2j")
@@ -1828,7 +1846,7 @@ offset_right = 165.0
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Play Agian"
+text = "Play Again"
 label_settings = SubResource("LabelSettings_dnk6c")
 horizontal_alignment = 1
 
@@ -1860,6 +1878,7 @@ scale = Vector2(0.00865824, 0.0148311)
 texture = ExtResource("20_ilh4i")
 
 [node name="ExitButton" type="Button" parent="Control/Congratulations" index="5"]
+layout_mode = 0
 offset_left = 15.2401
 offset_top = 28.5494
 offset_right = 373.24
@@ -1899,13 +1918,6 @@ transform = Transform3D(1.045, 0, 0, 0, 1.045, 0, 0, 0, 1.045, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Character" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59479, 0)
 shape = SubResource("CylinderShape3D_ipf01")
-
-[node name="RayCast3D" type="RayCast3D" parent="Character" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 3.39162e-08, 0.197501, 0.387956)
-target_position = Vector3(0, -0.8, 0)
-collide_with_areas = true
-debug_shape_thickness = 5
-script = ExtResource("13_ejdxg")
 
 [node name="Camera Controller" type="Node3D" parent="." index="27" node_paths=PackedStringArray("camera1", "camera2", "camera3", "camera4", "camera5", "camera6")]
 script = ExtResource("16_xxv0o")
@@ -1958,6 +1970,15 @@ stream = ExtResource("27_ekr5u")
 stream = ExtResource("28_456jn")
 volume_db = -5.0
 
+[node name="ExtraCollider" type="Area3D" parent="." index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.26369)
+collision_layer = 2
+script = ExtResource("30_1k8b8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExtraCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.239428, 0.537422)
+shape = SubResource("BoxShape3D_0nadf")
+
 [connection signal="pressed" from="Control/Panel/CloseButton" to="Control" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Choice/RabbitButton" to="Control" method="_on_rabbit_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Choice/OwlButton" to="Control" method="_on_owl_button_pressed"]
@@ -1977,3 +1998,5 @@ volume_db = -5.0
 [connection signal="area_entered" from="InteractionCol" to="InteractionCol" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionCol" to="InteractionCol" method="_on_area_exited"]
 [connection signal="area_entered" from="Character" to="Character" method="_on_area_entered"]
+[connection signal="area_entered" from="ExtraCollider" to="ExtraCollider" method="_on_area_entered"]
+[connection signal="area_exited" from="ExtraCollider" to="ExtraCollider" method="_on_area_exited"]

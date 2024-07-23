@@ -45,7 +45,7 @@ func _process(delta):
 
 
 func _on_area_entered(area):
-	print(area.name)
+	#print(area.name)
 	object_name = area.name
 	is_in_collider = true
 	if area.name == "Weapon":
