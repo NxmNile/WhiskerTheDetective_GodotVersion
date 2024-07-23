@@ -88,6 +88,7 @@ func _on_close_button_pressed():
 	$Panel/Phone.visible = false
 	$Panel/Bank.visible = false
 	$Panel/Window.visible = false
+	$Panel/Jade.visible = false
 	$Panel2.visible = false
 	$Panel.visible = false
 	character.move_speed = 6
