@@ -1820,8 +1820,9 @@ offset_top = 9.10494
 offset_right = 582.655
 offset_bottom = 109.105
 scale = Vector2(0.0331685, 0.0684667)
-text = "Congratulations!"
+text = "Congratulations"
 label_settings = SubResource("LabelSettings_2sfux")
+horizontal_alignment = 1
 
 [node name="PlayAgainButton" type="Button" parent="Control/Congratulations" index="1"]
 layout_mode = 0

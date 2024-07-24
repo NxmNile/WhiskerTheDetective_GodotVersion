@@ -1,7 +1,8 @@
 extends Control
-const intro = preload("res://scenes/intro.tscn")
-const police_intro = preload("res://scenes/police_intro.tscn")
-@export var conversation: Array = ["Hello there!", "How are you?", "Welcome to the game!"]
+#const intro = preload("res://scenes/intro.tscn")
+#const police_intro = preload("res://scenes/police_intro.tscn")
+#var intro_instance = intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+@export var conversation: Array
 var index: int = 0
 var dialog_name: Array
 var translate_key: String
@@ -23,7 +24,8 @@ func _ready():
 	elif Keepdata.language=="jp":
 		TranslationServer.set_locale("jp")
 	Keepdata.scene_name ="Intro"
-	
+	#var button_node = find_child("PlayButton")
+	#button_node.connect("pressed",_on_play_button_pressed.bind())
 	$"Sound Controller/PhoneRigging".play()
 	await get_tree().create_timer(1).timeout
 	$"Sound Controller/PhonePickedup".play()
@@ -95,6 +97,9 @@ func _on_setting_button_pressed():
 
 
 func _on_play_button_pressed():
-	intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-	get_tree().change_scene_to_packed(police_intro)
+	Keepdata.scene_name = "PoliceStation2"
+	#const intro = preload("res://scenes/intro.tscn")
+	#intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_file("res://scenes/police_intro.tscn")
+	
 	pass # Replace with function body.

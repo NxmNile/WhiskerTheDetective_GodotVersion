@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ugs7exssctw6"]
-
-[ext_resource type="Script" path="res://scripts/root_main.gd" id="1_ity2l"]
-
-[node name="RoodMain" type="Node3D"]
-script = ExtResource("1_ity2l")

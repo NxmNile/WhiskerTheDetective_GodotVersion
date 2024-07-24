@@ -223,8 +223,8 @@ size = Vector3(1.75, 3.655, 1.77)
 size = Vector3(1.045, 4.37, 3.535)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6g3s1"]
-radius = 0.85957
-height = 2.739
+radius = 1.26121
+height = 3.61672
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o47xv"]
 height = 3.538
@@ -1148,7 +1148,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14203, 1.82949, -2.54401)
 shape = SubResource("BoxShape3D_jkfqn")
 
 [node name="CollisionShape3D13" type="CollisionShape3D" parent="OwlHouse"]
-transform = Transform3D(0.432526, -0.893601, 0.11999, -0.271659, -0.00226308, 0.962391, -0.859722, -0.448856, -0.243734, -1.17588, 0.460994, 1.88438)
+transform = Transform3D(0.432526, -0.893601, 0.11999, -0.271659, -0.00226308, 0.962391, -0.859722, -0.448856, -0.243734, -1.17588, 0.460994, 1.6127)
 shape = SubResource("CapsuleShape3D_6g3s1")
 
 [node name="InteractionCol" type="Area3D" parent="."]

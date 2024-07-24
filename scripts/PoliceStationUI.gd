@@ -168,6 +168,9 @@ func set_text():
 	$Panel/Choice/BadgerButton/Label.text = tr("Choice4")
 	$Congratulations/ExitButton/Label.text = tr("ExitButton")
 	$Failed/ExitButton/Label.text = tr("ExitButton")
+	$Congratulations/Label.text = tr("Congraturations")
+	$Congratulations/PlayAgainButton/Label.text = tr("PlayAgain")
+	$Failed/Label.text = tr("Failed")
 func change_language():
 	continue_typing = false
 	display_dialog(dialog_name)
@@ -204,16 +207,17 @@ func choose_the_murderer(choice):
 		$Failed.visible = true
 		$"../Sound/Lose".play()
 	elif choice == true:
-		key_name = "Police4"
-		dialog_name = Police4
-		display_dialog(dialog_name)
-		await get_tree().create_timer(3).timeout
 		camera_controller.set_active_camera("camera4")
 		dialog_name = Squirrel2
 		key_name = "Squirrel2"
 		display_dialog(dialog_name)
 		await get_tree().create_timer(5).timeout
 		camera_controller.set_active_camera("camera6")
+		key_name = "Police4"
+		dialog_name = Police4
+		display_dialog(dialog_name)
+		await get_tree().create_timer(3).timeout
+		#camera_controller.set_active_camera("camera6")
 		$Panel.visible = false
 		$Congratulations.visible = true
 		$"../Sound/Win".play()
@@ -245,8 +249,7 @@ func _on_play_again_button_pressed():
 
 func reset_data():
 	Keepdata.scene_name = "Menu"
-	Keepdata.language = "jp"
-	Keepdata.cluses = [false,false,false,false,false,false,false,false]
+	Keepdata.cluses = [false,false,false,false,false,false,false,false,false]
 	Keepdata.npc = [false,false,false,false]
 	Keepdata.npc_num =0
 	Keepdata.clue_num = 0

@@ -137,7 +137,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wll32")
-conversation = ["Whisker : Hello?", "Police : Hi! Detective. Do you remember Dr.Hootie, an archaeologist?", "Whisker : Yes, Why?", "Police : She just fiund dead In her room. Please come to my office as fast as possible.", "Whisker : Roger that!"]
+conversation = ["Whisker : Hello?", "Police : Hi! Detective. Do you remember Dr.Hootie, an archaeologist?", "Whisker : Yes, Why?", "Police : She just fiund dead in her room. Please come to my office as fast as possible.", "Whisker : Roger that!"]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
