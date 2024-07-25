@@ -29,8 +29,8 @@ func _process(delta):
 			if Keepdata.clue_num==9:
 				$"../Camera3D/Control/NumberofClues3".visible = true
 		elif  object_name == "Door2"&&Keepdata.house_entering>0:
-			preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-			get_tree().change_scene_to_packed(preload("res://scenes/murder_case.tscn"))
+			#preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+			get_tree().change_scene_to_file("res://scenes/murder_case.tscn")
 			pass
 		elif object_name == "PoliceStation2":
 			if Keepdata.police_station_entering>0:
@@ -38,8 +38,8 @@ func _process(delta):
 					UI.display_clue("LockPoliceStation")
 				else :
 					Keepdata.scene_name = "PoliceStation"
-					preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-					get_tree().change_scene_to_packed(preload("res://scenes/police_interia.tscn"))
+					#preload("res://scenes/Environment.tscn").instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+					get_tree().change_scene_to_file("res://scenes/police_interia.tscn")
 	if close_button==true && Input.is_action_pressed("ESC"):
 		UI._on_close_button_pressed()
 func _on_area_entered(area):

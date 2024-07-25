@@ -6,8 +6,8 @@ var is_finish = false
 var close_button : bool = false
 @export var police_dialog : String
 @onready var camera_controller = $"../Camera Controller"
-const environment2 = preload("res://scenes/Environment.tscn")
-const police_intro = preload("res://scenes/police_intro.tscn")
+#const environment2 = preload("res://scenes/Environment.tscn")
+#const police_intro = preload("res://scenes/police_intro.tscn")
 
 func _ready():
 
@@ -31,8 +31,8 @@ func _process(delta):
 		elif object_name=="Door"&&is_finish:
 			Keepdata.scene_name = "Environment2"
 			await get_tree().create_timer(0.5).timeout
-			police_intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-			get_tree().change_scene_to_packed(environment2)
+			#police_intro.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+			get_tree().change_scene_to_file("res://scenes/environment.tscn")
 	if Input.is_action_pressed("ESC")&&close_button==true:
 		_on_close_button_pressed()
 	

@@ -1,6 +1,6 @@
 extends Control
-const police_station = preload("res://scenes/police_interia.tscn")
-const intro = preload("res://scenes/intro.tscn")
+#const police_station = preload("res://scenes/police_interia.tscn")
+#const intro = preload("res://scenes/intro.tscn")
 @onready var character = $"../Character"
 @onready var interrogate = $"../InteractionCol"
 @onready var camera_controller = $"../Camera Controller"
@@ -171,6 +171,7 @@ func set_text():
 	$Congratulations/Label.text = tr("Congraturations")
 	$Congratulations/PlayAgainButton/Label.text = tr("PlayAgain")
 	$Failed/Label.text = tr("Failed")
+	$Failed/TryAgainButton/Label.text = tr("TryButton")
 func change_language():
 	continue_typing = false
 	display_dialog(dialog_name)
@@ -237,15 +238,15 @@ func _on_squirrel_button_pressed():
 
 func _on_try_again_button_pressed():
 	reset_data()
-	police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-	get_tree().change_scene_to_packed(intro)
+	#police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_file("res://scenes/intro.tscn")
 
 
 
 func _on_play_again_button_pressed():
 	reset_data()
-	police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
-	get_tree().change_scene_to_packed(intro)
+	#police_station.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+	get_tree().change_scene_to_file("res://scenes/intro.tscn")
 
 func reset_data():
 	Keepdata.scene_name = "Menu"

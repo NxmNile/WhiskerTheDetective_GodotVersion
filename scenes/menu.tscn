@@ -146,14 +146,14 @@ anti_aliasing = false
 [sub_resource type="LabelSettings" id="LabelSettings_vvy33"]
 font = ExtResource("4_lel3i")
 font_size = 41
-font_color = Color(0.230276, 0.146369, 0.0246018, 1)
+font_color = Color(0.374868, 0.248481, 0.0621097, 1)
 outline_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_obft5"]
 line_spacing = 8.575
 font = ExtResource("4_lel3i")
 font_size = 36
-font_color = Color(0.231373, 0.145098, 0.0235294, 1)
+font_color = Color(0.638095, 0.328157, 0.0975855, 1)
 outline_size = 17
 
 [sub_resource type="LabelSettings" id="LabelSettings_p7rj8"]
@@ -619,12 +619,11 @@ label_settings = SubResource("LabelSettings_obft5")
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CreditPanel"]
-visible = false
 layout_mode = 0
-offset_left = 3.0
-offset_top = 16.0
-offset_right = 346.0
-offset_bottom = 102.0
+offset_left = 1.96622
+offset_top = 11.1717
+offset_right = 344.966
+offset_bottom = 97.1717
 scale = Vector2(0.023944, 0.0505902)
 text = "♡(੭´͈ ᐜ `͈)੭"
 label_settings = SubResource("LabelSettings_p7rj8")

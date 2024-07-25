@@ -5,8 +5,8 @@ var is_in_collider : bool
 var start_owl_house = 0
 @onready var UI = $"../Camera3D/Control"
 @onready var character = $"../Character"
-const murder_room = preload("res://scenes/murder_case.tscn")
-const environment = preload("res://scenes/Environment.tscn")
+#const murder_room = preload("res://scenes/murder_case.tscn")
+#const environment = preload("res://scenes/Environment.tscn")
 var close_button : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -34,9 +34,9 @@ func _process(delta):
 		$"../Camera3D/Control/InvestigatePanel7".visible = false
 	if Input.is_action_pressed("F")&&is_in_collider&&object_name=="Door3":
 		Keepdata.scene_name = "Environment"
-		murder_room.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
+		#murder_room.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE).queue_free()
 		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_packed(environment)
+		get_tree().change_scene_to_file("res://scenes/environment.tscn")
 		pass
 	if close_button == true && Input.is_action_pressed("ESC"):
 		UI._on_close_button_pressed()

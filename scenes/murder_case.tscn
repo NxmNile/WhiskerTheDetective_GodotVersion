@@ -501,6 +501,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel"]
 layout_mode = 0
@@ -545,6 +546,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel2"]
 layout_mode = 0
@@ -589,6 +591,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel5"]
 layout_mode = 0
@@ -633,6 +636,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel6"]
 layout_mode = 0
@@ -677,6 +681,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel3"]
 layout_mode = 0
@@ -721,6 +726,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel4"]
 layout_mode = 0
@@ -765,6 +771,7 @@ offset_bottom = 94.2668
 scale = Vector2(0.095713, 0.247454)
 text = "Investigate"
 label_settings = SubResource("LabelSettings_6ub6t")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera3D/Control/InvestigatePanel7"]
 layout_mode = 0
