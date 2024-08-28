@@ -212,12 +212,12 @@ func choose_the_murderer(choice):
 		dialog_name = Squirrel2
 		key_name = "Squirrel2"
 		display_dialog(dialog_name)
-		await get_tree().create_timer(5).timeout
+		await get_tree().create_timer(6).timeout
 		camera_controller.set_active_camera("camera6")
 		key_name = "Police4"
 		dialog_name = Police4
 		display_dialog(dialog_name)
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(4).timeout
 		#camera_controller.set_active_camera("camera6")
 		$Panel.visible = false
 		$Congratulations.visible = true

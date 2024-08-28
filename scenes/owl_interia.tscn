@@ -90,7 +90,7 @@ light_energy = 4.681
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" index="5"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.09304, 2.64468, 2.00654)
 light_color = Color(1, 1, 0.815686, 1)
-light_energy = 3.045
+light_energy = 0.675
 light_specular = 0.0
 spot_range = 3.33763
 spot_attenuation = 1.8025
@@ -120,7 +120,7 @@ spot_angle_attenuation = 0.435276
 [node name="SpotLight3D3" type="SpotLight3D" parent="Lights" index="8"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.49944, 3.20151, -1.38564)
 light_color = Color(0.8, 1, 1, 1)
-light_energy = 1.182
+light_energy = 0.655
 light_specular = 0.0
 spot_range = 3.33763
 spot_attenuation = 1.8025

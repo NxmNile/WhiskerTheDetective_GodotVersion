@@ -38,13 +38,7 @@ font_size = 25
 font_color = Color(0.32919, 0.207122, 0.0716364, 1)
 outline_size = 7
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgmx2"]
-bg_color = Color(0.933333, 0.286275, 0.34902, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cuqeo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5anag"]
 bg_color = Color(0.678749, 0.133306, 0.210366, 1)
@@ -54,7 +48,15 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cuqeo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgmx2"]
+bg_color = Color(0.933333, 0.286275, 0.34902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkqvi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqsq5"]
 bg_color = Color(0.152941, 0.152941, 0.152941, 0.192157)
@@ -62,8 +64,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkqvi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vubkq"]
 font = ExtResource("1_12ck4")
@@ -118,13 +118,7 @@ font_size = 120
 font_color = Color(0, 0, 0, 1)
 outline_size = 32
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywk4e"]
-bg_color = Color(1, 0.67451, 0.670588, 0)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-anti_aliasing = false
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wt6nd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80bvd"]
 bg_color = Color(0.6, 0.6, 0.6, 0.588235)
@@ -140,7 +134,13 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wt6nd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywk4e"]
+bg_color = Color(1, 0.67451, 0.670588, 0)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0sai"]
 bg_color = Color(0.886966, 0.545404, 0.599298, 1)
@@ -150,8 +150,8 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_436bg"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3mdb"]
+bg_color = Color(0.909804, 0.360784, 0.721569, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gabwm"]
@@ -171,20 +171,20 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3mdb"]
-bg_color = Color(0.909804, 0.360784, 0.721569, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_436bg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpphr"]
-bg_color = Color(1, 0.284297, 0.346101, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igxau"]
+bg_color = Color(0.419221, 0, 0.0829647, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igxau"]
-bg_color = Color(0.419221, 0, 0.0829647, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpphr"]
+bg_color = Color(1, 0.284297, 0.346101, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -299,9 +299,9 @@ offset_top = -14.0
 offset_right = 1250.0
 offset_bottom = -6.0
 scale = Vector2(5.10668, 5.10668)
-theme_override_styles/normal = SubResource("StyleBoxFlat_mgmx2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5anag")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cuqeo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5anag")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgmx2")
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/Panel/CloseButton"]
 layout_mode = 1
@@ -449,8 +449,8 @@ offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10.32, 10.32)
-theme_override_styles/normal = SubResource("StyleBoxFlat_nqsq5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jkqvi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nqsq5")
 
 [node name="Setting" type="TextureRect" parent="Camera3D/Control/SettingButton"]
 layout_mode = 1
@@ -902,10 +902,10 @@ offset_left = 22.0
 offset_top = 10.0
 offset_right = 35.0
 offset_bottom = 17.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ywk4e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wt6nd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_80bvd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hnak2")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wt6nd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ywk4e")
 
 [node name="Panel" type="Panel" parent="Camera3D/Control/SettingPanel/Panel/ENButton"]
 layout_mode = 1
@@ -961,10 +961,10 @@ offset_left = 37.267
 offset_top = 9.99971
 offset_right = 50.267
 offset_bottom = 16.9997
-theme_override_styles/normal = SubResource("StyleBoxFlat_436bg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c3mdb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gabwm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ds4ar")
-theme_override_styles/focus = SubResource("StyleBoxFlat_c3mdb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_436bg")
 
 [node name="Panel2" type="Panel" parent="Camera3D/Control/SettingPanel/Panel/JPButton"]
 visible = false
@@ -1021,8 +1021,8 @@ offset_top = -2.76915
 offset_right = 57.6328
 offset_bottom = 5.23085
 scale = Vector2(0.567354, 0.96007)
-theme_override_styles/normal = SubResource("StyleBoxFlat_vpphr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_igxau")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpphr")
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/SettingPanel/Panel/CloseButton"]
 layout_mode = 1
